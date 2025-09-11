@@ -7,6 +7,8 @@
 
     --breakpoint-3xl: 120rem;
 
+    --animate-float: float 2s ease-in-out infinite;
+
     --color-primary: #1A8079;
     --color-primary-light: #00ffee;
     --color-primary-card: #1a1a1a;
@@ -24,12 +26,42 @@
     font-family: 'PlusJakartaSans';
     src: url('/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
 }
+
 @layer components {
     .container {
-      @apply mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-60 max-w-[1800px];
+        @apply mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-60 max-w-[1800px];
     }
-  }
-  
+
+    /* Blend Background */
+    .blend-x {
+        -webkit-mask: linear-gradient(90deg, transparent, white 25%, white 75%, transparent);
+        mask: linear-gradient(90deg, transparent, white 25%, white 75%, transparent);
+    }
+
+    .blend-y {
+        -webkit-mask: linear-gradient(transparent, white 25%, white 75%, transparent);
+        mask: linear-gradient(transparent, white 25%, white 75%, transparent);
+    }
+
+    .blend-y-start {
+        -webkit-mask: linear-gradient(transparent 80%, white);
+        mask: linear-gradient(transparent 80%, white);
+    }
+
+    .blend-y-end {
+        -webkit-mask: linear-gradient(white 80%, transparent);
+        mask: linear-gradient(white 80%, transparent);
+    }
+    
+}
+
+@layer utilities {
+    @keyframes float {
+        0% {transform: translateY(0);}
+        50% {transform: translateY(-10px);}
+        100% {transform: translateY(0);}
+    }
+}
 
 
 ::-webkit-scrollbar {

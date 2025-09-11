@@ -96,7 +96,7 @@ export default function ScrollRotatorButton({
     <div
       aria-label="Scroll to top"
       onClick={handleClick}
-      className={`fixed ${bottom} ${right} z-50 cursor-pointer`}
+      className={`fixed ${bottom} ${right} z-40 cursor-pointer`}
     >
       <span
         className={`relative inline-block ${size} rounded-full flex items-center justify-center shadow-lgoverflow-hidden`}

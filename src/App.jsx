@@ -9,8 +9,6 @@ import Lenis from "@studio-freight/lenis";
 
 const Home = lazy(() => import("./pages/Home"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const ProductsList = lazy(() => import("./pages/product/ProductDetails"));
-const UserProfile = lazy(() => import("./pages/users/UserProfile"));
 
 
 
@@ -77,14 +75,6 @@ export default function App() {
       <Routes>
         <Route path={ROUTES.HOME} element={<MainLayout />}>
           <Route index element={<Home />} />
-
-          {/* Products */}
-          <Route path={ROUTES.PRODUCTS}>
-            <Route index element={<ProductsList />} />
-          </Route>
-          <Route path={ROUTES.USERS}>
-          </Route>
-
           {/* 404 */}
           <Route path="*" element={<NotFound />} />
         </Route>

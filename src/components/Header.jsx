@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants/RoutesContants";
 import { IMAGE_ASSETS } from "../constants/ImageContants";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -77,7 +78,7 @@ export default function Header() {
       <nav
         ref={headerRef}
         aria-label="Primary"
-        className={`fixed top-0 left-0 z-40 w-full ${bgCls} py-5 md:py-6 transform transition duration-500 ease-in-out ${navTransformCls}`}
+        className={`fixed top-0 left-0 z-40 w-full ${bgCls} py-5 md:py-6 px-2 lg:px-0 transform transition duration-500 ease-in-out ${navTransformCls}`}
       >
         <div className="container">
           {/* Row: left / center / right */}
@@ -95,14 +96,15 @@ export default function Header() {
             </div>
 
             {/* CENTER - Nav (hidden on mobile) */}
-            <div className="hidden md:flex justify-center font-primary font-bold">
-              <ul className="flex items-center transition-all duration-500 ease-in-out gap-6">
+            <div className="hidden lg:flex justify-center font-primary font-bold">
+              {/* Added flex-nowrap so items never wrap, and each li is flex-shrink-0 */}
+              <ul className="flex items-center transition-all duration-500 ease-in-out gap-6 flex-nowrap">
                 {items.map((it) => (
-                  <li key={it.label}>
+                  <li key={it.label} className="flex-shrink-0">
                     <NavLink
                       to={it.href}
                       className={({ isActive }) =>
-                        `px-3 py-2 font-medium transition-colors duration-200 ${
+                        `px-3 py-2 font-medium transition-colors duration-200 whitespace-nowrap ${
                           isActive ? "text-primary-light" : "text-white hover:text-primary"
                         }`
                       }
@@ -115,29 +117,19 @@ export default function Header() {
             </div>
 
             {/* RIGHT - mobile-only toggle */}
-            <div className="flex md:hidden items-center justify-end w-24">
-              <button
+            <div className="flex lg:hidden items-center justify-end w-24">
+            <button
                 onClick={() => setOpen((v) => !v)}
-                className={`inline-flex items-center justify-center p-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transform transition-transform duration-200 ${open ? "rotate-90" : "rotate-0"}`}
+                className="inline-flex items-center justify-center p-2 rounded"
                 aria-controls="mobile-menu"
                 aria-expanded={open}
                 aria-label={open ? "Close navigation menu" : "Open navigation menu"}
               >
-                {open ? (
-                  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      fill="currentColor"
-                      d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.9 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.9a1 1 0 0 0 1.41-1.41L13.41 12l4.9-4.89a1 1 0 0 0 0-1.4z"
-                    />
-                  </svg>
-                ) : (
-                  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      fill="currentColor"
-                      d="M3 6h18a1 1 0 1 0 0-2H3a1 1 0 1 0 0 2zm18 7H3a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2zM3 20h18a1 1 0 1 0 0-2H3a1 1 0 1 0 0 2z"
-                    />
-                  </svg>
+                {/* Hamburger icon (when closed) */}
+                {!open && (
+                  <Icon icon="solar:hamburger-menu-broken" width="22" height="22" aria-hidden="true" />
                 )}
+               
               </button>
             </div>
           </div>
@@ -147,14 +139,21 @@ export default function Header() {
       {/* Mobile full-screen overlay menu (optimized) */}
       <div
         id="mobile-menu"
-        className={`md:hidden fixed inset-0 z-50 bg-black/50 backdrop-blur transition-opacity duration-250 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        className={`lg:hidden fixed inset-0 z-50 bg-black/50 backdrop-blur transition-opacity duration-250 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
         role="dialog"
         aria-modal="true"
         onClick={() => setOpen(false)} // clicking backdrop closes menu
       >
         {/* overlay background: no expensive blur on small screens; blur allowed from md+ */}
         <div className={`absolute inset-0 ${open ? "bg-black/30" : "bg-black/0"} md:backdrop-blur-sm`} />
-
+        <button
+          type="button"
+          onClick={() => setOpen(false)}
+          aria-label="Close menu"
+          className="fixed top-6 right-5 z-60 p-2 rounded-full"
+        >
+          <Icon icon="flowbite:close-outline" width="30" height="30" aria-hidden="true" />
+        </button>
         {/* centered menu panel — animate with transform + opacity (GPU friendly) */}
         <div className="absolute inset-0 flex items-center justify-center">
           <ul
@@ -168,8 +167,8 @@ export default function Header() {
                 <NavLink
                   to={it.href}
                   className={({ isActive }) =>
-                    `block w-full text-white text-2xl sm:text-3xl font-semibold text-center py-3 transition-colors duration-150 ${
-                      isActive ? "text-primary-light" : "hover:text-primary"
+                    `block w-full text-2xl sm:text-3xl font-semibold text-center py-3 transition-colors duration-150 ${
+                      isActive ? "text-primary-light" : "text-white hover:text-primary"
                     }`
                   }
                   onClick={() => setOpen(false)}
