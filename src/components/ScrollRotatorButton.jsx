@@ -1,8 +1,8 @@
 // src/components/ScrollRotatorButton.jsx
 import React, { useEffect, useRef, useState } from "react";
+import { IMAGE_ASSETS } from "../constants/ImageContants";
 // Import the SVG here so MainLayout doesn't need to pass it.
 // Adjust the path if your assets are located elsewhere.
-import scrollTopImg from "../assets/images/logo/scroll_top.svg";
 
 export default function ScrollRotatorButton({
   size = "w-15 h-15",
@@ -105,7 +105,7 @@ export default function ScrollRotatorButton({
         
         <div className="relative inset-0 flex items-center justify-center">
           <img
-            src={scrollTopImg}
+            src={IMAGE_ASSETS.SCROLL_TOP}
             alt="scroll top"
             className="w-full h-full object-contain"
            
