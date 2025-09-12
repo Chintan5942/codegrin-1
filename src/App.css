@@ -7,12 +7,16 @@
 
     --breakpoint-3xl: 120rem;
 
-    --animate-float: float 2s ease-in-out infinite;
+    --animate-float-up: float-up 2s ease-in-out infinite;
+    --animate-float-down: float-down 2s ease-in-out infinite;
+    --animate-float-left: float-left 2s ease-in-out infinite;
+    --animate-float-right: float-right 2s ease-in-out infinite;
 
 
     --color-primary: #1A8079;
     --color-primary-light: #00ffee;
-    --color-primary-card: #1a1a1a;
+    --color-primary-card: #101010;
+    --color-primary-border: #2a2a2a;
     --color-avocado-100: oklch(0.99 0 0);
     --color-avocado-200: oklch(0.98 0.04 113.22);
     --color-avocado-300: oklch(0.94 0.11 115.03);
@@ -57,10 +61,26 @@
 }
 
 @layer utilities {
-    @keyframes float {
+
+    @keyframes float-up {
+        0% {transform: translateY(0);}
+        50% {transform: translateY(10px);}
+        100% {transform: translateY(0);}
+    }
+    @keyframes float-down {
         0% {transform: translateY(0);}
         50% {transform: translateY(-10px);}
         100% {transform: translateY(0);}
+    }
+    @keyframes float-left {
+        0% {transform: translateX(0);}
+        50% {transform: translateX(-10px);}
+        100% {transform: translateX(0);}
+    }
+    @keyframes float-right {
+        0% {transform: translateX(0);}
+        50% {transform: translateX(10px);}
+        100% {transform: translateX(0);}
     }
 }
 

@@ -4,7 +4,7 @@ const HeadingTitle = ({ word1, word2, className = "", direction = "col" }) => {
   return (
     <div
       className={`w-full flex ${className} text-center pointer-events-none ${
-        direction == "row" ? "flex-row gap-5 justify-center" : "flex-col gap-2"
+        direction == "row" ? "flex-row gap-1 lg:gap-3 justify-center" : "flex-col md:gap-2 lg:gap-2"
       }`}
     >
       <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-white">
