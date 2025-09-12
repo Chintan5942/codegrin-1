@@ -4,7 +4,7 @@ import { IMAGE_ASSETS } from "../constants/ImageContants";
 export default function Hero() {
   return (
     <section className="w-full h-auto blend-y-end ">
-      <div className="absolute w-full h-screen top-0">
+      <div className="absolute w-full h-[130vh] top-0">
         <Particles
             particleColors={["#ffffff", "#ffffff"]}
             particleCount={2000}

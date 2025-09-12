@@ -235,7 +235,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="text-center py-3 mt-5 border-t border-white/20">
         <div className="container">
-          <p className="mb-0 text-sm text-white/70">
+          <p className="mb-10 text-sm text-white/70">
             {new Date().getFullYear()} &copy;{" "}
             <span className="text-primary">Codegrin Technologies</span> | All
             Rights Reserved
