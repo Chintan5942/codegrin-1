@@ -95,9 +95,7 @@ const Particles = ({
   sizeRandomness = 1,
   cameraDistance = 20,
   disableRotation = false,
-  className,
-  children,
-  childrenInteractive = false // if true, children can receive pointer events
+  className
 }) => {
   const containerRef = useRef(null);
   const mouseRef = useRef({ x: 0, y: 0 });
@@ -108,16 +106,6 @@ const Particles = ({
 
     const renderer = new Renderer({ depth: false, alpha: true });
     const gl = renderer.gl;
-
-    // Ensure canvas is absolutely positioned and covers the container
-    gl.canvas.style.position = 'absolute';
-    gl.canvas.style.top = '0';
-    gl.canvas.style.left = '0';
-    gl.canvas.style.width = '100%';
-    gl.canvas.style.height = '100%';
-    gl.canvas.style.zIndex = '0';
-    gl.canvas.style.pointerEvents = 'auto'; // keep pointer events for interactions if needed
-
     container.appendChild(gl.canvas);
     gl.clearColor(0, 0, 0, 0);
 
@@ -242,16 +230,7 @@ const Particles = ({
     disableRotation
   ]);
 
-  return (
-    <div ref={containerRef} className={`relative w-full h-full ${className || ''}`}>
-      {/* children overlay — above canvas */}
-      <div
-        className={`absolute inset-0 z-10 flex items-center justify-center ${childrenInteractive ? 'pointer-events-auto' : 'pointer-events-none'}`}
-      >
-        {children}
-      </div>
-    </div>
-  );
+  return <div ref={containerRef} className={`relative w-full h-full ${className}`} />;
 };
 
 export default Particles;

@@ -12,10 +12,10 @@ export default function Home() {
 
       {/* Container-based section */}
       <div className="container">
-        <section className="w-full h-screen bg-amber-300 flex items-center justify-center">
-          {/* <h2 className="text-black text-3xl font-semibold">
+        <section className="w-full h-screen  flex items-center justify-center">
+          <h2 className="text-white text-3xl font-semibold">
             Container Section
-          </h2> */}
+          </h2>
         </section>
       </div>
     </div>
