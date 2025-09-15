@@ -58,12 +58,12 @@ export default function Header() {
 
   const items = [
     { label: "Home", href: ROUTES.HOME },
-    { label: "Services", href: "/service" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Courses", href: "/courses" },
-    { label: "Blog", href: "/blog" },
+    { label: "Services", href: ROUTES.SERVICES },
+    { label: "Portfolio", href: ROUTES.PORTFOLIO },
+    { label: "Courses", href: ROUTES.COURSES },
+    { label: "Blog", href: ROUTES.BLOG },
     { label: "About", href: ROUTES.ABOUT },
-    { label: "Contact Us", href: "/contact" }
+    { label: "Contact Us", href: ROUTES.CONTACT }
   ];
 
   // bg + blur + shadow classes based on scroll
@@ -78,7 +78,7 @@ export default function Header() {
       <nav
         ref={headerRef}
         aria-label="Primary"
-        className={`fixed top-0 left-0 z-40 w-full ${bgCls} py-5 md:py-6 px-2 lg:px-0 transform transition duration-500 ease-in-out ${navTransformCls}`}
+        className={`fixed top-0 left-0 z-40 w-full ${bgCls} py-5 md:py-6 px-2 lg:px-0 transform transition duration-500 ease-in-out  ${navTransformCls}`}
       >
         <div className="container">
           {/* Row: left / center / right */}
@@ -139,7 +139,7 @@ export default function Header() {
       {/* Mobile full-screen overlay menu (optimized) */}
       <div
         id="mobile-menu"
-        className={`lg:hidden fixed inset-0 z-50 bg-black/50 backdrop-blur transition-opacity duration-250 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        className={`lg:hidden fixed inset-0 z-50 bg-black/50 h-full backdrop-blur transition-opacity duration-250 overflow-scroll ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
         role="dialog"
         aria-modal="true"
         onClick={() => setOpen(false)} // clicking backdrop closes menu

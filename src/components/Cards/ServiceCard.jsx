@@ -1,0 +1,51 @@
+export default function ServiceCard({
+  title,
+  description,
+  img,
+  className = "",
+}) {
+  return (
+    <div
+    className={`relative group h-full flex flex-col text-white border-t md:border-t-0 md:border-l border-primary-border hover:border-primary-border transition-all duration-500 ease-in-out ${className}`}
+  >
+  
+      {/* Background glow effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out"></div>
+
+      {/* Overlay effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out"></div>
+
+      {/* Animated border effect */}
+      <div className="absolute inset-0 border border-transparent group-hover:border-white/20 transition-all duration-500 ease-out"></div>
+
+      {/* Corners with bounce effect */}
+      <span className="absolute -top-1 -left-1 w-2 h-2 bg-white opacity-0 group-hover:opacity-100 z-10 transition-all  ease-out"></span>
+      <span className="absolute -top-1 -right-1 w-2 h-2 bg-white opacity-0 group-hover:opacity-100 z-10 transition-all  ease-out "></span>
+      <span className="absolute -bottom-1 -left-1 w-2 h-2 bg-white opacity-0 group-hover:opacity-100 z-10 transition-all  ease-out "></span>
+      <span className="absolute -bottom-1 -right-1 w-2 h-2 bg-white opacity-0 group-hover:opacity-100 z-10 transition-all  ease-out "></span>
+
+      {/* Icon Section with floating animation */}
+      <div className="flex items-center p-6 sm:p-8 pb-0 h-20 relative z-10">
+        <img
+          src={img}
+          className="h-12 w-auto object-contain mt-5 transition-all  ease-out group-hover:brightness-110 group-hover:-translate-y-1 group-hover:drop-shadow-lg"
+          alt=""
+        />
+      </div>
+
+      {/* Title Section with slide-up animation */}
+      <div className="px-6 sm:px-8 py-4 min-h-[4rem] flex items-start relative z-10">
+        <h3 className="text-xl text-primary-light font-semibold leading-tight transition-all duration-400 ease-out transform">
+          {title}
+        </h3>
+      </div>
+
+      {/* Description Section with fade-in slide animation */}
+      <div className="px-6 sm:px-8 pb-6 sm:pb-8 flex-grow relative z-10">
+        <p className="text-md text-gray-400 group-hover:text-white leading-tight transition-all duration-500 delay-100 ease-out  group-hover:opacity-100">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}

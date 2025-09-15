@@ -1,9 +1,10 @@
 export const ROUTES = {
     HOME : "/",
+    SERVICES : "/services",
+    PORTFOLIO : "/portfolio",
+    COURSES : "/courses",
+    BLOG : "/blog",
     ABOUT : "/about",
-    PRODUCTS : "/products",
-    PRODUCT_DETAILS : "/products/:productId",
-    USERS : "/users",
-    USER_PROFILE : "/users/:userId",
-    
+    CONTACT : "/contact",
+    PROJECT_DETAILS : "/project-details",
 }

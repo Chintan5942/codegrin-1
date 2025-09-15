@@ -1,16 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { ROUTES } from "../constants/RoutesContants";
 import Particles from "../components/Particles";
 import { IMAGE_ASSETS } from "../constants/ImageContants";
 import HeadingTitle from "../components/HeadingTItle";
 import Orbit from "../components/Orbit";
-import AchivementCard from "../components/Cards/Achivement";
+import AchivementCard from "../components/Cards/AchivementCard";
+import ServiceCard from "../components/Cards/ServiceCard";
+import { SERVICES } from "../constants/ServicesConstants";
+import BorderButton from "../components/Buttons/BorderButton";
+import ToolsAnimation from "../components/ToolsAnimation";
+import PortfolioCarousel from "../components/PortfolioCarousel";
 
 export default function Home() {
   return (
     <div>
       {/* Hero */}
-        <section className="w-full h-auto blend-y-end overflow-x-clip">
+      <section className="w-full h-auto blend-y-end overflow-x-clip">
         <div className="absolute w-full h-[130vh] top-0 -z-2">
           <Particles
             particleColors={["#ffffff", "#ffffff"]}
@@ -23,11 +28,20 @@ export default function Home() {
             disableRotation={false}
           />
         </div>
-    
-        <HeadingTitle word1={"Turning Ideas Into Impact"} word2={"Through the Power of Code"} className="lg:pt-50 md:pt-50 pt-50 pb-20" direction="col"/>
-        <Orbit planetCount={10} radius={{ base: "40%", md: "35%", lg: "27%"}} duration={45000} className="translate-y-45 md:translate-y-65 lg:translate-y-115" />
+
+        <HeadingTitle
+          word1={"Turning Ideas Into Impact"}
+          word2={"Through the Power of Code"}
+          className="lg:pt-50 md:pt-50 pt-50 pb-20"
+          direction="col"
+        />
+        <Orbit
+          planetCount={10}
+          radius={{ base: "40%", md: "35%", lg: "27%" }}
+          duration={45000}
+          className="translate-y-45 md:translate-y-65 lg:translate-y-115"
+        />
         <div className="relative flex w-full justify-center items-center pointer-events-none">
-        
           <img
             src={IMAGE_ASSETS.HERO_SECTION_1}
             alt=""
@@ -42,21 +56,85 @@ export default function Home() {
           />
         </div>
       </section>
-      
+
       {/* Contents */}
       <div className="container">
-
-       {/* Achivements */}
-       <section className="w-fullflex items-center justify-center">
-          <HeadingTitle word1={"Our"} word2={"Achivements"} direction="row"className="mt-10 mb-5 lg:mb-10"/>
-
+        {/* Achivements */}
+        <section className="w-fullflex items-center justify-center">
+          <HeadingTitle
+            word1={"Our"}
+            word2={"Achivements"}
+            direction="row"
+            className="mt-10 mb-5 lg:mb-10"
+          />
           <div className="w-full flex flex-col lg:flex-row items-center justify-around gap-5 lg:gap-0">
-          <AchivementCard className="animate-float-left lg:animate-float-up" count={5} title={"Year of trust"}/>
-          <AchivementCard className="animate-float-right lg:animate-float-down" count={29} title={"Clients"}/>
-          <AchivementCard className="animate-float-left lg:animate-float-up" count={30} title={"Projects Completed"}/>
-          <AchivementCard className="animate-float-right lg:animate-float-down" count={10} title={"Countries Served"}/>
+            <AchivementCard
+              className="animate-float-left lg:animate-float-up"
+              count={5}
+              title={"Year of trust"}
+            />
+            <AchivementCard
+              className="animate-float-right lg:animate-float-down"
+              count={29}
+              title={"Clients"}
+            />
+            <AchivementCard
+              className="animate-float-left lg:animate-float-up"
+              count={30}
+              title={"Projects Completed"}
+            />
+            <AchivementCard
+              className="animate-float-right lg:animate-float-down"
+              count={10}
+              title={"Countries Served"}
+            />
           </div>
+        </section>
 
+        {/* Services */}
+        <section className="w-full flex flex-col items-center justify-center">
+          <HeadingTitle
+            word1={"Our"}
+            word2={"Services"}
+            direction="row"
+            className="mt-20 mb-5 lg:mb-10"
+          />
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
+            {SERVICES.slice(0, 8).map((service, index) => (
+              <div key={index} className="w-full">
+                <ServiceCard
+                  title={service.title}
+                  description={service.short_description}
+                  img={service.img}
+                />
+              </div>
+            ))}
+          </div>
+          <BorderButton title="View More" link={ROUTES.SERVICES} className="mt-10"/>
+        </section>
+
+        {/* Tools */}
+        <section>
+          <HeadingTitle
+            word1={"Integrating with"}
+            word2={"Top Tools"}
+            direction="col"
+            className="mt-20 mb-5 lg:mb-10"
+          />
+          <ToolsAnimation
+          />
+        </section>
+
+         {/* Work */}
+         <section>
+          <HeadingTitle
+            word1={"Our"}
+            word2={"Work"}
+            direction="row"
+            className="mt-20 mb-5 lg:mb-10"
+          />
+          <PortfolioCarousel
+          />
         </section>
       </div>
     </div>

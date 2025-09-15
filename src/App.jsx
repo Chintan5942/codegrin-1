@@ -6,6 +6,13 @@ import { ROUTES } from "./constants/RoutesContants";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
+import Services from "./pages/Services/Services";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Courses from "./pages/Courses/Courses";
+import AboutUs from "./pages/AboutUs";
+import Contact from "./pages/Contact";
+import Blogs from "./pages/Blogs/Blogs";
+import ProjectDetails from "./pages/Portfolio/ProjectDetails";
 
 const Home = lazy(() => import("./pages/Home"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -76,6 +83,14 @@ export default function App() {
         <Route path={ROUTES.HOME} element={<MainLayout />}>
           <Route index element={<Home />} />
           {/* 404 */}
+          <Route path={ROUTES.SERVICES} element={<Services />} />
+          <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
+          <Route path={ROUTES.COURSES} element={<Courses />} />
+          <Route path={ROUTES.BLOG} element={<Blogs />} />
+          <Route path={ROUTES.ABOUT} element={<AboutUs />} />
+          <Route path={ROUTES.CONTACT} element={<Contact />} />
+          <Route path={ROUTES.PROJECT_DETAILS} element={<ProjectDetails />} />
+
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
