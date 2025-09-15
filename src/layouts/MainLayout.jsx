@@ -17,7 +17,7 @@ export default function MainLayout() {
 
       {/* Footer */}
      <Footer/>
-      <ScrollRotatorButton />a
+      <ScrollRotatorButton />
     </div>
   );
 }
