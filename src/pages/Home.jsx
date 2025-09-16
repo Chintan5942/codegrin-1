@@ -132,7 +132,7 @@ export default function Home() {
         </section>
 
         {/* Work */}
-        <section>
+        <section className="w-full flex flex-col items-center justify-center">
           <HeadingTitle
             word1={"Our"}
             word2={"Work"}
@@ -140,21 +140,31 @@ export default function Home() {
             className="mt-20 mb-5 lg:mb-10"
           />
           <PortfolioCarousel />
+          <BorderButton
+            title="View More"
+            link={ROUTES.PORTFOLIO}
+            className="mt-10"
+          />
         </section>
 
         {/* Blogs */}
-        <section>
+        <section className="w-full flex flex-col items-center justify-center">
           <HeadingTitle
             word1={"Latest"}
             word2={"Blog"}
             direction="row"
             className="mt-20 mb-5 lg:mb-10"
           />
-          <BlogSection bloglimit={4}/>   
+          <BlogSection bloglimit={4} />
+          <BorderButton
+            title="View More"
+            link={ROUTES.BLOG}
+            className="mt-10"
+          />
         </section>
 
-         {/* Client Feedback */}
-         <section>
+        {/* Client Feedback */}
+        <section>
           <HeadingTitle
             word1={"What Client Say's About"}
             word2={"Our Services"}
@@ -164,8 +174,8 @@ export default function Home() {
           <ClientFeedbackAnimation />
         </section>
 
-         {/* Team */}
-         <section>
+        {/* Team */}
+        <section>
           <HeadingTitle
             word1={"Meet"}
             word2={"Our Team"}
@@ -174,7 +184,56 @@ export default function Home() {
           />
           <TeamCarousel />
         </section>
-        
+
+        {/* Why to choose us */}
+        <section>
+          <HeadingTitle
+            word1={"Why Choose"}
+            word2={"Codegrin"}
+            direction="col"
+            className="mt-30 mb-5 lg:mb-20"
+          />
+          <div className="text-justify text-base xl:text-lg text-gray-400">
+            <p className="mb-5">
+              At <strong>Codegrin Technologies</strong>, we believe in
+              delivering more than just software—we create digital experiences
+              that make an impact. Since our founding in 2020, we’ve been
+              committed to helping businesses transform ideas into powerful,
+              scalable, and future-ready solutions. Our expertise spans the
+              entire React ecosystem, including
+              <strong>ReactJS, Next.js, Node.js</strong>, and beyond. Whether
+              it’s building custom applications, optimizing existing systems, or
+              integrating cutting-edge features, we provide complete solutions
+              under one roof.
+            </p>
+
+            <p className="mb-5">
+              What sets us apart is our user-first approach. Every design and
+              development decision is made with usability in mind—ensuring
+              seamless navigation, engaging interfaces, and an overall
+              experience that delights end users. We combine creative UI/UX
+              design with robust technology to deliver products that are both
+              visually appealing and functionally strong. From eCommerce
+              platforms to inventory management systems and even blockchain
+              solutions, our portfolio reflects our ability to adapt and deliver
+              across industries.
+            </p>
+
+            <p className="mb-5">
+              Beyond technology, we also help businesses grow faster with
+              advanced
+              <strong>Google</strong> and <strong>Meta</strong> advertising
+              services—driving traffic, generating leads, and maximizing ROI.
+            </p>
+
+            <p className="mb-5">
+              Above all, we are more than just a vendor—we are a strategic
+              partner. Our team is dedicated to innovation, quality, and
+              long-term success, ensuring every project is delivered on time,
+              within budget, and beyond expectations.
+            </p>
+          </div>
+        </section>
       </div>
     </div>
   );

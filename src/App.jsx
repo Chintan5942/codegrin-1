@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import { ROUTES } from "./constants/RoutesContants";
@@ -15,9 +15,8 @@ import ProjectDetails from "./pages/Portfolio/ProjectDetails";
 import ScrollToTop from "./components/ScrollToTop";
 import RouteLoader from "./components/RouteLoader";
 import BlogDetails from "./pages/Blogs/BlogDetails";
-
-const Home = lazy(() => import("./pages/Home"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 gsap.registerPlugin(ScrollTrigger);
 

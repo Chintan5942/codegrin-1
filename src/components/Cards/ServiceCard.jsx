@@ -35,7 +35,7 @@ export default function ServiceCard({
 
       {/* Title Section with slide-up animation */}
       <div className="px-6 sm:px-8 py-4 min-h-[4rem] flex items-start relative z-10">
-        <h3 className="text-xl text-primary-light font-semibold leading-tight transition-all duration-400 ease-out transform">
+        <h3 className="text-xl text-white font-bold leading-tight transition-all duration-400 ease-out transform">
           {title}
         </h3>
       </div>
