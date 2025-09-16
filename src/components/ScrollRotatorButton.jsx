@@ -82,12 +82,12 @@ export default function ScrollRotatorButton({
   const wrapperStyle = {
     transform: `rotate(${angle}deg)`,
     transformOrigin: "center",
-    transition: "transform 120ms linear",
+    transition: "transform 120ms ease-in-out",
     willChange: "transform"
   };
   const labelStyle = {
     transform: `rotate(${-angle}deg)`,
-    transition: "transform 120ms linear"
+    transition: "transform 120ms ease-in-out"
   };
 
   if (!visible) return null;
@@ -99,7 +99,7 @@ export default function ScrollRotatorButton({
       className={`fixed ${bottom} ${right} z-40 cursor-pointer`}
     >
       <span
-        className={`relative inline-block ${size} rounded-full flex items-center justify-center shadow-lgoverflow-hidden`}
+        className={`relative inline-block ${size} rounded-full flex items-center justify-center shadow-lg overflow-hidden`}
         style={wrapperStyle}
       >
         

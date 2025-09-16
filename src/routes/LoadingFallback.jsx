@@ -7,8 +7,7 @@ export default function LoadingFallback() {
       <img
         src={IMAGE_ASSETS.LOGO_SYMBOL}
         alt="loading"
-        className="w-25 lg:w-1/6 animate-spin"
-        style={{ animationDuration: "600ms" }}
+        className="w-20 lg:w-60 animate-smooth-spin"
       />
     </div>
   );

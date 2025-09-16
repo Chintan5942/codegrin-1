@@ -96,7 +96,7 @@ export default function Header() {
             </div>
 
             {/* CENTER - Nav (hidden on mobile) */}
-            <div className="hidden lg:flex justify-center font-primary font-bold">
+            <div className="hidden xl:flex justify-center font-primary font-bold">
               {/* Added flex-nowrap so items never wrap, and each li is flex-shrink-0 */}
               <ul className="flex items-center transition-all duration-500 ease-in-out gap-6 flex-nowrap">
                 {items.map((it) => (
@@ -117,7 +117,7 @@ export default function Header() {
             </div>
 
             {/* RIGHT - mobile-only toggle */}
-            <div className="flex lg:hidden items-center justify-end w-24">
+            <div className="flex xl:hidden items-center justify-end w-24">
             <button
                 onClick={() => setOpen((v) => !v)}
                 className="inline-flex items-center justify-center p-2 rounded"
@@ -139,7 +139,7 @@ export default function Header() {
       {/* Mobile full-screen overlay menu (optimized) */}
       <div
         id="mobile-menu"
-        className={`lg:hidden fixed inset-0 z-50 bg-black/50 h-full backdrop-blur transition-opacity duration-250 overflow-scroll ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        className={`xl:hidden fixed inset-0 z-50 bg-black/50 h-full backdrop-blur transition-opacity duration-250 overflow-scroll ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
         role="dialog"
         aria-modal="true"
         onClick={() => setOpen(false)} // clicking backdrop closes menu
@@ -157,7 +157,7 @@ export default function Header() {
         {/* centered menu panel — animate with transform + opacity (GPU friendly) */}
         <div className="absolute inset-0 flex items-center justify-center">
           <ul
-            className={`transform-gpu transition-transform duration-300 ease-out transition-opacity ${
+            className={`transform-gpu duration-300 ease-out transition-opacity ${
               open ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             } w-full px-6`}
             onClick={(e) => e.stopPropagation()}

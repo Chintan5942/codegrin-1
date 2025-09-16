@@ -9,7 +9,10 @@ import ServiceCard from "../components/Cards/ServiceCard";
 import { SERVICES } from "../constants/ServicesConstants";
 import BorderButton from "../components/Buttons/BorderButton";
 import ToolsAnimation from "../components/ToolsAnimation";
-import PortfolioCarousel from "../components/PortfolioCarousel";
+import PortfolioCarousel from "./Portfolio/PortfolioCarousel";
+import BlogSection from "./Blogs/BlogSection";
+import ClientFeedbackAnimation from "../components/ClientFeedback";
+import TeamCarousel from "../components/TeamCarousel";
 
 export default function Home() {
   return (
@@ -52,7 +55,7 @@ export default function Home() {
           <img
             src={IMAGE_ASSETS.HERO_SECTION_2}
             alt=""
-            className="relative mt-50 w-5/6 md:w-5/6 lg:max-w-300 z-10 animate-float"
+            className="relative mt-50 w-5/6 md:w-5/6 lg:max-w-300 z-10 animate-float-down"
           />
         </div>
       </section>
@@ -67,24 +70,24 @@ export default function Home() {
             direction="row"
             className="mt-10 mb-5 lg:mb-10"
           />
-          <div className="w-full flex flex-col lg:flex-row items-center justify-around gap-5 lg:gap-0">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6 xl:gap-8 items-center justify-items-center">
             <AchivementCard
-              className="animate-float-left lg:animate-float-up"
+              className="animate-float-left lg:animate-float-left xl:animate-float-up"
               count={5}
               title={"Year of trust"}
             />
             <AchivementCard
-              className="animate-float-right lg:animate-float-down"
+              className="animate-float-right lg:animate-float-right xl:animate-float-down"
               count={29}
               title={"Clients"}
             />
             <AchivementCard
-              className="animate-float-left lg:animate-float-up"
+              className="animate-float-left lg:animate-float-right xl:animate-float-up"
               count={30}
               title={"Projects Completed"}
             />
             <AchivementCard
-              className="animate-float-right lg:animate-float-down"
+              className="animate-float-right lg:animate-float-left xl:animate-float-down"
               count={10}
               title={"Countries Served"}
             />
@@ -110,7 +113,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <BorderButton title="View More" link={ROUTES.SERVICES} className="mt-10"/>
+          <BorderButton
+            title="View More"
+            link={ROUTES.SERVICES}
+            className="mt-10"
+          />
         </section>
 
         {/* Tools */}
@@ -121,21 +128,53 @@ export default function Home() {
             direction="col"
             className="mt-20 mb-5 lg:mb-10"
           />
-          <ToolsAnimation
-          />
+          <ToolsAnimation />
         </section>
 
-         {/* Work */}
-         <section>
+        {/* Work */}
+        <section>
           <HeadingTitle
             word1={"Our"}
             word2={"Work"}
             direction="row"
             className="mt-20 mb-5 lg:mb-10"
           />
-          <PortfolioCarousel
-          />
+          <PortfolioCarousel />
         </section>
+
+        {/* Blogs */}
+        <section>
+          <HeadingTitle
+            word1={"Latest"}
+            word2={"Blog"}
+            direction="row"
+            className="mt-20 mb-5 lg:mb-10"
+          />
+          <BlogSection bloglimit={4}/>   
+        </section>
+
+         {/* Client Feedback */}
+         <section>
+          <HeadingTitle
+            word1={"What Client Say's About"}
+            word2={"Our Services"}
+            direction="col"
+            className="mt-30 mb-5 lg:mb-10"
+          />
+          <ClientFeedbackAnimation />
+        </section>
+
+         {/* Team */}
+         <section>
+          <HeadingTitle
+            word1={"Meet"}
+            word2={"Our Team"}
+            direction="row"
+            className="mt-30 mb-5 lg:mb-10"
+          />
+          <TeamCarousel />
+        </section>
+        
       </div>
     </div>
   );

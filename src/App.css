@@ -11,6 +11,7 @@
     --animate-float-down: float-down 2s ease-in-out infinite;
     --animate-float-left: float-left 2s ease-in-out infinite;
     --animate-float-right: float-right 2s ease-in-out infinite;
+    --animate-smooth-spin: smooth-spin 700ms linear infinite;
 
 
     --color-primary: #1A8079;
@@ -82,6 +83,14 @@
         50% {transform: translateX(10px);}
         100% {transform: translateX(0);}
     }
+    @keyframes smooth-spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
 }
 
 

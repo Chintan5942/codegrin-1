@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { PORTFOLIO } from '../constants/PortfolioConstants';
+import { PORTFOLIO } from '../../constants/PortfolioConstants';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { useNavigate } from 'react-router-dom';
-import { ROUTES } from '../constants/RoutesContants';
+import { ROUTES } from '../../constants/RoutesContants';
 
 const PortfolioCarousel = ({
   autoPlay = true,
