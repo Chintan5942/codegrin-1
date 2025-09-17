@@ -105,11 +105,7 @@ export default function Home() {
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
             {SERVICES.slice(0, 8).map((service, index) => (
               <div key={index} className="w-full">
-                <ServiceCard
-                  title={service.title}
-                  description={service.short_description}
-                  img={service.img}
-                />
+                <ServiceCard service={service}/>
               </div>
             ))}
           </div>
@@ -128,7 +124,7 @@ export default function Home() {
             direction="col"
             className="mt-20 mb-5 lg:mb-10"
           />
-          <ToolsAnimation />
+          <ToolsAnimation pauseOnHover={false} />
         </section>
 
         {/* Work */}

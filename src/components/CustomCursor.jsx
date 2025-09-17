@@ -3,16 +3,20 @@ import React, { useEffect, useState } from "react";
 export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
 
   useEffect(() => {
-    // Detect mobile/touch devices
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768 || "ontouchstart" in window);
+    // Detect mobile/tablet/touch devices
+    const checkMobileOrTablet = () => {
+      setIsMobileOrTablet(
+        window.innerWidth < 1024 || // Hide on screens smaller than lg (1024px)
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0
+      );
     };
 
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
+    checkMobileOrTablet();
+    window.addEventListener("resize", checkMobileOrTablet);
 
     const move = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
@@ -21,7 +25,7 @@ export default function CustomCursor() {
     const addHover = () => setHovered(true);
     const removeHover = () => setHovered(false);
 
-    if (!isMobile) {
+    if (!isMobileOrTablet) {
       window.addEventListener("mousemove", move);
 
       // Track hover on links, buttons, inputs etc.
@@ -35,16 +39,16 @@ export default function CustomCursor() {
 
       return () => {
         window.removeEventListener("mousemove", move);
-        window.removeEventListener("resize", checkMobile);
+        window.removeEventListener("resize", checkMobileOrTablet);
         hoverables.forEach((el) => {
           el.removeEventListener("mouseenter", addHover);
           el.removeEventListener("mouseleave", removeHover);
         });
       };
     }
-  }, [isMobile]);
+  }, [isMobileOrTablet]);
 
-  if (isMobile) return null; // 🚀 Hide cursor on mobile
+  if (isMobileOrTablet) return null; // 🚀 Hide cursor on mobile and tablet
 
   return (
     <div

@@ -86,7 +86,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-2">
                 <li>
                   <a
-                    href="index.html"
+                    href={ROUTES.HOME}
                     className="text-sm text-white/70 hover:text-white"
                   >
                     Home
@@ -94,7 +94,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="service.html"
+                    href={ROUTES.SERVICES}
                     className="text-sm text-white/70 hover:text-white"
                   >
                     Services
@@ -102,7 +102,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="courses.html"
+                    href={ROUTES.COURSES}
                     className="text-sm text-white/70 hover:text-white"
                   >
                     Courses
@@ -110,7 +110,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="blog.html"
+                    href={ROUTES.BLOGS}
                     className="text-sm text-white/70 hover:text-white"
                   >
                     Blog
@@ -118,7 +118,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="about.html"
+                    href={ROUTES.ABOUT}
                     className="text-sm text-white/70 hover:text-white"
                   >
                     About Us
@@ -126,7 +126,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="contact.html"
+                    href={ROUTES.CONTACT}
                     className="text-sm text-white/70 hover:text-white"
                   >
                     Contact Us

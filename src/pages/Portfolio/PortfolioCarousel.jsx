@@ -3,6 +3,7 @@ import { PORTFOLIO } from '../../constants/PortfolioConstants';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../constants/RoutesContants';
+import ProjectDetails from './ProjectDetails';
 
 const PortfolioCarousel = ({
   autoPlay = true,
@@ -77,7 +78,7 @@ const PortfolioCarousel = ({
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 hover:scale-105"
               style={{
-                backgroundImage: `url(${project.image_folder}header.png)`
+                backgroundImage: `url(${project.image_path}header.png)`
               }}
             >
               {/* Overlay Gradient */}

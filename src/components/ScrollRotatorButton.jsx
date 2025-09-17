@@ -75,19 +75,19 @@ export default function ScrollRotatorButton({
   }, []);
 
   function handleClick() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.lenis.scrollTo(0);
   }
 
   // Rotate the wrapper; counter-rotate the percent label so it stays upright
   const wrapperStyle = {
     transform: `rotate(${angle}deg)`,
     transformOrigin: "center",
-    transition: "transform 120ms ease-in-out",
+    transition: "transform 200ms ease",
     willChange: "transform"
   };
   const labelStyle = {
     transform: `rotate(${-angle}deg)`,
-    transition: "transform 120ms ease-in-out"
+    transition: "transform 200ms ease"
   };
 
   if (!visible) return null;

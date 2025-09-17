@@ -8,8 +8,9 @@ const TeamCarousel = ({
   direction = "alternate",
   className = "",
 }) => {
-  const allData = IMAGE_ASSETS.TEAM; // Assumes 20 images
+  const allData = IMAGE_ASSETS.TEAM;
   const [columns, setColumns] = useState(numberOfColumns);
+  const imgPerCol = Math.ceil(allData.length / columns);
   const scrollerRefs = useRef([]);
 
   useEffect(() => {
@@ -72,7 +73,7 @@ const TeamCarousel = ({
   };
 
   const getColumnData = (columnIndex) => {
-    const imagesPerColumn = columns === 2 ? 10 : 5;
+    const imagesPerColumn = columns === 2 ? imgPerCol/2 : imgPerCol;
     const startIndex = columnIndex * imagesPerColumn;
     return allData.slice(startIndex, startIndex + imagesPerColumn);
   };

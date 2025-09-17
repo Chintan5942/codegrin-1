@@ -12,7 +12,7 @@ const Breadcrumb = ({
 
   // Route mapping for display names
   const routeNames = {
-    [ROUTES.HOME]: homeLabel,
+    [ROUTES.HOME]: "Home",
     [ROUTES.SERVICES]: "Services",
     [ROUTES.PORTFOLIO]: "Portfolio", 
     [ROUTES.COURSES]: "Courses",
@@ -20,7 +20,6 @@ const Breadcrumb = ({
     [ROUTES.BLOG_DETAILS]: "Blog Details",
     [ROUTES.ABOUT]: "About",
     [ROUTES.CONTACT]: "Contact",
-    [ROUTES.PROJECT_DETAILS]: "Project Details"
   };
 
   // Generate breadcrumb items based on current path
@@ -40,7 +39,26 @@ const Breadcrumb = ({
       }
     ];
 
-    // Add current page
+    // Handle Service Details page specifically
+    if (currentPath === ROUTES.SERVICE_DETAILS && location.state?.service) {
+      // Add Services page
+      breadcrumbs.push({
+        label: "Services",
+        path: ROUTES.SERVICES,
+        current: false
+      });
+      
+      // Add current service title
+      breadcrumbs.push({
+        label: location.state.service.title,
+        path: currentPath,
+        current: true
+      });
+      
+      return breadcrumbs;
+    }
+
+    // Handle other routes
     const currentPageName = routeNames[currentPath];
     if (currentPageName) {
       breadcrumbs.push({
@@ -63,13 +81,13 @@ const Breadcrumb = ({
   return (
     <nav 
       aria-label="Breadcrumb" 
-      className={`flex items-center flex-wrap gap-2 text-md mb-4 ${className}`}
+      className={`flex items-center flex-wrap gap-2 text-sm md:text-md mb-4 ${className}`}
     >
       {breadcrumbs.map((breadcrumb, index) => (
-        <React.Fragment key={breadcrumb.path}>
+        <React.Fragment key={`${breadcrumb.path}-${index}`}>
           {breadcrumb.current ? (
             <span 
-              className="text-white font-semibold px-2 py-1"
+              className="text-white font-semibold px-0 md:px-2 py-1"
               aria-current="page"
             >
               {breadcrumb.label}
@@ -77,7 +95,7 @@ const Breadcrumb = ({
           ) : (
             <Link 
               to={breadcrumb.path}
-              className="text-primary hover:text-primary-light px-2 py-1 rounded-md transition-all duration-200 no-underline"
+              className="text-primary hover:text-primary-light px-0 md:px-2 py-1 rounded-md transition-all duration-200 no-underline"
             >
               {breadcrumb.label}
             </Link>

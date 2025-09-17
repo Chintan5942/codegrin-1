@@ -70,7 +70,7 @@ export const IMAGE_ASSETS = {
   ],
   
    TEAM : [
-    TEAM_BASE + "abhay.png",
+    TEAM_BASE + "abhay.png", //1
     TEAM_BASE + "chintanbhai.png",
     TEAM_BASE + "devan.png",
     TEAM_BASE + "dixit.png",
@@ -79,7 +79,7 @@ export const IMAGE_ASSETS = {
     TEAM_BASE + "kashyap.png",
     TEAM_BASE + "krina.png",
     TEAM_BASE + "krupali.png",
-    TEAM_BASE + "mitenbhai.png",
+    TEAM_BASE + "mitenbhai.png", //10
     TEAM_BASE + "nemisha.png",
     TEAM_BASE + "payal.png",
     TEAM_BASE + "ravibhai.png",
@@ -89,7 +89,10 @@ export const IMAGE_ASSETS = {
     TEAM_BASE + "trushit.png",
     TEAM_BASE + "utsav.png",
     TEAM_BASE + "vansh.png",
-    TEAM_BASE + "vishva.png"
+    TEAM_BASE + "vishva.png", //20
+    TEAM_BASE + "princy.png",
+    TEAM_BASE + "aryan.png",
+    TEAM_BASE + "viren.png",
   ]
   
 };

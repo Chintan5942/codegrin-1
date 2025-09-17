@@ -1,14 +1,17 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-export default function BorderButton({
+const BorderButton = ({
     title,
     link,
     className = "",
-}) {
+    target,
+}) => {
     return (
         <div className="mt-4 bg-black border-none">
             <Link
                 to={link}
+                target={target}
                 className={`
                     relative inline-block px-8 py-2 
                     border-2 border-white 
@@ -29,7 +32,7 @@ export default function BorderButton({
                         scale-y-100 group-hover:scale-y-0
                         origin-center
                     "
-                ></span>
+                />
                 
                 {/* After pseudo-element - horizontal scaling */}
                 <span 
@@ -41,7 +44,7 @@ export default function BorderButton({
                         scale-x-100 group-hover:scale-x-0
                         origin-center
                     "
-                ></span>
+                />
                 
                 {/* Text content */}
                 <span className="relative z-10">
@@ -50,4 +53,6 @@ export default function BorderButton({
             </Link>
         </div>
     );
-}
+};
+
+export default BorderButton;

@@ -1,12 +1,16 @@
-export default function ServiceCard({
-  title,
-  description,
-  img,
-  className = "",
-}) {
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../constants/RoutesContants";
+
+export default function ServiceCard(props) {
+  const navigate = useNavigate();
+
+  const handleRedirect = (service) => {
+    navigate(ROUTES.SERVICE_DETAILS, { state: { service } });
+  };
   return (
     <div
-    className={`relative group h-full flex flex-col text-white border-t md:border-t-0 md:border-l border-primary-border hover:border-primary-border transition-all duration-500 ease-in-out ${className}`}
+    className={`cursor-pointer relative group h-full flex flex-col text-white border-t md:border-t-0 md:border-l border-primary-border hover:border-primary-border transition-all duration-500 ease-in-out`}
+    onClick={() => handleRedirect(props.service)}
   >
   
       {/* Background glow effect */}
@@ -27,7 +31,7 @@ export default function ServiceCard({
       {/* Icon Section with floating animation */}
       <div className="flex items-center p-6 sm:p-8 pb-0 h-20 relative z-10">
         <img
-          src={img}
+          src={props.service.img}
           className="h-12 w-auto object-contain mt-5 transition-all  ease-out group-hover:brightness-110 group-hover:-translate-y-1 group-hover:drop-shadow-lg"
           alt=""
         />
@@ -36,14 +40,14 @@ export default function ServiceCard({
       {/* Title Section with slide-up animation */}
       <div className="px-6 sm:px-8 py-4 min-h-[4rem] flex items-start relative z-10">
         <h3 className="text-xl text-white font-bold leading-tight transition-all duration-400 ease-out transform">
-          {title}
+          {props.service.title}
         </h3>
       </div>
 
       {/* Description Section with fade-in slide animation */}
       <div className="px-6 sm:px-8 pb-6 sm:pb-8 flex-grow relative z-10">
-        <p className="text-md text-gray-400 group-hover:text-white leading-tight transition-all duration-500 delay-100 ease-out  group-hover:opacity-100">
-          {description}
+        <p className="text-md text-gray-500 group-hover:text-white leading-tight transition-all duration-500 delay-100 ease-out  group-hover:opacity-100">
+          {props.service.short_description}
         </p>
       </div>
     </div>

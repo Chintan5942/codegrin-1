@@ -17,13 +17,14 @@ import RouteLoader from "./components/RouteLoader";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import ServiceDetails from "./pages/Services/ServiceDetails";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2,
+      duration: 1.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smooth: true,
       direction: "vertical",
@@ -31,7 +32,6 @@ export default function App() {
       smoothTouch: false,
     });
 
-    // ✅ make lenis accessible globally
     window.lenis = lenis;
 
     ScrollTrigger.scrollerProxy(document.documentElement, {
@@ -75,6 +75,7 @@ export default function App() {
           <Route path={ROUTES.HOME} element={<MainLayout />}>
             <Route index element={<Home />} />
             <Route path={ROUTES.SERVICES} element={<Services />} />
+            <Route path={ROUTES.SERVICE_DETAILS} element={<ServiceDetails />} />
             <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
             <Route path={ROUTES.COURSES} element={<Courses />} />
             <Route path={ROUTES.BLOG} element={<Blogs />} />
