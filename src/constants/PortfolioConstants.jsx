@@ -1,4 +1,5 @@
 const BASE_URL = "assets/images/portfolio/";
+export const PORTFOLIO_CATEGORY = ["nextjs", "reactjs","nodejs","wordpress", "shopify","blockchain","mobile","uiux", "erp"];
 export const PORTFOLIO = [
   {
     title: "Lumetiq",

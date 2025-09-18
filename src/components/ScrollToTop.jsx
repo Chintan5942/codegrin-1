@@ -6,10 +6,10 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     if (window.lenis) {
-      // ✅ smooth scroll to top
+      
       window.lenis.scrollTo(0, { immediate: true });
     } else {
-      // fallback if lenis not initialized
+     
       window.scrollTo(0, 0);
     }
   }, [pathname]);

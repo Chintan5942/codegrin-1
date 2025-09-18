@@ -1,11 +1,15 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
 import { ROUTES } from "../../constants/RoutesContants";
 import BorderButton from "../../components/Buttons/BorderButton";
 const ServiceDetails = () => {
   const location = useLocation();
   const service = location.state?.service;
+
+  if (!service) {
+    return <Navigate to={ROUTES.SERVICES} replace />;
+  }
   return (
     <div className="container">
       <PageTitle title={service.title} showBreadcrumb={true} />

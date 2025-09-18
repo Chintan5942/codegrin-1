@@ -13,7 +13,6 @@ import Contact from "./pages/Contact";
 import Blogs from "./pages/Blogs/Blogs";
 import ProjectDetails from "./pages/Portfolio/ProjectDetails";
 import ScrollToTop from "./components/ScrollToTop";
-import RouteLoader from "./components/RouteLoader";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -68,9 +67,8 @@ export default function App() {
   }, []);
 
   return (
-    <RouteLoader>
+    <>
       <ScrollToTop />
-      <Suspense fallback={null}>
         <Routes>
           <Route path={ROUTES.HOME} element={<MainLayout />}>
             <Route index element={<Home />} />
@@ -86,7 +84,6 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
-      </Suspense>
-    </RouteLoader>
+    </ >
   );
 }
