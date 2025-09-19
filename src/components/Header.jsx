@@ -162,7 +162,7 @@ export default function Header() {
             } w-full px-6`}
             onClick={(e) => e.stopPropagation()}
           >
-            {items.map((it) => (
+            {/* {items.map((it) => (
               <li key={it.label} className="w-full">
                 <NavLink
                   to={it.href}
@@ -176,7 +176,14 @@ export default function Header() {
                   {it.label}
                 </NavLink>
               </li>
-            ))}
+            ))} */}
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/courses">Courses</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
           </ul>
         </div>
       </div>
