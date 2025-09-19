@@ -17,6 +17,8 @@ import BlogDetails from "./pages/Blogs/BlogDetails";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import ServiceDetails from "./pages/Services/ServiceDetails";
+import useDocumentLoader from "./hooks/useDocumentLoader";
+import PreLoader from "./components/Preloader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,6 +67,14 @@ export default function App() {
       lenis.destroy();
     };
   }, []);
+  const { isLoading } = useDocumentLoader({
+    minLoadTime: 1000,
+    onLoadComplete: () => console.log('App fully loaded')
+  });
+
+  if (isLoading) {
+    return <PreLoader />;
+  }
 
   return (
     <>
