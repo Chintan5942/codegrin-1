@@ -57,13 +57,13 @@ export default function Header() {
   }, [open]);
 
   const items = [
-    { label: "Home", href: "/" },
-    { label: "Services", href:"/services"},
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Courses", href: "/courses" },
-    { label: "Blog", href: "/blog" },
-    { label: "About", href: "/about" },
-    { label: "Contact Us", href: "/contact" }
+    { label: "Home", href: ROUTES.HOME },
+    { label: "Services", href: ROUTES.SERVICES },
+    { label: "Portfolio", href: ROUTES.PORTFOLIO },
+    { label: "Courses", href: ROUTES.COURSES },
+    { label: "Blog", href: ROUTES.BLOG },
+    { label: "About", href: ROUTES.ABOUT },
+    { label: "Contact Us", href: ROUTES.CONTACT }
   ];
 
   // bg + blur + shadow classes based on scroll
@@ -90,7 +90,7 @@ export default function Header() {
                   src={IMAGE_ASSETS.LOGO}
                   alt="Company logo"
                   className={`h-10 sm:h-12 md:h-14 w-auto transform transition-transform duration-500 ease-in-out ${scrolled ? "scale-95" : "scale-100"}`}
-                 
+                  loading="lazy"
                 />
               </NavLink>
             </div>
@@ -162,7 +162,7 @@ export default function Header() {
             } w-full px-6`}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* {items.map((it) => (
+            {items.map((it) => (
               <li key={it.label} className="w-full">
                 <NavLink
                   to={it.href}
@@ -176,14 +176,7 @@ export default function Header() {
                   {it.label}
                 </NavLink>
               </li>
-            ))} */}
-            <a href="/">Home</a>
-            <a href="/services">Services</a>
-            <a href="/portfolio">Portfolio</a>
-            <a href="/courses">Courses</a>
-            <a href="/blog">Blog</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+            ))}
           </ul>
         </div>
       </div>
