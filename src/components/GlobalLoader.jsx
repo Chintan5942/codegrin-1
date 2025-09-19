@@ -1,7 +1,6 @@
-import React from "react";
 import { IMAGE_ASSETS } from "../constants/ImageContants";
 
-const GlobalLoader = () => {
+const GlobalPageLoader = () => {
 
   return (
     <div
@@ -11,9 +10,12 @@ const GlobalLoader = () => {
         src={IMAGE_ASSETS.LOGO_SYMBOL}
         alt="loading"
         className="w-20 lg:w-60 animate-smooth-spin"
+        style={{
+          animationDuration: "0.75s",
+        }}
       />
     </div>
   );
 };
 
-export default GlobalLoader;
+export default GlobalPageLoader;

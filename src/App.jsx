@@ -1,5 +1,5 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import { ROUTES } from "./constants/RoutesContants";
 import gsap from "gsap";
@@ -17,21 +17,10 @@ import BlogDetails from "./pages/Blogs/BlogDetails";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import ServiceDetails from "./pages/Services/ServiceDetails";
-import GlobalLoader from "./components/GlobalLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
-  const {pathname} = useLocation();
-  const [screenLoading, setScreenLoading] = useState(false);
-
-  useEffect(() => {
-    setScreenLoading(true);
-    setTimeout(() => {
-      setScreenLoading(false);
-    }, 1500);
-  }, [pathname]);
-
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
@@ -50,12 +39,7 @@ export default function App() {
         return lenis.scroll;
       },
       getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
       },
       pinType: document.documentElement.style.transform ? "transform" : "fixed",
     });
@@ -82,24 +66,93 @@ export default function App() {
     };
   }, []);
 
-  return screenLoading ? (
-    <GlobalLoader />
-  ) : (
+  return (
     <>
       <ScrollToTop />
       <Routes>
-        <Route path={ROUTES.HOME} element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path={ROUTES.SERVICES} element={<Services />} />
-          <Route path={ROUTES.SERVICE_DETAILS} element={<ServiceDetails />} />
-          <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
-          <Route path={ROUTES.COURSES} element={<Courses />} />
-          <Route path={ROUTES.BLOG} element={<Blogs />} />
-          <Route path={ROUTES.BLOG_DETAILS} element={<BlogDetails />} />
-          <Route path={ROUTES.ABOUT} element={<AboutUs />} />
-          <Route path={ROUTES.CONTACT} element={<Contact />} />
-          <Route path={ROUTES.PROJECT_DETAILS} element={<ProjectDetails />} />
-        </Route>
+        {/* All pages wrapped in MainLayout */}
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <Home />
+            </MainLayout>
+          }
+        />
+        <Route
+          path={ROUTES.SERVICES}
+          element={
+            <MainLayout>
+              <Services />
+            </MainLayout>
+          }
+        />
+        <Route
+          path={ROUTES.SERVICE_DETAILS}
+          element={
+            <MainLayout>
+              <ServiceDetails />
+            </MainLayout>
+          }
+        />
+        <Route
+          path={ROUTES.PORTFOLIO}
+          element={
+            <MainLayout>
+              <Portfolio />
+            </MainLayout>
+          }
+        />
+        <Route
+          path={ROUTES.COURSES}
+          element={
+            <MainLayout>
+              <Courses />
+            </MainLayout>
+          }
+        />
+        <Route
+          path={ROUTES.BLOG}
+          element={
+            <MainLayout>
+              <Blogs />
+            </MainLayout>
+          }
+        />
+        <Route
+          path={ROUTES.BLOG_DETAILS}
+          element={
+            <MainLayout>
+              <BlogDetails />
+            </MainLayout>
+          }
+        />
+        <Route
+          path={ROUTES.ABOUT}
+          element={
+            <MainLayout>
+              <AboutUs />
+            </MainLayout>
+          }
+        />
+        <Route
+          path={ROUTES.CONTACT}
+          element={
+            <MainLayout>
+              <Contact />
+            </MainLayout>
+          }
+        />
+        <Route
+          path={ROUTES.PROJECT_DETAILS}
+          element={
+            <MainLayout>
+              <ProjectDetails />
+            </MainLayout>
+          }
+        />
+
+        {/* NotFound outside MainLayout */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
