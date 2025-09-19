@@ -57,13 +57,13 @@ export default function Header() {
   }, [open]);
 
   const items = [
-    { label: "Home", href: ROUTES.HOME },
-    { label: "Services", href: ROUTES.SERVICES },
-    { label: "Portfolio", href: ROUTES.PORTFOLIO },
-    { label: "Courses", href: ROUTES.COURSES },
-    { label: "Blog", href: ROUTES.BLOG },
-    { label: "About", href: ROUTES.ABOUT },
-    { label: "Contact Us", href: ROUTES.CONTACT }
+    { label: "Home", href: "/" },
+    { label: "Services", href:"/services"},
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Courses", href: "/courses" },
+    { label: "Blog", href: "/blog" },
+    { label: "About", href: "/about" },
+    { label: "Contact Us", href: "/contact" }
   ];
 
   // bg + blur + shadow classes based on scroll
@@ -85,12 +85,12 @@ export default function Header() {
           <div className="flex items-center justify-between w-full">
             {/* LEFT - Logo */}
             <div className="flex-shrink-0">
-              <NavLink to={ROUTES.HOME} loading="lazy" className="flex items-center gap-3" aria-label="Home">
+              <NavLink to={ROUTES.HOME} className="flex items-center gap-3" aria-label="Home">
                 <img
                   src={IMAGE_ASSETS.LOGO}
                   alt="Company logo"
                   className={`h-10 sm:h-12 md:h-14 w-auto transform transition-transform duration-500 ease-in-out ${scrolled ? "scale-95" : "scale-100"}`}
-                  loading="lazy"
+                 
                 />
               </NavLink>
             </div>
@@ -103,7 +103,6 @@ export default function Header() {
                   <li key={it.label} className="flex-shrink-0">
                     <NavLink
                       to={it.href}
-                      loading="lazy"
                       className={({ isActive }) =>
                         `px-3 py-2 font-medium transition-colors duration-200 whitespace-nowrap ${
                           isActive ? "text-primary-light" : "text-white hover:text-primary"
