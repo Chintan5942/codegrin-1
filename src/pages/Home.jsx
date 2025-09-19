@@ -13,7 +13,6 @@ import PortfolioCarousel from "./Portfolio/PortfolioCarousel";
 import BlogSection from "./Blogs/BlogSection";
 import ClientFeedbackAnimation from "../components/ClientFeedback";
 import TeamCarousel from "../components/TeamCarousel";
-
 export default function Home() {
   return (
     <div>
