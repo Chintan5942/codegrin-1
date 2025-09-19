@@ -10,7 +10,7 @@ export default function MainLayout() {
   return (
     <>
       <div className="bg-black text-white font-primary min-h-screen flex flex-col">
-        <GlobalPageLoader />
+        {/* <GlobalPageLoader /> */}
         <Header overlay />
         <CustomCursor />
         <main className="flex-1 w-full">

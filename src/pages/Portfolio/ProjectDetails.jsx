@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { ROUTES } from "../../constants/RoutesContants";
-import { PORTFOLIO } from "../../constants/PortfolioConstants"; // Import PORTFOLIO array
+import { PORTFOLIO } from "../../constants/PortfolioConstants";
 import BorderButton from "../../components/Buttons/BorderButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import GlobalLoader from "../../components/GlobalLoader";
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectDetails = () => {
@@ -18,6 +18,9 @@ const ProjectDetails = () => {
   const titleFillRef = useRef(null);
   const nextProjectRef = useRef(null);
   const nextBgRef = useRef(null);
+
+  // Track which images are loaded
+  const [loadedImages, setLoadedImages] = useState([]);
 
   // Scroll to top on route change
   useEffect(() => {
@@ -35,75 +38,67 @@ const ProjectDetails = () => {
 
   const nextProject = getNextProject();
 
+  // Preload all images
   useEffect(() => {
     if (!portfolio?.project_images) return;
 
-    // Wait for all images to load before initializing animations
-    const imagePromises = portfolio?.project_images.map((image) => {
+    const imagePromises = portfolio?.project_images.map((image, index) => {
       return new Promise((resolve) => {
         const img = new Image();
-        img.onload = resolve;
-        img.onerror = resolve; // Still resolve on error to avoid hanging
+        img.onload = () => {
+          setLoadedImages((prev) => [...prev, index]);
+          resolve();
+        };
+        img.onerror = () => resolve();
         img.src = portfolio?.image_path + image;
       });
     });
 
     Promise.all(imagePromises).then(() => {
-      // Small delay to ensure DOM has updated
       setTimeout(() => {
-        // GSAP ScrollTrigger animation for clip-path
+        // GSAP ScrollTrigger animation
         clipperRefs.current.forEach((clip) => {
           if (clip) {
             gsap.fromTo(
               clip,
-              { clipPath: "inset(25% round 50px)" }, // start state
+              { clipPath: "inset(25% round 50px)" },
               {
-                clipPath: "inset(0% round 0px)", // end state
+                clipPath: "inset(0% round 0px)",
                 ease: "none",
                 scrollTrigger: {
                   trigger: clip,
-                  start: "top 100%", // when image enters viewport
-                  end: "bottom 100%", // until it passes
+                  start: "top 100%",
+                  end: "bottom 100%",
                   scrub: true,
-                  markers: false, // set to true to debug
                 },
               }
             );
           }
         });
 
-        // Next project title fill animation
+        // Next project title animation
         if (nextProjectRef.current) {
           gsap.to(titleFillRef.current, {
             scrollTrigger: {
               trigger: nextProjectRef.current,
               start: "top 100%",
               end: "bottom 100%",
-              scrub: true, // smooth with scroll
+              scrub: true,
               onLeave: () => {
-                // Navigate to next project when animation is done
                 if (nextProject) {
                   const nextIndex = (currentIndex + 1) % PORTFOLIO.length;
-                  
-                  // Kill all ScrollTrigger instances before navigation
-                  ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-                  
-                  // Navigate and scroll to top
+                  ScrollTrigger.getAll().forEach((t) => t.kill());
                   navigate(ROUTES.PROJECT_DETAILS, {
-                    state: {
-                      portfolio: nextProject,
-                      currentIndex: nextIndex
-                    }
+                    state: { portfolio: nextProject, currentIndex: nextIndex },
                   });
-                  
-                window.lenis.scrollTo(0 ,{immediate: true});
+                  window.lenis.scrollTo(0, { immediate: true });
                 }
-              }
-            }
+              },
+            },
           });
         }
 
-        // Next project background parallax animation
+        // Next project bg parallax
         if (nextBgRef.current && nextProjectRef.current) {
           gsap.to(nextBgRef.current, {
             y: "-20%",
@@ -112,17 +107,17 @@ const ProjectDetails = () => {
               trigger: nextProjectRef.current,
               start: "top bottom",
               end: "bottom top",
-              scrub: true
-            }
+              scrub: true,
+            },
           });
         }
+
         ScrollTrigger.refresh();
       }, 0);
     });
 
-    // Cleanup function
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, [portfolio, currentIndex, nextProject, navigate]);
 
@@ -136,11 +131,11 @@ const ProjectDetails = () => {
       <div className="relative min-h-screen w-full overflow-hidden">
         <div className="absolute bg-black/50 w-full h-screen z-10 flex items-center justify-center text-shadow-lg/25 text-white font-bold text-2xl md:text-4xl lg:text-6xl xl:text-7xl">
           {portfolio?.title}
-        </div>  
+        </div>
         <img
           src={portfolio?.image_path + "header.png"}
           className="absolute top-1/2 left-0 -translate-y-1/2 min-h-full min-w-none object-cover z-0"
-        />  
+        />
       </div>
 
       {/* Details */}
@@ -181,7 +176,7 @@ const ProjectDetails = () => {
         </div>
       </div>
 
-      {/* Images */}
+      {/* Images with Skeleton Loader */}
       <div className="mt-20">
         {portfolio?.project_images.map((image, index) => (
           <div key={index} className="w-full relative tt-clipper">
@@ -191,11 +186,16 @@ const ProjectDetails = () => {
               style={{ clipPath: "inset(25% round 45px)" }}
             >
               <div className="absolute inset-0 -z-1 tt-clipper-bg">
-                <img
-                  src={portfolio?.image_path + image}
-                  alt={portfolio?.title}
-                  className="w-full h-full object-contain"
-                />
+                {!loadedImages.includes(index) ? (
+                  // Skeleton loader
+                 <GlobalLoader/>
+                ) : (
+                  <img
+                    src={portfolio?.image_path + image}
+                    alt={portfolio?.title}
+                    className="w-full h-full object-contain"
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -204,22 +204,25 @@ const ProjectDetails = () => {
 
       {/* Next Project Section */}
       {nextProject && (
-        <section 
+        <section
           ref={nextProjectRef}
           className="next-project relative min-h-screen overflow-hidden"
         >
           <div className="bg absolute inset-0">
-            <img 
+            <img
               ref={nextBgRef}
-              src={nextProject.image_path + "header.png"} 
+              src={nextProject.image_path + "header.png"}
               alt="Next Project Background"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="next-project-inner relative z-10 flex items-center justify-center min-h-screen bg-black/50">
             <div className="text-center">
-              <h2 ref={titleFillRef} className="text-2xl md:text-3xl lg:text-5xl font-bold">
-                  Next: {nextProject.title}
+              <h2
+                ref={titleFillRef}
+                className="text-2xl md:text-3xl lg:text-5xl font-bold"
+              >
+                Next: {nextProject.title}
               </h2>
             </div>
           </div>

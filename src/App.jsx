@@ -1,5 +1,5 @@
-import React, { Suspense, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { Suspense, useEffect, useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import { ROUTES } from "./constants/RoutesContants";
 import gsap from "gsap";
@@ -17,10 +17,21 @@ import BlogDetails from "./pages/Blogs/BlogDetails";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import ServiceDetails from "./pages/Services/ServiceDetails";
+import GlobalLoader from "./components/GlobalLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
+  const {pathname} = useLocation();
+  const [screenLoading, setScreenLoading] = useState(false);
+
+  useEffect(() => {
+    setScreenLoading(true);
+    setTimeout(() => {
+      setScreenLoading(false);
+    }, 1500);
+  }, [pathname]);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
@@ -39,7 +50,12 @@ export default function App() {
         return lenis.scroll;
       },
       getBoundingClientRect() {
-        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
       },
       pinType: document.documentElement.style.transform ? "transform" : "fixed",
     });
@@ -66,24 +82,26 @@ export default function App() {
     };
   }, []);
 
-  return (
+  return screenLoading ? (
+    <GlobalLoader />
+  ) : (
     <>
       <ScrollToTop />
-        <Routes>
-          <Route path={ROUTES.HOME} element={<MainLayout />}>
-            <Route index element={<Home />} />
-            <Route path={ROUTES.SERVICES} element={<Services />} />
-            <Route path={ROUTES.SERVICE_DETAILS} element={<ServiceDetails />} />
-            <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
-            <Route path={ROUTES.COURSES} element={<Courses />} />
-            <Route path={ROUTES.BLOG} element={<Blogs />} />
-            <Route path={ROUTES.BLOG_DETAILS} element={<BlogDetails />} />
-            <Route path={ROUTES.ABOUT} element={<AboutUs />} />
-            <Route path={ROUTES.CONTACT} element={<Contact />} />
-            <Route path={ROUTES.PROJECT_DETAILS} element={<ProjectDetails />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-    </ >
+      <Routes>
+        <Route path={ROUTES.HOME} element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path={ROUTES.SERVICES} element={<Services />} />
+          <Route path={ROUTES.SERVICE_DETAILS} element={<ServiceDetails />} />
+          <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
+          <Route path={ROUTES.COURSES} element={<Courses />} />
+          <Route path={ROUTES.BLOG} element={<Blogs />} />
+          <Route path={ROUTES.BLOG_DETAILS} element={<BlogDetails />} />
+          <Route path={ROUTES.ABOUT} element={<AboutUs />} />
+          <Route path={ROUTES.CONTACT} element={<Contact />} />
+          <Route path={ROUTES.PROJECT_DETAILS} element={<ProjectDetails />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }

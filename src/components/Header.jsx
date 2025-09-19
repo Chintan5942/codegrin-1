@@ -85,7 +85,7 @@ export default function Header() {
           <div className="flex items-center justify-between w-full">
             {/* LEFT - Logo */}
             <div className="flex-shrink-0">
-              <NavLink to={ROUTES.HOME} className="flex items-center gap-3" aria-label="Home">
+              <NavLink to={ROUTES.HOME} loading="lazy" className="flex items-center gap-3" aria-label="Home">
                 <img
                   src={IMAGE_ASSETS.LOGO}
                   alt="Company logo"
@@ -103,6 +103,7 @@ export default function Header() {
                   <li key={it.label} className="flex-shrink-0">
                     <NavLink
                       to={it.href}
+                      loading="lazy"
                       className={({ isActive }) =>
                         `px-3 py-2 font-medium transition-colors duration-200 whitespace-nowrap ${
                           isActive ? "text-primary-light" : "text-white hover:text-primary"
