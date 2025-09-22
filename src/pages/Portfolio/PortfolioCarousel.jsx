@@ -3,7 +3,6 @@ import { PORTFOLIO } from '../../constants/PortfolioConstants';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../constants/RoutesContants';
-import ProjectDetails from './ProjectDetails';
 
 const PortfolioCarousel = ({
   autoPlay = true,
@@ -52,8 +51,10 @@ const PortfolioCarousel = ({
     setCurrentSlide((prev) => (prev + 1) % displayProjects.length);
   };
 
-  const handleRedirect = (project) => {
-    navigate(ROUTES.PROJECT_DETAILS, { state: { project } });
+  const handleRedirect = (portfolio, index) => {
+    navigate(ROUTES.PROJECT_DETAILS, {
+      state: { portfolio, currentIndex: index },
+    });
   };
   
 
@@ -72,10 +73,10 @@ const PortfolioCarousel = ({
           <div 
             key={index} 
             className="relative w-full h-full flex-shrink-0 cursor-pointer"
-            onClick={() => handleRedirect(project)}
+            onClick={() => handleRedirect(project, index)}
           >
             {/* Background Image */}
-            <div 
+            <div  
               className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 hover:scale-105"
               style={{
                 backgroundImage: `url(${project.image_path}header.png)`

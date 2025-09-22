@@ -16,7 +16,7 @@ const Breadcrumb = ({
     [ROUTES.SERVICES]: "Services",
     [ROUTES.PORTFOLIO]: "Portfolio", 
     [ROUTES.COURSES]: "Courses",
-    [ROUTES.BLOG]: "Blog",
+    [ROUTES.BLOG]: "Blogs",
     [ROUTES.BLOG_DETAILS]: "Blog Details",
     [ROUTES.ABOUT]: "About",
     [ROUTES.CONTACT]: "Contact",
@@ -57,6 +57,46 @@ const Breadcrumb = ({
       
       return breadcrumbs;
     }
+
+    // Handle Course Details page specifically
+    if (currentPath === ROUTES.COURSE_DETAILS && location.state?.course) {
+      // Add Courses page
+      breadcrumbs.push({
+        label: "Courses",
+        path: ROUTES.COURSES,
+        current: false
+      });
+      
+      // Add current course title
+      breadcrumbs.push({
+        label: location.state.course.category,
+        path: currentPath,
+        current: true
+      });
+      
+      return breadcrumbs;
+    }
+
+    // Handle Blog Details page specifically
+    if (currentPath === ROUTES.BLOG_DETAILS && location.state?.blog) {
+      // Add Courses page
+      breadcrumbs.push({
+        label: "Blog",
+        path: ROUTES.BLOG,
+        current: false
+      });
+      
+      // Add current course title
+      breadcrumbs.push({
+        label: location.state.blog.title,
+        path: currentPath,
+        current: true
+      });
+      
+      return breadcrumbs;
+    }
+
+
 
     // Handle other routes
     const currentPageName = routeNames[currentPath];

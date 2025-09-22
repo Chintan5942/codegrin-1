@@ -16,7 +16,7 @@ const ServiceDetails = () => {
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 mt-20 mb-5 lg:mb-10">
         <div className="w-full text-justify lg:order-1 order-2">
           {service?.description?.map((desc, i) => (
-            <li className="list-none mt-3 text-sm md:text-base text-gray-300" key={i}>
+            <li className="list-none mt-3 text-sm md:text-base text-secondary" key={i}>
               {desc}
             </li>
           ))}

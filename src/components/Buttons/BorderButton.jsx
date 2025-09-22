@@ -8,7 +8,7 @@ const BorderButton = ({
     target,
 }) => {
     return (
-        <div className="mt-4 bg-black border-none">
+        <div className="mt-4 border-none">
             <Link
                 to={link}
                 target={target}

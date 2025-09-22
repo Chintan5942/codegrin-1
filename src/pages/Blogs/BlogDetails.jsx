@@ -1,20 +1,24 @@
 
 import { useLocation } from "react-router-dom";
+import PageTitle from "../../components/PageTitle";
 
 export default function BlogDetails() {
   const location = useLocation();
   // const navigate = useNavigate();
   const blog = location.state?.blog;
   return (
-    <div className="max-w-3xl mx-auto py-10">
-      <img
-        src={blog.header_img}
-        alt={blog.title}
-        className="w-full h-96 object-cover rounded-xl mb-6"
+    <div className="container">
+      <PageTitle title={blog.title} showBreadcrumb={false} />
+      <img src={blog.blog_image} alt="" className="w-full h-full object-cover rounded-xl my-10"/>
+      <div 
+        className="prose prose-lg max-w-none"
+        dangerouslySetInnerHTML={{ __html: blog.blog_content }}
       />
-      <h1 className="text-3xl font-bold mb-2">{blog.title}</h1>
-      <p className="text-gray-500 mb-6">{blog.upload_date}</p>
-      <div className="text-lg leading-relaxed">{blog.content}</div>
+      <div className="flex justify-between items-center border-t border-primary mt-10 pt-5">
+        <p className="text-gray-500">{blog.upload_date}</p>
+        <p className="text-gray-500">- {blog.publisher_name}</p>
+      </div>
+      
     </div>
   );
 }

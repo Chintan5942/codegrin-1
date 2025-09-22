@@ -38,9 +38,9 @@ export default function Home() {
           direction="col"
         />
         <Orbit
-          planetCount={10}
+          planetCount={5}
           radius={{ base: "40%", md: "35%", lg: "27%" }}
-          duration={45000}
+          duration={20000}
           className="translate-y-45 md:translate-y-65 lg:translate-y-115"
         />
         <div className="relative flex w-full justify-center items-center pointer-events-none">

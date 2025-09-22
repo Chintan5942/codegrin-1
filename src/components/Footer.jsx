@@ -1,33 +1,33 @@
 // src/components/Footer.jsx
 import React from "react";
-import { SOCIAL_PROFILES } from "../constants/SocialProfilesConstants";
 import { IMAGE_ASSETS } from "../constants/ImageContants";
 import { ROUTES } from "../constants/RoutesContants";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { COMPANY_INFO } from "../constants/CompanyInfo";
 
 // Social items config
 const SOCIAL_ITEMS = [
   {
     key: "linkedin",
-    href: SOCIAL_PROFILES.LINKEDIN,
+    href: COMPANY_INFO.LINKEDIN,
     icon: "ri:linkedin-fill",
     aria: "LinkedIn",
   },
   {
     key: "upwork",
-    href: SOCIAL_PROFILES.UPWORK,
+    href: COMPANY_INFO.UPWORK,
     icon: "cib:upwork",
     aria: "Upwork",
   },
   {
     key: "instagram",
-    href: SOCIAL_PROFILES.INSTAGRAM,
+    href: COMPANY_INFO.INSTAGRAM,
     icon: "simple-icons:instagram",
     aria: "Instagram",
   },
   {
     key: "email",
-    href: `mailto:${SOCIAL_PROFILES.EMAIL}`,
+    href: `mailto:${COMPANY_INFO.EMAIL}`,
     icon: "material-symbols:mail-outline-rounded",
     aria: "Email",
   },
@@ -38,8 +38,7 @@ export default function Footer() {
     <footer className="pt-10 mt-10 font-primary border-t border-white/20 section-space-sm-bottom relative text-white">
       <div className="section-space-md-bottom">
         <div className="container">
-          <div
-            className="grid gap-x-8 gap-y-6
+          <div className="grid gap-x-8 gap-y-6
                           grid-cols-2
                           md:grid-cols-2 md:grid-rows-2
                           lg:grid-cols-[1.6fr_1fr_1fr_1fr] lg:grid-rows-1"
@@ -71,7 +70,7 @@ export default function Footer() {
                       rel="noreferrer"
                       href={item.href}
                       aria-label={item.aria}
-                      className="inline-flex items-center justify-center w-10 h-10 rounded-full text-black bg-white hover:bg-white/10 hover:text-white transition"
+                      className="inline-flex items-center justify-center w-10 h-10 rounded-full text-black bg-white transition"
                     >
                       <Icon icon={item.icon} width={20} height={20} />
                     </a>
@@ -110,10 +109,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href={ROUTES.BLOGS}
+                    href={ROUTES.BLOG}
                     className="text-sm text-white/70 hover:text-white"
                   >
-                    Blog
+                    Blogs
                   </a>
                 </li>
                 <li>
@@ -186,29 +185,33 @@ export default function Footer() {
                     className="flex-shrink-0 mt-0.5"
                   />
                   <a
-                    href="https://www.google.com/maps?ll=22.275119,70.778775&z=16"
+                    href={COMPANY_INFO.ADDRESS_MAP}
                     target="_blank"
                     rel="noreferrer"
                     className="text-sm text-white/70 hover:text-primary"
                   >
-                    309 - R K Prime, Nana Mava Circle, 150 Feet Ring Rd, Rajkot,
-                    Gujarat , 360005
+                    {COMPANY_INFO.ADDRESS}
                   </a>
                 </li>
 
-                <li className="flex gap-3 items-center">
+                <li className="flex gap-3 items-start">
                   <Icon
                     icon="mage:phone-call"
                     width={20}
                     height={20}
                     className="flex-shrink-0"
                   />
-                  <a
-                    href="tel:+918238813001"
-                    className="text-sm text-white/70 hover:text-primary"
-                  >
-                    +91 8238813001
-                  </a>
+                  <div className="flex flex-col gap-2">
+                    {COMPANY_INFO.PHONE.map((phone, index) => (
+                      <a
+                        key={index}
+                        href={`tel:${phone}`}
+                        className="text-sm text-white/70 hover:text-primary"
+                      >
+                        {phone}
+                      </a>
+                    ))}
+                  </div>
                 </li>
 
                 <li className="flex gap-3 items-center">
@@ -219,10 +222,10 @@ export default function Footer() {
                     className="flex-shrink-0"
                   />
                   <a
-                    href="mailto:info@codegrin.com"
+                    href={`mailto:${COMPANY_INFO.EMAIL}`}
                     className="text-sm text-white/70 hover:text-primary"
                   >
-                    info@codegrin.com
+                    {COMPANY_INFO.EMAIL}
                   </a>
                 </li>
               </ul>

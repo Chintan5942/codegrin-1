@@ -111,7 +111,7 @@ const ClientFeedbackAnimation = ({
                 >
                   <div className="flex justify-between items-start gap-4 mb-4">
                     <div className="flex-grow">
-                      <h4 className="mb-1 font-bold text-lg text-primary-light">
+                      <h4 className="mb-1 font-bold text-lg text-primary">
                         {feedback.clientName}
                       </h4>
                       <span className="text-sm text-gray-500">

@@ -61,7 +61,7 @@ export default function Header() {
     { label: "Services", href: ROUTES.SERVICES },
     { label: "Portfolio", href: ROUTES.PORTFOLIO },
     { label: "Courses", href: ROUTES.COURSES },
-    { label: "Blog", href: ROUTES.BLOG },
+    { label: "Blogs", href: ROUTES.BLOG },
     { label: "About", href: ROUTES.ABOUT },
     { label: "Contact Us", href: ROUTES.CONTACT }
   ];

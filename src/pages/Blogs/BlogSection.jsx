@@ -10,23 +10,28 @@ export default function BlogSection({ bloglimit = 4 }) {
       
   return (
     <div className="w-full h-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 gap-6">
         {BLOGS.slice(0, bloglimit).map((blog, index) => (
           <div
             key={index}
-            className="w-full h-full cursor-pointer bg-primary-card p-3 rounded-xl border border-transparent hover:border-primary transition-all duration-500 ease-in-out"
+            className="flex flex-col md:flex-row w-full h-full cursor-pointer hover:scale-101 bg-primary-card p-3 rounded-xl border border-transparent hover:border-primary transition-all duration-500 ease-in-out"
             onClick={() => handleRedirect(blog)}
           >
             <img
               src={blog.header_img}
               alt={blog.title}
-              className="w-full h-70 object-cover rounded-xl"
+              className="lg:h-70 md:h-60 md:w-1/3 object-cover rounded-xl"
             />
-            <div className="w-full flex-1 mt-3 flex flex-col justify-between min-h-20 xl:min-h-25">
-              <h3 className="text-xl font-semibold line-clamp-2">
+            <div className="w-full flex-1 min-h-20 mt-3 flex flex-col md:mr-5">
+              <h3 className="text-xl font-semibold line-clamp-2 md:ml-5 lg:text-3xl">
                 {blog.title}
               </h3>
-              <p className="text-gray-500 text-sm">{blog.upload_date}</p>
+                <p className="mt-5 text-secondary text-sm lg:text-lg leading-relaxed md:ml-7 line-clamp-4 lg:line-clamp-none md:text-justify">{blog.description}</p>
+                <div className="flex items-center justify-between gap-2 md:mt-5">
+                  <p className="mt-5 text-secondary text-sm lg:text-lg md:ml-7 md:mt-0">{blog.upload_date}</p>
+                  <p className="mt-5 text-secondary text-sm lg:text-lg md:ml-7 md:mt-0">- {blog.publisher_name}</p>
+                </div>
+                
             </div>
           </div>
         ))}

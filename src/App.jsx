@@ -14,6 +14,7 @@ import Blogs from "./pages/Blogs/Blogs";
 import ProjectDetails from "./pages/Portfolio/ProjectDetails";
 import ScrollToTop from "./components/ScrollToTop";
 import BlogDetails from "./pages/Blogs/BlogDetails";
+import CourseDetails from "./pages/Courses/CourseDetails";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import ServiceDetails from "./pages/Services/ServiceDetails";
@@ -78,6 +79,7 @@ export default function App() {
             <Route path={ROUTES.SERVICE_DETAILS} element={<ServiceDetails />} />
             <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
             <Route path={ROUTES.COURSES} element={<Courses />} />
+            <Route path={ROUTES.COURSE_DETAILS} element={<CourseDetails />} />
             <Route path={ROUTES.BLOG} element={<Blogs />} />
             <Route path={ROUTES.BLOG_DETAILS} element={<BlogDetails />} />
             <Route path={ROUTES.ABOUT} element={<AboutUs />} />

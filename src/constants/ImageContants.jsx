@@ -93,6 +93,7 @@ export const IMAGE_ASSETS = {
     TEAM_BASE + "princy.png",
     TEAM_BASE + "aryan.png",
     TEAM_BASE + "viren.png",
+    TEAM_BASE + "chintanbhai.png",
   ]
   
 };

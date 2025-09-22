@@ -46,7 +46,7 @@ export default function ServiceCard(props) {
 
       {/* Description Section with fade-in slide animation */}
       <div className="px-6 sm:px-8 pb-6 sm:pb-8 flex-grow relative z-10">
-        <p className="text-md text-gray-500 group-hover:text-white leading-tight transition-all duration-500 delay-100 ease-out  group-hover:opacity-100">
+        <p className="text-md text-secondary group-hover:text-white leading-tight transition-all duration-500 delay-100 ease-out  group-hover:opacity-100">
           {props.service.short_description}
         </p>
       </div>
