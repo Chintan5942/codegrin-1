@@ -1,3 +1,4 @@
+// App.jsx
 import React, { Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
@@ -21,11 +22,15 @@ import ServiceDetails from "./pages/Services/ServiceDetails";
 import TermsConditions from "./pages/TermsConditions";
 import FAQ from "./pages/Faq";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Preloader from "./components/Preloader";
+import { usePageLoader } from "./hooks/usePageLoader";
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
+  const { isLoading } = usePageLoader();
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
@@ -71,10 +76,12 @@ export default function App() {
     };
   }, []);
 
-
   return (
     <>
-      <ScrollToTop />
+      {isLoading && <Preloader />}
+      
+      <div className={isLoading ? "opacity-0" : "opacity-100 transition-opacity duration-300"}>
+        <ScrollToTop />
         <Routes>
           <Route path={ROUTES.HOME} element={<MainLayout />}>
             <Route index element={<Home />} />
@@ -92,8 +99,9 @@ export default function App() {
             <Route path={ROUTES.TERMS} element={<TermsConditions />} />
             <Route path={ROUTES.PRIVACY} element={<PrivacyPolicy />} />
           </Route>
-            <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
+      </div>
     </>
   );
 }
