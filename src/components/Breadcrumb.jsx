@@ -20,6 +20,9 @@ const Breadcrumb = ({
     [ROUTES.BLOG_DETAILS]: "Blog Details",
     [ROUTES.ABOUT]: "About",
     [ROUTES.CONTACT]: "Contact",
+    [ROUTES.FAQ]: "FAQ's",
+    [ROUTES.TERMS]: "Terms & Conditions",
+    [ROUTES.PRIVACY]: "Privacy Policy",
   };
 
   // Generate breadcrumb items based on current path

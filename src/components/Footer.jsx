@@ -140,7 +140,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-2">
                 <li>
                   <a
-                    href="faq.html"
+                    href={ROUTES.FAQ}
                     className="text-sm text-white/70 hover:text-white"
                   >
                     FAQ’s
@@ -148,7 +148,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="terms-condition.html"
+                    href={ROUTES.TERMS}
                     className="text-sm text-white/70 hover:text-white"
                   >
                     Terms &amp; Conditions
@@ -156,7 +156,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="privacy-policy.html"
+                    href={ROUTES.PRIVACY}
                     className="text-sm text-white/70 hover:text-white"
                   >
                     Privacy Policy
@@ -164,7 +164,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="contact.html"
+                    href={ROUTES.CONTACT}
                     className="text-sm text-white/70 hover:text-white"
                   >
                     Support Center

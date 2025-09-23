@@ -18,6 +18,9 @@ import CourseDetails from "./pages/Courses/CourseDetails";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import ServiceDetails from "./pages/Services/ServiceDetails";
+import TermsConditions from "./pages/TermsConditions";
+import FAQ from "./pages/Faq";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -85,9 +88,12 @@ export default function App() {
             <Route path={ROUTES.ABOUT} element={<AboutUs />} />
             <Route path={ROUTES.CONTACT} element={<Contact />} />
             <Route path={ROUTES.PROJECT_DETAILS} element={<ProjectDetails />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path={ROUTES.FAQ} element={<FAQ />} />
+            <Route path={ROUTES.TERMS} element={<TermsConditions />} />
+            <Route path={ROUTES.PRIVACY} element={<PrivacyPolicy />} />
           </Route>
+            <Route path="*" element={<NotFound />} />
         </Routes>
-    </ >
+    </>
   );
 }

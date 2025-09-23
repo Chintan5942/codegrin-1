@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 
+
 @theme {
     --font-display: "Satoshi", "sans-serif";
     --font-primary: "PlusJakartaSans", "sans-serif";
@@ -40,7 +41,7 @@
         @apply mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-60 max-w-[1800px];
     }
 
-    /* Blend Background */
+    /* blend classes */
     .blend-x {
         -webkit-mask: linear-gradient(90deg, transparent, white 25%, white 75%, transparent);
         mask: linear-gradient(90deg, transparent, white 25%, white 75%, transparent);
@@ -60,39 +61,86 @@
         -webkit-mask: linear-gradient(white 80%, transparent);
         mask: linear-gradient(white 80%, transparent);
     }
-    
+    .blend-x-none {
+        -webkit-mask: none;
+        mask: none;
+    }
+
+    .blend-y-none {
+        -webkit-mask: none;
+        mask: none;
+    }
+
+
 }
 
 @layer utilities {
-    
+
     @keyframes float-up {
-        0% {transform: translateY(0);}
-        50% {transform: translateY(-10px);}
-        100% {transform: translateY(0);}
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
     }
+
     @keyframes float-down {
-        0% {transform: translateY(0);}
-        50% {transform: translateY(10px);}
-        100% {transform: translateY(0);}
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(10px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
     }
+
     @keyframes float-left {
-        0% {transform: translateX(0);}
-        50% {transform: translateX(-10px);}
-        100% {transform: translateX(0);}
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(-10px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
     }
+
     @keyframes float-right {
-        0% {transform: translateX(0);}
-        50% {transform: translateX(10px);}
-        100% {transform: translateX(0);}
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(10px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
     }
+
     @keyframes smooth-spin {
         from {
-          transform: rotate(0deg);
+            transform: rotate(0deg);
         }
+
         to {
-          transform: rotate(360deg);
+            transform: rotate(360deg);
         }
-      }
+    }
 }
 
 

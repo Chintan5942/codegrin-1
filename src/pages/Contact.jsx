@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PageTitle from "../components/PageTitle";
 import { COMPANY_INFO } from "../constants/CompanyInfo";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Contact() {
   const [result, setResult] = useState("");
@@ -10,7 +11,7 @@ export default function Contact() {
   const onSubmit = async (event) => {
     event.preventDefault();
     setIsSubmitting(true);
-    setError(""); // Clear previous errors
+    setError("");
     setResult("");
 
     const formData = new FormData(event.target);
@@ -83,13 +84,6 @@ export default function Contact() {
               Fill out the form and we will contact you
             </h2>
             
-            {/* Success Message */}
-            {result && (
-              <div className="mt-4 p-3 rounded-lg bg-green-100 text-green-700 border border-green-300">
-                {result}
-              </div>
-            )}
-
             <form onSubmit={onSubmit}>
               <div className="flex flex-col gap-5 mt-10">
                 <div className="flex flex-col gap-2">
@@ -139,15 +133,20 @@ export default function Contact() {
                 
                 {/* Error Message Above Button */}
                 {error && (
-                  <div className="p-3 rounded-lg bg-red-100 text-red-700 border border-red-300 text-sm">
+                  <div className="p-3 flex items-center gap-2 rounded-lg bg-red-800 text-white">
                     <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                      </svg>
+                      <Icon icon="line-md:close" className="w-5 h-5"/>
                       {error}
                     </div>
                   </div>
                 )}
+                {/* Success Message */}
+            {result && (
+              <div className="p-3 flex items-center gap-2 rounded-lg bg-green-800 text-white">
+                <Icon icon="line-md:check-all" className="w-5 h-5"/>
+                {result}
+              </div>
+            )}
                 
                 
                 {/* Submit Button with Loading Animation */}
