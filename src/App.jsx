@@ -1,5 +1,4 @@
-// App.jsx
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import { ROUTES } from "./constants/RoutesContants";
@@ -22,14 +21,14 @@ import ServiceDetails from "./pages/Services/ServiceDetails";
 import TermsConditions from "./pages/TermsConditions";
 import FAQ from "./pages/Faq";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import usePreloader from "./components/hooks/usePreloader";
 import Preloader from "./components/Preloader";
-import { usePreloader } from "./hooks/usePreloader";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const isLoading = usePreloader();
-
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
@@ -75,34 +74,30 @@ export default function App() {
     };
   }, []);
 
+
   return (
     <>
-      {/* Show preloader when loading */}
-      {isLoading && <Preloader />}
-      
-      {/* Main content with opacity transition */}
-      <div className={`transition-opacity duration-300 ${isLoading ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-        <ScrollToTop />
+     <Preloader isVisible={isLoading} />
+      <ScrollToTop />
         <Routes>
           <Route path={ROUTES.HOME} element={<MainLayout />}>
             <Route index element={<Home />} />
             <Route path={ROUTES.SERVICES} element={<Services />} />
             <Route path={ROUTES.SERVICE_DETAILS} element={<ServiceDetails />} />
             <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
+            <Route path={ROUTES.PROJECT_DETAILS} element={<ProjectDetails />} />
             <Route path={ROUTES.COURSES} element={<Courses />} />
             <Route path={ROUTES.COURSE_DETAILS} element={<CourseDetails />} />
             <Route path={ROUTES.BLOG} element={<Blogs />} />
             <Route path={ROUTES.BLOG_DETAILS} element={<BlogDetails />} />
             <Route path={ROUTES.ABOUT} element={<AboutUs />} />
             <Route path={ROUTES.CONTACT} element={<Contact />} />
-            <Route path={ROUTES.PROJECT_DETAILS} element={<ProjectDetails />} />
             <Route path={ROUTES.FAQ} element={<FAQ />} />
             <Route path={ROUTES.TERMS} element={<TermsConditions />} />
             <Route path={ROUTES.PRIVACY} element={<PrivacyPolicy />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
-      </div>
     </>
   );
 }
