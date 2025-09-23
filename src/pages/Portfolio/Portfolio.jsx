@@ -177,9 +177,17 @@ export default function Portfolio() {
                 />
               </div>
               <div className="absolute -bottom-4 left-5">
-                <h2 className=" lg:text-sm text-xs w-fit bg-black/50 rounded-full text-white px-4 py-1">
-                  {portfolio.tech_stack}
-                </h2>
+               <div className="flex gap-2">
+                {portfolio.tech_category.map((tech, index) => (
+                  <h2
+                    key={index}
+                    className="lg:text-sm text-xs w-fit bg-black/50 rounded-full text-white px-4 py-1 capitalize"
+                  >
+                    {tech}
+                  </h2>
+                ))}
+             
+               </div>
                 <h2 className="lg:text-2xl text-sm w-fit bg-primary-card-light text-white py-2 px-5 font-bold mt-3">
                   {portfolio.title}
                 </h2>

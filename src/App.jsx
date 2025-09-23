@@ -21,7 +21,7 @@ import ServiceDetails from "./pages/Services/ServiceDetails";
 import TermsConditions from "./pages/TermsConditions";
 import FAQ from "./pages/Faq";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import usePreloader from "./components/hooks/usePreloader";
+import usePreloader from "./hooks/usePreloader";
 import Preloader from "./components/Preloader";
 
 

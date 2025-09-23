@@ -28,6 +28,7 @@ export default function Home() {
             moveParticlesOnHover={true}
             alphaParticles={false}
             disableRotation={false}
+            className="opacity-60"
           />
         </div>
 

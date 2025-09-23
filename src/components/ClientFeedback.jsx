@@ -114,7 +114,7 @@ const ClientFeedbackAnimation = ({
                       <h4 className="mb-1 font-bold text-lg text-primary">
                         {feedback.clientName}
                       </h4>
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm text-secondary">
                         {feedback.clientPosition}
                       </span>
                     </div>
