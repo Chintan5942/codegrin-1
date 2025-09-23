@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { ROUTES } from "../../constants/RoutesContants";
-import { PORTFOLIO } from "../../constants/PortfolioConstants"; // Import PORTFOLIO array
+import { PORTFOLIO } from "../../constants/PortfolioConstants";
 import BorderButton from "../../components/Buttons/BorderButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectDetails = () => {
@@ -22,7 +21,7 @@ const ProjectDetails = () => {
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location.pathname]);
+  }, [location.pathname, location.state]);
 
   // Get next project data
   const getNextProject = () => {
@@ -43,29 +42,28 @@ const ProjectDetails = () => {
       return new Promise((resolve) => {
         const img = new Image();
         img.onload = resolve;
-        img.onerror = resolve; // Still resolve on error to avoid hanging
+        img.onerror = resolve;
         img.src = portfolio?.image_path + image;
       });
     });
 
     Promise.all(imagePromises).then(() => {
-      // Small delay to ensure DOM has updated
       setTimeout(() => {
         // GSAP ScrollTrigger animation for clip-path
         clipperRefs.current.forEach((clip) => {
           if (clip) {
             gsap.fromTo(
               clip,
-              { clipPath: "inset(25% round 50px)" }, // start state
+              { clipPath: "inset(25% round 50px)" },
               {
-                clipPath: "inset(0% round 0px)", // end state
+                clipPath: "inset(0% round 0px)",
                 ease: "none",
                 scrollTrigger: {
                   trigger: clip,
-                  start: "top 100%", // when image enters viewport
-                  end: "bottom 100%", // until it passes
+                  start: "top 100%",
+                  end: "bottom 100%",
                   scrub: true,
-                  markers: false, // set to true to debug
+                  markers: false,
                 },
               }
             );
@@ -79,7 +77,7 @@ const ProjectDetails = () => {
               trigger: nextProjectRef.current,
               start: "top 100%",
               end: "bottom 100%",
-              scrub: true, // smooth with scroll
+              scrub: true,
               onLeave: () => {
                 // Navigate to next project when animation is done
                 if (nextProject) {
@@ -88,7 +86,7 @@ const ProjectDetails = () => {
                   // Kill all ScrollTrigger instances before navigation
                   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
                   
-                  // Navigate and scroll to top
+                  // Navigate immediately - preloader will handle loading state
                   navigate(ROUTES.PROJECT_DETAILS, {
                     state: {
                       portfolio: nextProject,
@@ -96,7 +94,7 @@ const ProjectDetails = () => {
                     }
                   });
                   
-                window.lenis.scrollTo(0 ,{immediate: true});
+                  window.lenis?.scrollTo(0, { immediate: true });
                 }
               }
             }
@@ -120,7 +118,6 @@ const ProjectDetails = () => {
       }, 0);
     });
 
-    // Cleanup function
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };

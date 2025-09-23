@@ -1,5 +1,5 @@
 // App.jsx
-import React, { Suspense, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import { ROUTES } from "./constants/RoutesContants";
@@ -23,13 +23,12 @@ import TermsConditions from "./pages/TermsConditions";
 import FAQ from "./pages/Faq";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Preloader from "./components/Preloader";
-import { usePageLoader } from "./hooks/usePageLoader";
-
+import { usePreloader } from "./hooks/usePreloader";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
-  const { isLoading } = usePageLoader();
+  const isLoading = usePreloader();
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -78,9 +77,11 @@ export default function App() {
 
   return (
     <>
+      {/* Show preloader when loading */}
       {isLoading && <Preloader />}
       
-      <div className={isLoading ? "opacity-0" : "opacity-100 transition-opacity duration-300"}>
+      {/* Main content with opacity transition */}
+      <div className={`transition-opacity duration-300 ${isLoading ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <ScrollToTop />
         <Routes>
           <Route path={ROUTES.HOME} element={<MainLayout />}>
