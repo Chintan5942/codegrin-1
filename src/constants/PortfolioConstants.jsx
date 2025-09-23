@@ -158,7 +158,7 @@ export const PORTFOLIO = [
   {
     title: "ToyIQ",
     tech_stack: "Shopify",
-    tech_category: ["shopify", "nodejs", ""],
+    tech_category: ["shopify", "nodejs"],
     project_type: "Toys & Kids Lifestyle Store",
     publisher_name: "ToyIQ",
     description: [
@@ -172,7 +172,7 @@ export const PORTFOLIO = [
   {
     title: "XOOG",
     tech_stack: "React.js",
-    tech_category: ["reactjs", ""],
+    tech_category: ["reactjs"],
     project_type: "Toys & Educational Play Solutions",
     publisher_name: "XOOG",
     description: [
@@ -326,7 +326,7 @@ export const PORTFOLIO = [
   {
     title: "Adore Beds Mobile App",
     tech_stack: "Flutter",
-    tech_category: ["mobile", "erp", ""],
+    tech_category: ["mobile", "erp"],
     project_type: "Designer Beds & Sleep Solutions",
     publisher_name: "Maison Complete",
     description: [
