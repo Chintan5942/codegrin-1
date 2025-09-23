@@ -8,7 +8,7 @@ export const IMAGE_ASSETS = {
   LOGO_SYMBOL: LOGO_BASE + "logo-light-symbol.png",
   SCROLL_TOP: LOGO_BASE + "scroll_top.svg",
   NOT_FOUND: BASE_URL + "404.gif",
-  HERO_SECTION_1: BASE_URL + "earth.webp",
+  HERO_SECTION_1: BASE_URL + "earth.png",
   HERO_SECTION_2: BASE_URL + "code.png",
 
   SERVICE_IMG: {

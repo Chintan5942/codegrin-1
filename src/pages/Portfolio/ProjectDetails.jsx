@@ -94,7 +94,7 @@ const ProjectDetails = () => {
                       portfolio: nextProject,
                       currentIndex: nextIndex
                     }
-                  });
+                  }, {replace: false});
                   
                 window.lenis.scrollTo(0 ,{immediate: true});
                 }
