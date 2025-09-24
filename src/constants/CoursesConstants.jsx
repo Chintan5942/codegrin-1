@@ -19,7 +19,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "uiux.png",
   },
   {
     title: "Application Development With Flutter",
@@ -40,7 +40,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "flutter.png",
   },
   {
     title: "Blockchain Development Fundamentals",
@@ -61,7 +61,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "blockchain.png",
   },
   {
     title: "Modern Frontend Development with React",
@@ -82,7 +82,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "react.png",
   },
   {
     title: "Full Stack Development with MERN",
@@ -103,7 +103,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "mern.png",
   },
   {
     title: "Backend With Laravel Development",
@@ -125,19 +125,19 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "laravel.png",
   },
   {
-    title: "Full Stack Development with MERN",
-    category: "MERN Stack Development",
+    title: "Building Scalable Applications with Next.js",
+    category: "Next.js Development",
     description:
-      "This course provides a thorough introduction to full-stack development using the MERN stack (MongoDB, Express.js, React, Node.js). Students will build dynamic web applications from the ground up, learning both client-side and server-side development along with essential practices for integrating databases and APIs in a single cohesive project.",
+      "This course provides a thorough introduction to building scalable web applications using Next.js, the React framework for production. Students will create high-performance applications from the ground up, learning both client-side and server-side development with Next.js's integrated features, along with essential practices for database integration and API development in a single cohesive framework.",
     what_you_will_learn: [
-      "Build and deploy full-stack web applications using the MERN stack.",
-      "Understand backend development with Node.js and Express.js.",
-      "Develop front-end interfaces with React and manage state with Redux.",
-      "Integrate MongoDB for robust data storage solutions.",
-      "Apply best practices for testing and deploying scalable applications.",
+      "Build and deploy scalable web applications using Next.js and React.",
+      "Understand server-side rendering (SSR) and static site generation (SSG) with Next.js.",
+      "Develop dynamic front-end interfaces with React and manage state effectively.",
+      "Create API routes and integrate databases like MongoDB for robust data storage.",
+      "Apply best practices for performance optimization, testing, and deploying scalable Next.js applications.",
     ],
     duration: "35 weeks",
     lesson: "40",
@@ -146,7 +146,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "nextjs.png",
   },
   {
     title: "Node.js Backend Development",
@@ -167,7 +167,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "nodejs.png",
   },
   {
     title: "Backend With PHP Development",
@@ -189,7 +189,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "php.png",
   },
   {
     title: "Backend With Python Development",
@@ -211,7 +211,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "python.png",
   },
   {
     title: "Responsive Web Design Essentials",
@@ -232,7 +232,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "responsive.png",
   },
   {
     title: "Master the Art of Web Design",
@@ -253,6 +253,6 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "ex.jpg",
+    image: BASE_URL + "html-css-js.png",
   },
 ];

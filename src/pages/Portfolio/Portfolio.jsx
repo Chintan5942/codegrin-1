@@ -99,7 +99,7 @@ export default function Portfolio() {
           <h3 className="hidden lg:block lg:text-lg lg:font-semibold">
             Filter:
           </h3>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-4">
             {/* All option */}
             <label
               ref={(el) => (filtersRef.current[0] = el)}
