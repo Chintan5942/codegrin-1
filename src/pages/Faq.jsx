@@ -23,8 +23,8 @@ export default function FAQ() {
                 </h2>
                 <motion.div
                   initial={{ 
-                    scaleY: 0,  // Mobile: vertical scale (Y)
-                    scaleX: 0,  // Will be overridden by lg variant
+                    scaleY: 0,
+                    scaleX: 0,
                     opacity: 0 
                   }}
                   animate={{ 
@@ -39,7 +39,7 @@ export default function FAQ() {
                       animate: { scaleX: 1, opacity: 1 }
                     }
                   }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 2 }}
                   className="w-0.5 h-15 lg:w-full lg:h-0.5 bg-gradient-to-b from-transparent via-primary to-primary lg:bg-gradient-to-r lg:from-transparent lg:via-primary lg:to-primary origin-center lg:origin-left"
                 />
               </div>
@@ -66,8 +66,8 @@ export default function FAQ() {
                     }
                   }}
                   transition={{
-                    duration: 0.5,
-                    delay: 0.4
+                    duration: 1,
+                    delay: 1.5
                   }}
                   className="w-full h-0.5 lg:w-1 lg:h-full bg-gradient-to-r from-transparent via-primary to-transparent lg:bg-gradient-to-b lg:from-transparent lg:via-primary lg:to-transparent origin-center"
                 />
@@ -93,7 +93,7 @@ export default function FAQ() {
                       }}
                       transition={{
                         duration: 1,
-                        delay: 1
+                        delay: 2
                       }}
                     >
                       <Accordion question={faq.question} answer={faq.answer} />

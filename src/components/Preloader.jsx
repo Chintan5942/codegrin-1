@@ -2,11 +2,14 @@
 import React from 'react';
 import { IMAGE_ASSETS } from '../constants/ImageContants';
 
-export const Preloader = ({ isVisible }) => {
+const Preloader = ({ isVisible, preloaderRef }) => {
+  if (!isVisible) return null;
+
   return (
-    <div 
-      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-black transition-opacity duration-500 preloader ${!isVisible ? 'hidden' : ''}`}
-      style={{ display: isVisible ? 'flex' : 'none' }}
+    <div
+      ref={preloaderRef}
+      className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+      style={{ opacity: 1 }} // Initial opacity
     >
       <img 
         src={IMAGE_ASSETS.LOGO_SYMBOL} 

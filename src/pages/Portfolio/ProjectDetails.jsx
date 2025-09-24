@@ -148,17 +148,17 @@ const ProjectDetails = () => {
         <div className="lg:col-span-1">
           <h1 className="text-2xl font-bold mb-5">PROJECT DETAILS</h1>
           <ul className="pl-2 md:pl-5">
-            <li className="mb-1 text-lg text-secondary">
-              <strong className="mr-2 text-white">Tech Stack:</strong>
-              {portfolio?.tech_stack}
+            <li className="mb-1 text-lg">
+              <strong className="mr-2 text-white">Tech Category:</strong>
+              <span className="text-secondary capitalize">{portfolio?.tech_category.join(", ")}</span>
             </li>
-            <li className="mb-1 text-lg text-secondary">
+            <li className="mb-1 text-lg">
               <strong className="mr-2 text-white">Project Type:</strong>
-              {portfolio?.project_type}
+              <span className="text-secondary capitalize">{portfolio?.project_type}</span>
             </li>
-            <li className="mb-1 text-lg text-secondary">
+            <li className="mb-1 text-lg">
               <strong className="mr-2 text-white">Publisher Name:</strong>
-              {portfolio?.publisher_name}
+              <span className="text-secondary">{portfolio?.publisher_name}</span>
             </li>
           </ul>
         </div>

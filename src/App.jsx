@@ -28,7 +28,7 @@ import Preloader from "./components/Preloader";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
-  const isLoading = usePreloader();
+  const { isVisible, preloaderRef } = usePreloader();
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
@@ -77,7 +77,7 @@ export default function App() {
 
   return (
     <>
-     <Preloader isVisible={isLoading} />
+     <Preloader isVisible={isVisible} preloaderRef={preloaderRef} />
       <ScrollToTop />
         <Routes>
           <Route path={ROUTES.HOME} element={<MainLayout />}>
