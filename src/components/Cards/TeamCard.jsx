@@ -3,7 +3,7 @@ export default function TeamCard(props) {
   
   return (
     <div
-      className="w-full lg:w-100 h-full flex flex-col bg-primary-card border border-primary-border"
+      className="w-fit lg:w-100 h-full flex flex-col bg-primary-card border border-primary-border"
     >
       <img
         src={props.team.image}

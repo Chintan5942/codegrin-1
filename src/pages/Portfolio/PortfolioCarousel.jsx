@@ -97,10 +97,12 @@ const PortfolioCarousel = ({
                 </h2>
                 
                 {/* Tech Stack Badge */}
-                <div className="mb-4">
-                  <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium border border-primary-light text-white backdrop-blur-sm hover:bg-primary-light/10 transition-all duration-300">
-                    {project.tech_stack}
-                  </div>
+                <div className="mb-4 flex gap-2 capitalize">
+                  {project.tech_category.map((tech, index) => (
+                    <span key={index} className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium border border-primary-light text-white backdrop-blur-sm hover:bg-primary-light/10 transition-all duration-300">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>

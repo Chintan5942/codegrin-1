@@ -72,14 +72,14 @@ export default function Contact() {
           </div>
         </div>
         <div className="mt-40 flex items-center justify-center">
-          <div className="w-full h-1 bg-primary blend-x" />
-          <h1 className="text-4xl font-bold w-1/2 text-center">
+          <div className="w-1/4 lg:w-full h-1 bg-primary blend-x" />
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold w-2/3 text-center">
             Meet Our Team
           </h1>
-          <div className="w-full h-1 bg-primary blend-x" />
+          <div className="w-1/4 lg:w-full h-1 bg-primary blend-x" />
         </div>
         {/* Founder section - 2 items centered with gap-10 */}
-        <div className="flex flex-col sm:flex-row w-full items-center justify-center gap-6 sm:gap-10 my-10 sm:my-20">
+        <div className="flex flex-col md:flex-row w-full items-center justify-center gap-6 md:gap-10 my-10 md:my-20">
           {TEAM_DATA.FOUNDER.map((item, index) => (
             <div key={index}>
               <TeamCard team={item} />

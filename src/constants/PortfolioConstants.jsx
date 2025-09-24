@@ -3,7 +3,6 @@ export const PORTFOLIO_CATEGORY = ["nextjs", "reactjs","nodejs","wordpress", "sh
 export const PORTFOLIO = [
   {
     title: "Lumetiq",
-    tech_stack: "Next.js",
     tech_category: ["nextjs"],
     project_type: "Elevator Solutions",
     publisher_name: "Lumetiq Industries",
@@ -17,7 +16,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Homiqly",
-    tech_stack: "Next.js",
     tech_category: ["nextjs", "erp", "uiux"],
     project_type: "Home & Beauty Services Platform",
     publisher_name: "Homiqly",
@@ -31,7 +29,6 @@ export const PORTFOLIO = [
   },
   {
     title: "GNext Groups",
-    tech_stack: "React.js",
     tech_category: ["reactjs", "uiux"],
     project_type: "Packaging Solutions / Manufacturing",
     publisher_name: "GNext Groups",
@@ -45,7 +42,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Brahmani Lab",
-    tech_stack: "React.js",
     tech_category: ["reactjs"],
     project_type: "Laboratory Instruments & Scientific Solutions",
     publisher_name: "Brahmani Lab",
@@ -59,7 +55,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Root Labs",
-    tech_stack: "React.js",
     tech_category: ["reactjs"],
     project_type: "Holistic Wellness & Traditional Medicine Supplements",
     publisher_name: "Root Labs",
@@ -73,7 +68,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Tante Tina",
-    tech_stack: "Shopify",
     tech_category: ["shopify", "uiux"],
     project_type: "Women’s Health & Wellness Coaching",
     publisher_name: "Aunt Tina",
@@ -87,7 +81,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Quantum Leap Natural Medicine",
-    tech_stack: "Shopify",
     tech_category: ["shopify"],
     project_type: "Holistic Nutrition & Integrative Wellness",
     publisher_name: "Quantum Leap Natural Medicine",
@@ -101,7 +94,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Renew HR",
-    tech_stack: "Wordpress",
     tech_category: ["wordpress"],
     project_type: "HR Technology & Consulting Solutions",
     publisher_name: "SAP Silver Partner",
@@ -115,7 +107,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Scema Construction",
-    tech_stack: "React.js",
     tech_category: ["reactjs", "nodejs"],
     project_type: "Construction & Infrastructure Development",
     publisher_name: "Scema Construction",
@@ -129,7 +120,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Madde And Me",
-    tech_stack: "Shopify",
     tech_category: ["shopify", "uiux"],
     project_type: "Fashion & Jewelry Design",
     publisher_name: "Madde And Me",
@@ -143,7 +133,6 @@ export const PORTFOLIO = [
   },
   {
     title: "MINDWHIZ Eduprise",
-    tech_stack: "Wordpress",
     tech_category: ["wordpress", "uiux"],
     project_type: "Training & Personal Development Solutions",
     publisher_name: "MINDWHIZ - The Brain Development Eduprise",
@@ -157,7 +146,6 @@ export const PORTFOLIO = [
   },
   {
     title: "ToyIQ",
-    tech_stack: "Shopify",
     tech_category: ["shopify", "nodejs"],
     project_type: "Toys & Kids Lifestyle Store",
     publisher_name: "ToyIQ",
@@ -171,7 +159,6 @@ export const PORTFOLIO = [
   },
   {
     title: "XOOG",
-    tech_stack: "React.js",
     tech_category: ["reactjs"],
     project_type: "Toys & Educational Play Solutions",
     publisher_name: "XOOG",
@@ -185,7 +172,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Elisabet Prag",
-    tech_stack: "Shopify",
     tech_category: ["shopify", "uiux"],
     project_type: "Jewelry & Lifestyle Accessories",
     publisher_name: "Elisabet Prag",
@@ -199,7 +185,6 @@ export const PORTFOLIO = [
   },
   {
     title: "HONEST infotech",
-    tech_stack: "Next.js",
     tech_category: ["nextjs", "nodejs"],
     project_type: "Web Development & Digital Solutions",
     publisher_name: "HONEST infotech",
@@ -213,7 +198,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Adore Beds",
-    tech_stack: "Shopify",
     tech_category: ["shopify", "erp"],
     project_type: "Designer Beds & Sleep Solutions",
     publisher_name: "Maison Complete",
@@ -227,7 +211,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Solana Launcher",
-    tech_stack: "Next.js",
     tech_category: ["nextjs", "blockchain"],
     project_type: "Blockchain & Token Creation Platform",
     publisher_name: "SolanaLauncher",
@@ -241,7 +224,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Praediumx",
-    tech_stack: "Blockchain",
     tech_category: ["blockchain"],
     project_type: "Blockchain-Powered Real Estate Investment Platform",
     publisher_name: "PraediumX - Real Estate on Blockchain",
@@ -255,7 +237,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Unleash",
-    tech_stack: "React.js",
     tech_category: ["reactjs", "nodejs"],
     project_type: "Social Media Design & Content Creation Tool",
     publisher_name: "Erience Solutions",
@@ -269,7 +250,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Agrolla Impex",
-    tech_stack: "Next.js",
     tech_category: ["nextjs", "nodejs", "uiux"],
     project_type: "Agro Export & Manufacturing Company",
     publisher_name: "Agrolla Impex",
@@ -283,7 +263,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Gym Master",
-    tech_stack: "React.js",
     tech_category: ["reactjs", "nodejs", "erp", "uiux"],
     project_type: "Membership Management Solution",
     publisher_name: "Treshna Enterprises Ltd.",
@@ -297,7 +276,6 @@ export const PORTFOLIO = [
   },
   {
     title: "MSFG",
-    tech_stack: "Next.js",
     tech_category: ["nextjs", "nodejs"],
     project_type: "State-Level Memory Sports Championship",
     publisher_name: "Memory Sport Federation of Gujarat",
@@ -311,7 +289,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Varsha Foundation",
-    tech_stack: "React.js",
     tech_category: ["reactjs", "nodejs", "erp", "uiux"],
     project_type: "Admin Panel for Non-Profit Management",
     publisher_name: "Varsha Foundation",
@@ -325,7 +302,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Adore Beds Mobile App",
-    tech_stack: "Flutter",
     tech_category: ["mobile", "erp"],
     project_type: "Designer Beds & Sleep Solutions",
     publisher_name: "Maison Complete",
@@ -339,7 +315,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Movie Ticket Booking Mobile App",
-    tech_stack: "Flutter",
     tech_category: ["mobile", "uiux"],
     project_type: "Movie Ticket Booking Mobile Application",
     publisher_name: "N/A",
@@ -353,7 +328,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Car Rental Mobile App",
-    tech_stack: "Flutter",
     tech_category: ["mobile", "uiux"],
     project_type: "Car Rental Mobile Application",
     publisher_name: "N/A",
@@ -366,7 +340,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Stock Investment Mobile App",
-    tech_stack: "Flutter",
     tech_category: ["mobile", "uiux"],
     project_type: "Stock Investment & Trading Mobile Application",
     publisher_name: "N/A",
@@ -380,7 +353,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Dating Mobile App",
-    tech_stack: "Flutter",
     tech_category: ["mobile", "uiux"],
     project_type: "Dating & Social Connection Mobile Application",
     publisher_name: "N/A",
@@ -394,7 +366,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Gym Master Mobile App",
-    tech_stack: "Flutter",
     tech_category: ["mobile", "erp", "uiux"],
     project_type: "Gym Membership & Fitness Management Mobile Application",
     publisher_name: "Treshna Enterprises Ltd.",
@@ -408,7 +379,6 @@ export const PORTFOLIO = [
   },
   {
     title: "Varsha Foundation Mobile App",
-    tech_stack: "Flutter",
     tech_category: ["mobile", "erp", "uiux"],
     project_type: "Admin Panel for Non-Profit Management",
     publisher_name: "Varsha Foundation",
