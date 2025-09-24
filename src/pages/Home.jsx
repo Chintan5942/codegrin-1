@@ -189,7 +189,7 @@ export default function Home() {
             direction="col"
             className="mt-30 mb-5 lg:mb-20"
           />
-          <div className="text-justify text-base xl:text-lg text-gray-400">
+          <div className="text-justify text-base xl:text-lg text-secondary">
             <p className="mb-5">
               At <strong>Codegrin Technologies</strong>, we believe in
               delivering more than just software—we create digital experiences
