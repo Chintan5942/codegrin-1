@@ -1,35 +1,14 @@
 // hooks/usePreloader.js
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import gsap from 'gsap';
 
 const usePreloader = () => {
-  // const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
-  const preloaderRef = useRef();
-
-  const hidePreloader = () => {
-    // Simple fade out animation
-    gsap.to(preloaderRef.current, {
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power2.out',
-      onComplete: () => {
-        setIsVisible(false); // Hide after fade completes
-      }
-    });
-  };
 
   useEffect(() => {
     // Show preloader on route change
-    // setIsLoading(true);
-    setIsVisible(true);
-    
-    // Reset opacity to 1 when showing preloader
-    if (preloaderRef.current) {
-      gsap.set(preloaderRef.current, { opacity: 1 });
-    }
+    setIsLoading(true);
 
     const checkImagesLoaded = () => {
       const images = document.getElementsByTagName('img');
@@ -39,28 +18,27 @@ const usePreloader = () => {
       // If no images, proceed to hide preloader
       if (totalImages === 0) {
         setTimeout(() => {
-          // setIsLoading(false);
-          hidePreloader();
-        }, 1000);
+          setIsLoading(false);
+        }, 1000); // Maintain your original 1-second delay
         return;
       }
 
+      // Handle each image's load event
       const onImageLoad = () => {
         loadedImages += 1;
         if (loadedImages === totalImages) {
           setTimeout(() => {
-            // setIsLoading(false);
-            hidePreloader();
-          }, 1000);
+            setIsLoading(false);
+          }, 1000); // Delay after all images are loaded
         }
       };
 
+      // Handle image errors (e.g., broken images)
       const onImageError = () => {
         loadedImages += 1;
         if (loadedImages === totalImages) {
           setTimeout(() => {
-            // setIsLoading(false);
-            hidePreloader();
+            setIsLoading(false);
           }, 1000);
         }
       };
@@ -68,11 +46,11 @@ const usePreloader = () => {
       // Attach load and error listeners to each image
       Array.from(images).forEach((img) => {
         if (img.complete) {
+          // If image is already loaded (cached)
           loadedImages += 1;
           if (loadedImages === totalImages) {
             setTimeout(() => {
-              // setIsLoading(false);
-              hidePreloader();
+              setIsLoading(false);
             }, 1000);
           }
         } else {
@@ -81,7 +59,7 @@ const usePreloader = () => {
         }
       });
 
-      // Cleanup listeners
+      // Cleanup listeners for images that haven't loaded yet
       return () => {
         Array.from(images).forEach((img) => {
           img.removeEventListener('load', onImageLoad);
@@ -99,9 +77,9 @@ const usePreloader = () => {
         window.removeEventListener('load', checkImagesLoaded);
       };
     }
-  }, [location.pathname, location.state, location.key]);
+  }, [location.pathname, location.state, location.key]); // Watch for route changes
 
-  return { isVisible, preloaderRef };
+  return isLoading;
 };
 
 export default usePreloader;
