@@ -83,13 +83,13 @@ export default function App() {
           <Route path={ROUTES.HOME} element={<MainLayout />}>
             <Route index element={<Home />} />
             <Route path={ROUTES.SERVICES} element={<Services />} />
-            <Route path={ROUTES.SERVICE_DETAILS} element={<ServiceDetails />} />
+            <Route path={ROUTES.SERVICE_DETAILS+"/:slug"} element={<ServiceDetails />} />
             <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
-            <Route path={ROUTES.PROJECT_DETAILS} element={<ProjectDetails />} />
+            <Route path={ROUTES.PROJECT_DETAILS+"/:slug"} element={<ProjectDetails />} />
             <Route path={ROUTES.COURSES} element={<Courses />} />
-            <Route path={ROUTES.COURSE_DETAILS} element={<CourseDetails />} />
+            <Route path={ROUTES.COURSE_DETAILS+"/:slug"} element={<CourseDetails />} />
             <Route path={ROUTES.BLOG} element={<Blogs />} />
-            <Route path={ROUTES.BLOG_DETAILS} element={<BlogDetails />} />
+            <Route path={ROUTES.BLOG_DETAILS+"/:slug"} element={<BlogDetails />} />
             <Route path={ROUTES.ABOUT} element={<AboutUs />} />
             <Route path={ROUTES.CONTACT} element={<Contact />} />
             <Route path={ROUTES.FAQ} element={<FAQ />} />

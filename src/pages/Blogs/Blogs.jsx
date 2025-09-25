@@ -1,10 +1,11 @@
 import { BLOGS } from "../../constants/BlogConstant";
 import { useNavigate } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
+import { ROUTES } from "../../constants/RoutesContants";
 export default function Blogs() {
     const navigate = useNavigate();
     const handleRedirect = (blog) => {
-        navigate("/blog-details", { state: { blog } });
+        navigate(`${ROUTES.BLOG_DETAILS}/${blog.slug}`);
     };
     return (
         <section className="w-full min-h-screen">

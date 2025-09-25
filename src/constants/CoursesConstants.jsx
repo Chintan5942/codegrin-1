@@ -1,8 +1,9 @@
-const BASE_URL = "assets/images/courses/";
+const BASE_URL = "/assets/images/courses/";
 export const COURSES = [
   {
     title: "Advanced UI/UX Design Techniques",
     category: "UI-UX Design",
+    slug: "ui-ux-design",
     description:
       "This course explores advanced techniques in UI/UX design to enhance user interfaces with innovative and interactive elements. Students will learn to integrate microinteractions, motion design, and sophisticated typography to create compelling digital experiences. The course also covers the strategic implementation of design systems and effective data visualization to support decision-making processes. Emphasis is placed on creating accessible and inclusive designs that adhere to global standards, ensuring a broad and engaging user experience.",
     what_you_will_learn: [
@@ -24,6 +25,7 @@ export const COURSES = [
   {
     title: "Application Development With Flutter",
     category: "App Development",
+    slug: "app-development",
     description:
       "Our App Development Course is designed to equip learners with the skills required to build professional mobile applications from scratch. The program covers both Android and iOS development, focusing on modern frameworks, tools, and best practices. Participants will gain hands-on experience by developing real-world projects.",
     what_you_will_learn: [
@@ -45,6 +47,7 @@ export const COURSES = [
   {
     title: "Blockchain Development Fundamentals",
     category: "Blockchain Development",
+    slug: "blockchain-development",
     description:
       "This course provides an in-depth introduction to the world of blockchain technology. Students will explore the foundational concepts of how blockchains operate, including the architecture of decentralized networks, consensus mechanisms like Proof of Work and Proof of Stake, and the security protocols that underpin blockchain reliability. The course offers hands-on experience with popular development tools such as Truffle and Ganache, and guides students through the process of developing, deploying, and interacting with smart contracts on Ethereum.",
     what_you_will_learn: [
@@ -66,6 +69,7 @@ export const COURSES = [
   {
     title: "Modern Frontend Development with React",
     category: "Frontend Development",
+    slug: "frontend-development",
     description:
       "This course offers an in-depth exploration of React, one of the most popular JavaScript libraries for building user interfaces. Students will learn about React's component-based architecture, state management, and lifecycle methods, along with modern hooks and advanced patterns for scalable application development.",
     what_you_will_learn: [
@@ -87,6 +91,7 @@ export const COURSES = [
   {
     title: "Full Stack Development with MERN",
     category: "Full Stack Development",
+    slug: "full-stack-development",
     description:
       "This course provides a thorough introduction to full-stack development using the MERN stack (MongoDB, Express.js, React, Node.js). Students will build dynamic web applications from the ground up, learning both client-side and server-side development along with essential practices for integrating databases and APIs in a single cohesive project.",
     what_you_will_learn: [
@@ -108,6 +113,7 @@ export const COURSES = [
   {
     title: "Backend With Laravel Development",
     category: "Laravel Development",
+    slug: "laravel-development",
     description:
       "Our Laravel Development Course is designed to help learners master one of the most popular and powerful PHP frameworks. Laravel is widely used for building secure, scalable, and high-performance web applications. This course covers everything from Laravel fundamentals to advanced concepts such as authentication, APIs, and deployment, enabling participants to become job-ready full-stack developers.",
     what_you_will_learn: [
@@ -130,6 +136,7 @@ export const COURSES = [
   {
     title: "Building Scalable Applications with Next.js",
     category: "Next.js Development",
+    slug: "nextjs-development",
     description:
       "This course provides a thorough introduction to building scalable web applications using Next.js, the React framework for production. Students will create high-performance applications from the ground up, learning both client-side and server-side development with Next.js's integrated features, along with essential practices for database integration and API development in a single cohesive framework.",
     what_you_will_learn: [
@@ -151,6 +158,7 @@ export const COURSES = [
   {
     title: "Node.js Backend Development",
     category: "Node.js Backend Development",
+    slug: "nodejs-backend-development",
     description:
       "This course focuses on backend development using Node.js, exploring its non-blocking architecture and event-driven environment. Students will learn to build scalable and efficient web services and APIs using Express.js, and integrate databases like MongoDB and SQL. Security, performance optimization, and real-time data processing are also covered extensively.",
     what_you_will_learn: [
@@ -172,6 +180,7 @@ export const COURSES = [
   {
     title: "Backend With PHP Development",
     category: "PHP Development",
+    slug: "php-development",
     description:
       "Our PHP Development Course is designed to train learners in building powerful, scalable, and dynamic web applications using PHP. The program covers Core PHP, advanced concepts, and popular frameworks such as Laravel & CodeIgniter, along with front-end technologies for full-stack development. By the end of the course, participants will be able to design, develop, and deploy professional-grade web applications.",
     what_you_will_learn: [
@@ -194,6 +203,7 @@ export const COURSES = [
   {
     title: "Backend With Python Development",
     category: "Python Development",
+    slug: "python-development",
     description:
       "Our Python Development Course is designed to provide learners with in-demand programming skills and hands-on experience in Python, one of the most popular and versatile programming languages in the world. The course covers everything from the basics to advanced development concepts, including web development, data handling, automation, and frameworks.",
     what_you_will_learn: [
@@ -216,6 +226,7 @@ export const COURSES = [
   {
     title: "Responsive Web Design Essentials",
     category: "Responsive Web Design",
+    slug: "responsive-web-design",
     description:
       "This course teaches the fundamentals of responsive web design, focusing on flexible layouts, responsive images, and CSS media queries. Students will learn how to build websites that look great and function properly on any device, from desktops to smartphones, ensuring a seamless user experience.",
     what_you_will_learn: [
@@ -237,6 +248,7 @@ export const COURSES = [
   {
     title: "Master the Art of Web Design",
     category: "Web Design",
+    slug: "web-design",
     description:
       "This comprehensive course delves into the artistic and technical aspects of web design. It covers essential design principles, advanced user interface techniques, and the psychology of colors and typography. Students will learn to craft aesthetically pleasing and functional designs, understand user behavior, and apply responsive design principles to ensure accessibility and usability across various devices.",
     what_you_will_learn: [

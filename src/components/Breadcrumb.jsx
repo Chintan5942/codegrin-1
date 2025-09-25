@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, useParams, Link } from 'react-router-dom';
 import { ROUTES } from '../constants/RoutesContants';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
@@ -9,6 +9,7 @@ const Breadcrumb = ({
   homeLabel = "Home"
 }) => {
   const location = useLocation();
+  const params = useParams();
 
   // Route mapping for display names
   const routeNames = {
@@ -23,6 +24,14 @@ const Breadcrumb = ({
     [ROUTES.FAQ]: "FAQ's",
     [ROUTES.TERMS]: "Terms & Conditions",
     [ROUTES.PRIVACY]: "Privacy Policy",
+  };
+
+  // Helper function to format slug to readable text
+  const formatSlugToTitle = (slug) => {
+    return slug
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
   };
 
   // Generate breadcrumb items based on current path
@@ -43,7 +52,7 @@ const Breadcrumb = ({
     ];
 
     // Handle Service Details page specifically
-    if (currentPath === ROUTES.SERVICE_DETAILS && location.state?.service) {
+    if (currentPath.startsWith('/service-details/') && params.slug) {
       // Add Services page
       breadcrumbs.push({
         label: "Services",
@@ -51,9 +60,10 @@ const Breadcrumb = ({
         current: false
       });
       
-      // Add current service title
+      // Add current service title - try to get from state first, fallback to formatted slug
+      const serviceTitle = location.state?.service?.title || formatSlugToTitle(params.slug);
       breadcrumbs.push({
-        label: location.state.service.title,
+        label: serviceTitle,
         path: currentPath,
         current: true
       });
@@ -62,7 +72,7 @@ const Breadcrumb = ({
     }
 
     // Handle Course Details page specifically
-    if (currentPath === ROUTES.COURSE_DETAILS && location.state?.course) {
+    if (currentPath.startsWith('/course-details/') && params.slug) {
       // Add Courses page
       breadcrumbs.push({
         label: "Courses",
@@ -70,9 +80,10 @@ const Breadcrumb = ({
         current: false
       });
       
-      // Add current course title
+      // Add current course title - try to get from state first, fallback to formatted slug
+      const courseTitle = location.state?.course?.category || formatSlugToTitle(params.slug);
       breadcrumbs.push({
-        label: location.state.course.category,
+        label: courseTitle,
         path: currentPath,
         current: true
       });
@@ -81,25 +92,24 @@ const Breadcrumb = ({
     }
 
     // Handle Blog Details page specifically
-    if (currentPath === ROUTES.BLOG_DETAILS && location.state?.blog) {
-      // Add Courses page
+    if (currentPath.startsWith('/blog-details/') && params.slug) {
+      // Add Blog page
       breadcrumbs.push({
         label: "Blog",
         path: ROUTES.BLOG,
         current: false
       });
       
-      // Add current course title
+      // Add current blog title - try to get from state first, fallback to formatted slug
+      const blogTitle = location.state?.blog?.title || formatSlugToTitle(params.slug);
       breadcrumbs.push({
-        label: location.state.blog.title,
+        label: blogTitle,
         path: currentPath,
         current: true
       });
       
       return breadcrumbs;
     }
-
-
 
     // Handle other routes
     const currentPageName = routeNames[currentPath];

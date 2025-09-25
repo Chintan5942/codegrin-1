@@ -1,4 +1,4 @@
-const BASE_URL = "assets/images/";
+const BASE_URL = "/assets/images/";
 const LOGO_BASE = BASE_URL + "logo/";
 const SERVICE_BASE = BASE_URL + "services/";
 const TEAM_BASE = BASE_URL + "team/";

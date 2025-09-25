@@ -1,8 +1,9 @@
-const BASE_URL = "assets/images/blog/";
+const BASE_URL = "/assets/images/blog/";
 
 export const BLOGS = [
   {
     title: "The Future of Web Development: React 18 and Beyond",
+    slug: "react-future",
     upload_date: "15 Dec 2024",
     header_img: BASE_URL + "react-future/header.png",
     blog_image: BASE_URL + "react-future/main-image.png",
@@ -140,6 +141,7 @@ export const BLOGS = [
   },
   {
     title: "Building Scalable Applications with Next.js",
+    slug: "nextjs-scalable",
     upload_date: "28 Nov 2024",
     header_img: BASE_URL + "nextjs-scalable/header.png",
     blog_image: BASE_URL + "nextjs-scalable/main-image.png",

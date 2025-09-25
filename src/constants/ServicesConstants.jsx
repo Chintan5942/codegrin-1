@@ -3,6 +3,7 @@ import { IMAGE_ASSETS } from "./ImageContants";
 export const SERVICES = [
   {
     title: "Graphic Design Services",
+    slug: "graphic-design-services",
     short_description:
       "Creative and impactful designs that elevate your brand identity across digital and print platforms.",
     img: IMAGE_ASSETS.SERVICE_IMG.GRAPHIC_DESIGN,
@@ -18,6 +19,7 @@ export const SERVICES = [
   },
   {
     title: "UI / UX Design",
+    slug: "ui-ux-design",
     short_description:
       "We create user-friendly interfaces that balance aesthetics and functionality.",
     img: IMAGE_ASSETS.SERVICE_IMG.UIUX_DESIGN,
@@ -33,6 +35,7 @@ export const SERVICES = [
   },
   {
     title: "Custom Software Development",
+    slug: "custom-software-development",
     short_description:
       "Tailored software solutions designed to fit your business needs, ensuring scalability and efficiency.",
     img: IMAGE_ASSETS.SERVICE_IMG.CUSTOM_DEV,
@@ -48,6 +51,7 @@ export const SERVICES = [
   },
   {
     title: "JS Development",
+    slug: "js-development",
     short_description:
       "Building dynamic, fast, and interactive web applications using modern JavaScript frameworks.",
     img: IMAGE_ASSETS.SERVICE_IMG.JS_DEV,
@@ -62,6 +66,7 @@ export const SERVICES = [
   },
   {
     title: "CMS Development",
+    slug: "cms-development",
     short_description:
       "Easy-to-manage content solutions with secure, scalable, and customizable CMS platforms.",
     img: IMAGE_ASSETS.SERVICE_IMG.CMS_DEV,
@@ -76,6 +81,7 @@ export const SERVICES = [
   },
   {
     title: "Ecommerce Development",
+    slug: "ecommerce-development",
     short_description:
       "End-to-end eCommerce solutions with secure payments, product management, and user-friendly design.",
     img: IMAGE_ASSETS.SERVICE_IMG.ECOMMERCE_DEV,
@@ -92,6 +98,7 @@ export const SERVICES = [
 
   {
     title: "Mobile App Development",
+    slug: "mobile-app-development",
     short_description:
       "Intuitive, high-performing mobile apps for Android and iOS to engage your customers on the go.",
     img: IMAGE_ASSETS.SERVICE_IMG.MOBILE_APP_DEV,
@@ -107,6 +114,7 @@ export const SERVICES = [
   },
   {
     title: "Inventory Management",
+    slug: "inventory-management",
     short_description:
       "Smart inventory systems to track, manage, and optimize your stock in real time.",
 
@@ -123,6 +131,7 @@ export const SERVICES = [
   },
   {
     title: "Blockchain development",
+    slug: "blockchain-development",
     short_description:
       "Building secure and transparent blockchain solutions for the future and Empowering businesses with blockchain.",
     img: IMAGE_ASSETS.SERVICE_IMG.BLOCKCHAIN,
@@ -138,6 +147,7 @@ export const SERVICES = [
   },
   {
     title: "WordPress Development",
+    slug: "wordpress-development",
     short_description:
       "Scalable and user-friendly WordPress websites built for performance and easy management.",
     img: IMAGE_ASSETS.SERVICE_IMG.WORDPRESS_DEV,
@@ -153,6 +163,7 @@ export const SERVICES = [
   },
   {
     title: "Meta Advertisement Services",
+    slug: "meta-advertisement-services",
     short_description:
       "With advanced Meta tools, we set up powerful re-targeting ads to re-engage potential customers and increase conversions.",
     img: IMAGE_ASSETS.SERVICE_IMG.META_ADS,
@@ -168,6 +179,7 @@ export const SERVICES = [
   },
   {
     title: "Google Advertisement Services",
+    slug: "google-advertisement-services",
     short_description:
       "We design and manage high-performing Google Ads campaigns that drive qualified traffic, generate leads, and maximize your ROI.",
     img: IMAGE_ASSETS.SERVICE_IMG.GOOGLE_ADS,

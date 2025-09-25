@@ -51,10 +51,10 @@ const PortfolioCarousel = ({
     setCurrentSlide((prev) => (prev + 1) % displayProjects.length);
   };
 
-  const handleRedirect = (portfolio, index) => {
-    navigate(ROUTES.PROJECT_DETAILS, {
-      state: { portfolio, currentIndex: index },
-    });
+
+  const handleRedirect = (portfolio) => {
+    // Only pass the slug in the URL, no state
+    navigate(`${ROUTES.PROJECT_DETAILS}/${portfolio.slug}`);
   };
   
 
@@ -73,7 +73,7 @@ const PortfolioCarousel = ({
           <div 
             key={index} 
             className="relative w-full h-full flex-shrink-0 cursor-pointer"
-            onClick={() => handleRedirect(project, index)}
+            onClick={() => handleRedirect(project)}
           >
             {/* Background Image */}
             <div  

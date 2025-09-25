@@ -1,13 +1,34 @@
-import React from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Navigate, useParams } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
 import { ROUTES } from "../../constants/RoutesContants";
-import BorderButton from "../../components/Buttons/BorderButton";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { COURSES } from "../../constants/CoursesConstants";
 const CourseDetails = () => {
-  const location = useLocation();
-  const course = location.state?.course;
+  
+  const [course, setCourse] = React.useState(null);
+  const { slug } = useParams();
+  const [loading, setLoading] = React.useState(true);
 
+    // Fetch portfolio data based on slug
+    useEffect(() => {
+      if (slug) {
+        const foundCourse = COURSES.find(p => p.slug === slug);
+        
+        if (foundCourse) {
+          setCourse(foundCourse);
+        }
+        setLoading(false);
+      }
+    }, [slug]);
+
+    if (loading) {
+      return (
+        <div className="w-full flex justify-center items-center min-h-screen">
+          <div className="text-white text-lg">Loading...</div>
+        </div>
+      );
+    }
   if (!course) {
     return <Navigate to={ROUTES.COURSES} replace />;
   }

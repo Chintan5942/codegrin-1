@@ -1,8 +1,9 @@
-const BASE_URL = "assets/images/portfolio/";
+const BASE_URL = "/assets/images/portfolio/";
 export const PORTFOLIO_CATEGORY = ["nextjs", "reactjs","nodejs","wordpress", "shopify","blockchain","mobile","uiux", "erp"];
 export const PORTFOLIO = [
   {
     title: "Lumetiq",
+    slug: "lumetiq",
     tech_category: ["nextjs"],
     project_type: "Elevator Solutions",
     publisher_name: "Lumetiq Industries",
@@ -16,6 +17,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Homiqly",
+    slug: "homiqly",
     tech_category: ["nextjs", "erp", "uiux"],
     project_type: "Home & Beauty Services Platform",
     publisher_name: "Homiqly",
@@ -29,6 +31,7 @@ export const PORTFOLIO = [
   },
   {
     title: "GNext Groups",
+    slug: "gnext-groups",
     tech_category: ["reactjs", "uiux"],
     project_type: "Packaging Solutions / Manufacturing",
     publisher_name: "GNext Groups",
@@ -42,6 +45,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Brahmani Lab",
+    slug: "brahmani-lab",
     tech_category: ["reactjs"],
     project_type: "Laboratory Instruments & Scientific Solutions",
     publisher_name: "Brahmani Lab",
@@ -55,6 +59,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Root Labs",
+    slug: "root-labs",
     tech_category: ["reactjs"],
     project_type: "Holistic Wellness & Traditional Medicine Supplements",
     publisher_name: "Root Labs",
@@ -68,6 +73,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Tante Tina",
+    slug: "tante-tina",
     tech_category: ["shopify", "uiux"],
     project_type: "Women’s Health & Wellness Coaching",
     publisher_name: "Aunt Tina",
@@ -81,6 +87,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Quantum Leap Natural Medicine",
+    slug: "quantum-leap-natural-medicine",
     tech_category: ["shopify"],
     project_type: "Holistic Nutrition & Integrative Wellness",
     publisher_name: "Quantum Leap Natural Medicine",
@@ -94,6 +101,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Renew HR",
+    slug: "renew-hr",
     tech_category: ["wordpress"],
     project_type: "HR Technology & Consulting Solutions",
     publisher_name: "SAP Silver Partner",
@@ -107,6 +115,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Scema Construction",
+    slug: "scema-construction",
     tech_category: ["reactjs", "nodejs"],
     project_type: "Construction & Infrastructure Development",
     publisher_name: "Scema Construction",
@@ -120,6 +129,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Madde And Me",
+    slug: "madde-and-me",
     tech_category: ["shopify", "uiux"],
     project_type: "Fashion & Jewelry Design",
     publisher_name: "Madde And Me",
@@ -133,6 +143,7 @@ export const PORTFOLIO = [
   },
   {
     title: "MINDWHIZ Eduprise",
+    slug: "mindwhiz-eduprise",
     tech_category: ["wordpress", "uiux"],
     project_type: "Training & Personal Development Solutions",
     publisher_name: "MINDWHIZ - The Brain Development Eduprise",
@@ -146,6 +157,7 @@ export const PORTFOLIO = [
   },
   {
     title: "ToyIQ",
+    slug: "toy-iq",
     tech_category: ["shopify", "nodejs"],
     project_type: "Toys & Kids Lifestyle Store",
     publisher_name: "ToyIQ",
@@ -153,12 +165,13 @@ export const PORTFOLIO = [
       "ToyiQ is a one-stop destination for fun, learning, and creativity, offering a wide range of toys that inspire imagination and bring joy to every child. From educational games and puzzles to action figures, dolls, and outdoor play essentials, our collection is carefully curated to combine entertainment with development.",
       "We believe toys are more than playthings—they’re tools that help children explore, learn, and grow. At ToyiQ, our mission is to provide safe, high-quality, and innovative toys that spark curiosity, nurture creativity, and create unforgettable childhood memories. Whether for playtime, learning, or gifting, ToyiQ brings happiness to every home.",
     ],
-    image_path: BASE_URL + "toyiq/",
+    image_path: BASE_URL + "toy-iq/",
     project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
     project_link: "https://toyiq.in/",
   },
   {
     title: "XOOG",
+    slug: "xoog",
     tech_category: ["reactjs"],
     project_type: "Toys & Educational Play Solutions",
     publisher_name: "XOOG",
@@ -172,6 +185,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Elisabet Prag",
+    slug: "elisabet-prag",
     tech_category: ["shopify", "uiux"],
     project_type: "Jewelry & Lifestyle Accessories",
     publisher_name: "Elisabet Prag",
@@ -185,6 +199,7 @@ export const PORTFOLIO = [
   },
   {
     title: "HONEST infotech",
+    slug: "honest-infotech",
     tech_category: ["nextjs", "nodejs"],
     project_type: "Web Development & Digital Solutions",
     publisher_name: "HONEST infotech",
@@ -198,6 +213,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Adore Beds",
+    slug: "adore-beds",
     tech_category: ["shopify", "erp"],
     project_type: "Designer Beds & Sleep Solutions",
     publisher_name: "Maison Complete",
@@ -211,6 +227,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Solana Launcher",
+    slug: "solana-launcher",
     tech_category: ["nextjs", "blockchain"],
     project_type: "Blockchain & Token Creation Platform",
     publisher_name: "SolanaLauncher",
@@ -224,32 +241,21 @@ export const PORTFOLIO = [
   },
   {
     title: "Praediumx",
+    slug: "praediumx",
     tech_category: ["blockchain"],
     project_type: "Blockchain-Powered Real Estate Investment Platform",
     publisher_name: "PraediumX - Real Estate on Blockchain",
     description: [
-      "PraediumX is redefining real estate investment by leveraging blockchain technology to offer fractional ownership in high-value properties. Through secure, efficient, and transparent transactions, our platform makes real estate investing more accessible, global, and diversified, allowing investors to benefit from sustainable returns without traditional barriers.",
-      "Early adopters gain access to discounted PraediumX tokens, creating a unique link between real estate appreciation and cryptocurrency growth. As the platform evolves, so does the value of your investment. With a strong focus on innovation, accessibility, and security, PraediumX is more than just property investment—it’s a step into the future of real estate finance.",
+      "PraediumX is a blockchain-powered real estate investment platform that leverages the power of blockchain technology to create a transparent, secure, and efficient way to invest in real estate. By using blockchain technology, PraediumX ensures that all transactions are recorded on a secure and transparent ledger, making it easy for investors to track their investments and monitor their returns.",
+      "With PraediumX, investors can easily buy, sell, and trade real estate investments with just a few clicks. The platform is designed to be user-friendly and easy to navigate, making it accessible to investors of all skill levels. Whether you're a seasoned investor or a first-time investor, PraediumX has something for everyone.",
     ],
     image_path: BASE_URL + "praediumx/",
     project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
     project_link: "https://praediumx.com/",
   },
   {
-    title: "Unleash",
-    tech_category: ["reactjs", "nodejs"],
-    project_type: "Social Media Design & Content Creation Tool",
-    publisher_name: "Erience Solutions",
-    description: [
-      "Unleash is a revolutionary tool that transforms ideas into unique and captivating social media graphics with just a few clicks. Designed for creators, brands, and businesses, it simplifies the design process so you can create professional, eye-catching posts quickly and effortlessly.",
-      "With features like smart resize, ready-to-use colors and fonts, and customizable templates, Unleash helps you maintain a consistent brand style without needing advanced design skills. Export options in multiple formats ensure your content is ready for any platform.",
-    ],
-    image_path: BASE_URL + "unleash/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
-    project_link: "https://myunleash.com/",
-  },
-  {
     title: "Agrolla Impex",
+    slug: "agrolla-impex",
     tech_category: ["nextjs", "nodejs", "uiux"],
     project_type: "Agro Export & Manufacturing Company",
     publisher_name: "Agrolla Impex",
@@ -263,6 +269,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Gym Master",
+    slug: "gym-master",
     tech_category: ["reactjs", "nodejs", "erp", "uiux"],
     project_type: "Membership Management Solution",
     publisher_name: "Treshna Enterprises Ltd.",
@@ -276,6 +283,7 @@ export const PORTFOLIO = [
   },
   {
     title: "MSFG",
+    slug: "msfg",
     tech_category: ["nextjs", "nodejs"],
     project_type: "State-Level Memory Sports Championship",
     publisher_name: "Memory Sport Federation of Gujarat",
@@ -289,6 +297,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Varsha Foundation",
+    slug: "varsha-foundation",
     tech_category: ["reactjs", "nodejs", "erp", "uiux"],
     project_type: "Admin Panel for Non-Profit Management",
     publisher_name: "Varsha Foundation",
@@ -302,6 +311,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Adore Beds Mobile App",
+    slug: "adore-beds-mobile-app",
     tech_category: ["mobile", "erp"],
     project_type: "Designer Beds & Sleep Solutions",
     publisher_name: "Maison Complete",
@@ -315,6 +325,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Movie Ticket Booking Mobile App",
+    slug: "movie-ticket-booking-mobile-app",
     tech_category: ["mobile", "uiux"],
     project_type: "Movie Ticket Booking Mobile Application",
     publisher_name: "N/A",
@@ -328,6 +339,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Car Rental Mobile App",
+    slug: "car-rental-mobile-app",
     tech_category: ["mobile", "uiux"],
     project_type: "Car Rental Mobile Application",
     publisher_name: "N/A",
@@ -340,6 +352,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Stock Investment Mobile App",
+    slug: "stock-investment-mobile-app",
     tech_category: ["mobile", "uiux"],
     project_type: "Stock Investment & Trading Mobile Application",
     publisher_name: "N/A",
@@ -353,6 +366,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Dating Mobile App",
+    slug: "dating-mobile-app",
     tech_category: ["mobile", "uiux"],
     project_type: "Dating & Social Connection Mobile Application",
     publisher_name: "N/A",
@@ -366,6 +380,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Gym Master Mobile App",
+    slug: "gym-master-mobile-app",
     tech_category: ["mobile", "erp", "uiux"],
     project_type: "Gym Membership & Fitness Management Mobile Application",
     publisher_name: "Treshna Enterprises Ltd.",
@@ -379,6 +394,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Varsha Foundation Mobile App",
+    slug: "varsha-foundation-mobile-app",
     tech_category: ["mobile", "erp", "uiux"],
     project_type: "Admin Panel for Non-Profit Management",
     publisher_name: "Varsha Foundation",

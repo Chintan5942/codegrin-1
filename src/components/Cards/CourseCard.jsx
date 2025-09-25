@@ -5,7 +5,7 @@ export default function CourseCard(props) {
   const navigate = useNavigate();
 
   const handleRedirect = (course) => {
-    navigate(ROUTES.COURSE_DETAILS, { state: { course } });
+    navigate(`${ROUTES.COURSE_DETAILS}/${course.slug}`);
   };
   
   return (
