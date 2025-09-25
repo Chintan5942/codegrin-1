@@ -56,7 +56,7 @@ export default function CustomCursor() {
         transition-transform duration-500 ease-out mix-blend-difference`}
       style={{
         transform: `translate(${position.x - 15}px, ${position.y - 15}px) scale(${
-          hovered ? 2 : 1
+          hovered ? 2.5 : 0.75
         })`,
         backgroundColor: "white",
       }}
