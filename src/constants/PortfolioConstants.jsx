@@ -12,7 +12,7 @@ export const PORTFOLIO = [
       "We go beyond just providing elevators — our approach emphasizes personalized solutions and ongoing support to ensure long-term reliability. From modern designs that enhance building aesthetics to smart features that improve operational efficiency, we craft elevator systems that help businesses and communities elevate to new heights with confidence and style.",
     ],
     image_path: BASE_URL + "lumetiq/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://www.lumetiq.in/",
   },
   {
@@ -26,7 +26,7 @@ export const PORTFOLIO = [
       "Our focus is on building a seamless and trustworthy experience where quality meets convenience. With verified professionals, transparent bookings, and exceptional service delivery, Homiqly is redefining how people experience beauty and self-care at home. Guided by our mission and vision, we aim to make effortless, reliable home services a reality for everyone.",
     ],
     image_path: BASE_URL + "homiqly/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png", "ss5.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp", "ss5.webp"],
     project_link: "https://www.homiqly.com/",
   },
   {
@@ -40,7 +40,7 @@ export const PORTFOLIO = [
       "Our project approach emphasizes customer-centric design, advanced technology, and sustainable practices. From concept to completion, we ensure packaging solutions that not only address functional requirements but also contribute to long-term brand growth and environmental stewardship. With a blend of technical expertise and creative innovation, we continue to set new benchmarks in packaging excellence worldwide.",
     ],
     image_path: BASE_URL + "gnext/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://www.genextgroup.co/",
   },
   {
@@ -54,7 +54,7 @@ export const PORTFOLIO = [
       "From precision measuring devices to advanced analytical equipment, our products are crafted to serve the diverse needs of modern laboratories. Backed by expertise and dedicated customer support, we aim to empower scientists, researchers, and industries with cutting-edge technology and dependable solutions that drive progress and discovery.",
     ],
     image_path: BASE_URL + "brahmani/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://brahmanilabinstruments.com/",
   },
   {
@@ -68,7 +68,7 @@ export const PORTFOLIO = [
       "By blending eastern medicinal ingredients with rigorous research and high-quality production, the project aims to fill the gap in the wellness industry for safe, reliable, and authentic supplements. The focus is on empowering individuals to take charge of their health through holistic, sustainable, and culturally rooted solutions that prioritize both physical and mental well-being.",
     ],
     image_path: BASE_URL + "rootlabs/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://rootlabs.co/",
   },
   {
@@ -82,7 +82,7 @@ export const PORTFOLIO = [
       "With training in nutrition, detoxification, women’s health, and mental health, Tante Tina provides personalized guidance to help women discover the foods, nutrients, and daily routines that truly work for them. More than just coaching, this is a supportive lifestyle approach designed to help women unlock their full physical and mental potential, creating a path toward balance, vitality, and a fulfilling life.",
     ],
     image_path: BASE_URL + "tante-tina/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://www.tante-tina.com/",
   },
   {
@@ -96,7 +96,7 @@ export const PORTFOLIO = [
       "Backed by formal training in holistic nutrition, live cell microscopy, and digestive health, along with hands-on clinical experience, Quantum Leap combines knowledge, practice, and passion to deliver impactful results. From nutrient-dense solutions like our specialized bone broths to personalized guidance in nutrition and natural healing, we aim to empower individuals to take control of their wellness. With a balance of expertise, compassion, and innovation, Quantum Leap is redefining what’s possible with holistic health.",
     ],
     image_path: BASE_URL + "quantum-medicine/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://myquantumleap.ca/",
   },
   {
@@ -110,7 +110,7 @@ export const PORTFOLIO = [
       "As a recognized SAP SuccessFactors partner with SAP Recognized Expertise (REx) accreditation, Renew HR delivers solutions built on best practices and proven methodologies. Through affordable HR analytics, qualified partner packages, and tailored consulting services, we make cutting-edge HR innovations accessible to businesses of all sizes. Guided by our purpose and promise, we partner with organizations to achieve digital HR excellence, enabling them to renew, innovate, and grow with confidence.",
     ],
     image_path: BASE_URL + "renew-hr/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://www.renewhr.com/",
   },
   {
@@ -124,7 +124,7 @@ export const PORTFOLIO = [
       "Our approach is built on expert engineering, modern technology, and collaborative project management. Whether it’s designing new structures, renovating existing spaces, or developing complex infrastructure, we bring together skilled professionals and advanced techniques to deliver lasting results. At the core of our work lies a passion for shaping environments that inspire growth, connectivity, and a better future.",
     ],
     image_path: BASE_URL + "scema-construction/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "http://www.scemaconstruction.com/",
   },
   {
@@ -138,7 +138,7 @@ export const PORTFOLIO = [
       "Each piece at Maddeandme is crafted as more than just an accessory—it’s a story, a memory, and a reflection of individuality. Our focus is on creating jewelry that resonates emotionally, turning everyday style into an art form. With a balance of creativity, elegance, and timeless charm, Maddeandme helps you celebrate life’s moments while carrying beauty that feels uniquely yours.",
     ],
     image_path: BASE_URL + "madde-and-me/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://maddeandme.com/",
   },
   {
@@ -152,7 +152,7 @@ export const PORTFOLIO = [
       "Our programs are built on innovative methodologies and practical techniques that inspire growth, sharpen cognitive abilities, and enhance overall performance. By focusing on confidence, productivity, and lifelong learning skills, MINDWHIZ helps individuals unlock their true potential and achieve excellence in both personal and professional life.",
     ],
     image_path: BASE_URL + "mindwhiz/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://mindwhiz.com/",
   },
   {
@@ -166,7 +166,7 @@ export const PORTFOLIO = [
       "We believe toys are more than playthings—they’re tools that help children explore, learn, and grow. At ToyiQ, our mission is to provide safe, high-quality, and innovative toys that spark curiosity, nurture creativity, and create unforgettable childhood memories. Whether for playtime, learning, or gifting, ToyiQ brings happiness to every home.",
     ],
     image_path: BASE_URL + "toy-iq/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://toyiq.in/",
   },
   {
@@ -180,7 +180,7 @@ export const PORTFOLIO = [
       "We believe that play is the foundation of growth. That’s why every XOOG product is built with a focus on safety, quality, and engagement, ensuring that children not only enjoy playtime but also gain valuable skills for the future. With XOOG, toys become more than entertainment—they become tools for discovery, creativity, and lifelong learning.",
     ],
     image_path: BASE_URL + "xoog/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "http://www.xoog.info",
   },
   {
@@ -194,7 +194,7 @@ export const PORTFOLIO = [
       "We believe jewelry is more than an accessory—it’s a statement of personality and a celebration of life’s moments. With designs that blend contemporary trends and classic charm, our mission is to help you elevate your style while carrying a piece of inspiration wherever you go.",
     ],
     image_path: BASE_URL + "elisabet-prag/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://elisabetprag.com/",
   },
   {
@@ -208,7 +208,7 @@ export const PORTFOLIO = [
       "We may not be a global giant, but our strength lies in being personal, agile, and committed. Every project is approached with dedication, innovation, and attention to detail—helping businesses grow, strengthen their digital presence, and achieve long-term success. At Honest Infotech, we don’t just build solutions, we build lasting partnerships.",
     ],
     image_path: BASE_URL + "honest-infotech/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://honestinfotech.in/",
   },
   {
@@ -222,7 +222,7 @@ export const PORTFOLIO = [
       "Our focus is on making good sleep accessible to everyone. By blending smart production methods, timeless design, and premium craftsmanship, Adore Beds delivers products that go beyond furniture—they create an ultimate sleep experience. For us, it’s not just about making beds, it’s about helping you fall in love with sleep all over again.",
     ],
     image_path: BASE_URL + "adore-beds/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://adorebeds.nl/",
   },
   {
@@ -236,7 +236,7 @@ export const PORTFOLIO = [
       "Backed by industry-standard security practices, SolanaLauncher ensures a safe and reliable token deployment process. Whether for building decentralized applications (dApps), experimenting with blockchain utilities, or launching community-driven assets, the platform provides a simple, secure, and scalable solution to get tokens live on the Solana blockchain instantly. With responsive support and ongoing innovation, SolanaLauncher is making token creation more accessible than ever before.",
     ],
     image_path: BASE_URL + "solana-launcher/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://solanalauncher.com/",
   },
   {
@@ -250,7 +250,7 @@ export const PORTFOLIO = [
       "With PraediumX, investors can easily buy, sell, and trade real estate investments with just a few clicks. The platform is designed to be user-friendly and easy to navigate, making it accessible to investors of all skill levels. Whether you're a seasoned investor or a first-time investor, PraediumX has something for everyone.",
     ],
     image_path: BASE_URL + "praediumx/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://praediumx.com/",
   },
   {
@@ -264,7 +264,7 @@ export const PORTFOLIO = [
       "Our close partnerships with farmers, backed by state-of-the-art processing facilities and rigorous quality control systems, allow us to maintain purity, freshness, and nutritional value across all product lines. With a strong focus on sustainability, ethical sourcing, and global distribution, Agrolla Impex has built a reputation as a preferred supplier for bulk buyers, manufacturers, wholesalers, and retailers worldwide.",
     ],
     image_path: BASE_URL + "agrolla/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://www.agrollaimpex.com/",
   },
   {
@@ -278,7 +278,7 @@ export const PORTFOLIO = [
       "Backed by Treshna Enterprises, the team behind GymMaster brings decades of innovation and expertise in the fitness industry. From developing purpose-built access control hardware to launching a fully cloud-based solution and mobile app, GymMaster has continuously evolved to meet the demands of a rapidly changing market. Today, thousands of gyms worldwide rely on GymMaster’s cutting-edge technology and dedicated support, making it more than just software—it’s a trusted partner in running and scaling successful fitness clubs.",
     ],
     image_path: BASE_URL + "gymmaster/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://www.gymmaster.com/",
   },
   {
@@ -292,7 +292,7 @@ export const PORTFOLIO = [
       "What sets GMC apart is its adherence to international standards, featuring disciplines such as random words, historical dates, binary numbers, random images, and more, each designed to test different memory systems. Beyond competition, the event opens doors for athletes to qualify for international championships, offering them a chance to represent India at the global stage. With live streaming, media coverage, professional judging, and networking opportunities, GMC stands as both a competitive challenge and a platform for career opportunities in memory sports.",
     ],
     image_path: BASE_URL + "msfg/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://www.msfg.in/",
   },
   {
@@ -306,7 +306,7 @@ export const PORTFOLIO = [
       "Through this centralized platform, the foundation can better support children with cancer at its “Home Away from Home” in Lucknow and monitor learning progress at the non-formal education center in Aligarh. By simplifying day-to-day tasks and improving data management, the admin panel strengthens Varsha Foundation’s mission to bring change in childhood cancer care and education for underprivileged children in India.",
     ],
     image_path: BASE_URL + "varsha-foundation/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png", "ss4.png", "ss5.png", "ss6.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp", "ss5.webp", "ss6.webp"],
     project_link: "https://varshafoundation.org/",
   },
   {
@@ -320,7 +320,7 @@ export const PORTFOLIO = [
       "Our focus is on making good sleep accessible to everyone. By blending smart production methods, timeless design, and premium craftsmanship, Adore Beds delivers products that go beyond furniture—they create an ultimate sleep experience. For us, it’s not just about making beds, it’s about helping you fall in love with sleep all over again.",
     ],
     image_path: BASE_URL + "adore-beds-mobile/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp"],
     project_link: "https://adorebeds.nl/",
   },
   {
@@ -334,7 +334,7 @@ export const PORTFOLIO = [
       "Beyond ticketing, the app provides personalized recommendations, notifications about new releases, and exclusive offers, enhancing the overall entertainment experience. By combining advanced search, secure payments, and interactive features, the app serves as a one-stop solution for movie lovers to plan their outings efficiently while enjoying a seamless digital experience.",
     ],
     image_path: BASE_URL + "movie-ticket-booking-mobile/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp"],
     project_link: "#",
   },
   {
@@ -347,7 +347,7 @@ export const PORTFOLIO = [
       "This mobile app is designed to make car rentals simple, fast, and convenient. Users can browse available vehicles, compare prices, choose pickup and drop-off locations, and book cars directly from their smartphones. With real-time availability, secure payment options, and instant confirmations, the app streamlines the car rental process for both short-term and long-term needs.",
     ],
     image_path: BASE_URL + "car-rental-mobile/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp"],
     project_link: "#",
   },
   {
@@ -361,7 +361,7 @@ export const PORTFOLIO = [
       "Beyond trading, the app offers personalized insights, market analysis, alerts, and educational resources to help users grow their wealth and manage investments effectively. By combining intuitive design, robust security, and intelligent tools, the app ensures a comprehensive investment experience that makes stock trading accessible, convenient, and efficient for everyone.",
     ],
     image_path: BASE_URL + "stock-investment-mobile/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp"],
     project_link: "#",
   },
   {
@@ -375,7 +375,7 @@ export const PORTFOLIO = [
       "Beyond connecting singles, the app provides features such as real-time messaging, event suggestions, and personalized recommendations, enhancing the overall social experience. With a focus on safety, privacy, and user engagement, the app empowers individuals to explore friendships, dating, and relationships confidently and conveniently.",
     ],
     image_path: BASE_URL + "dating-mobile/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp"],
     project_link: "#",
   },
   {
@@ -389,7 +389,7 @@ export const PORTFOLIO = [
       "Beyond membership management, GymMaster offers features like progress tracking, notifications for upcoming classes, and in-app communication with trainers, creating a fully connected fitness ecosystem. With a focus on convenience, engagement, and fitness goal achievement, GymMaster empowers both gym owners and members to maximize their productivity and results while fostering a seamless, interactive gym experience.",
     ],
     image_path: BASE_URL + "gymmaster-mobile/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp"],
     project_link: "https://www.gymmaster.com/",
   },
   {
@@ -403,7 +403,7 @@ export const PORTFOLIO = [
       "For beneficiaries and volunteers, the app acts as a bridge to access resources, request support, and participate in programs. With its simple and user-friendly design, the Varsha Foundation Mobile App empowers communities to stay connected, spread awareness about childhood cancer, and work together toward creating opportunities for underprivileged children across India.",
     ],
     image_path: BASE_URL + "varsha-foundation-mobile/",
-    project_images: ["ss1.png", "ss2.png", "ss3.png"],
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp"],
     project_link: "https://varshafoundation.org/",
   },
 ];

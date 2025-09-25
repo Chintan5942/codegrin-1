@@ -79,7 +79,7 @@ const PortfolioCarousel = ({
             <div  
               className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 hover:scale-105"
               style={{
-                backgroundImage: `url(${project.image_path}header.png)`
+                backgroundImage: `url(${project.image_path}header.webp)`
               }}
             >
               {/* Overlay Gradient */}

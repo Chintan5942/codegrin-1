@@ -167,7 +167,7 @@ const ProjectDetails = () => {
           {portfolio.title}
         </div>  
         <img
-          src={portfolio.image_path + "header.png"}
+          src={portfolio.image_path + "header.webp"}
           className="absolute top-1/2 left-0 -translate-y-1/2 min-h-full min-w-none object-cover z-0"
           alt={portfolio.title}
         />  
@@ -241,7 +241,7 @@ const ProjectDetails = () => {
           <div className="bg absolute inset-0">
             <img 
               ref={nextBgRef}
-              src={nextProjectData.project.image_path + "header.png"} 
+              src={nextProjectData.project.image_path + "header.webp"} 
               alt="Next Project Background"
               className="w-full h-full object-cover"
             />

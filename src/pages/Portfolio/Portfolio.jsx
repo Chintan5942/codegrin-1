@@ -169,7 +169,7 @@ export default function Portfolio() {
             >
               <div className="overflow-hidden rounded-xl">
                 <img
-                  src={portfolio.image_path + "header.png"}
+                  src={portfolio.image_path + "header.webp"}
                   className="rounded-lg group-hover:scale-110 transition-all duration-300 object-cover origin-center"
                   alt={portfolio.title}
                 />
