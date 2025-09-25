@@ -5,8 +5,8 @@ export const BLOGS = [
     title: "The Future of Web Development: React 18 and Beyond",
     slug: "react-future",
     upload_date: "15 Dec 2024",
-    header_img: BASE_URL + "react-future/header.png",
-    blog_image: BASE_URL + "react-future/main-image.png",
+    header_img: BASE_URL + "react-future/header.webp",
+    blog_image: BASE_URL + "react-future/main-image.webp",
     publisher_name: "Ravi Babariya",
     description:
       "React 18 represents a paradigm shift in how we build modern web applications. Released in March 2022, this major version introduces groundbreaking features that fundamentally transform user experience through concurrent rendering, automatic batching, and enhanced Suspense capabilities. The release focuses heavily on performance improvements and sets the foundation for future React developments that will benefit developers and users alike.",
@@ -143,8 +143,8 @@ export const BLOGS = [
     title: "Building Scalable Applications with Next.js",
     slug: "nextjs-scalable",
     upload_date: "28 Nov 2024",
-    header_img: BASE_URL + "nextjs-scalable/header.png",
-    blog_image: BASE_URL + "nextjs-scalable/main-image.png",
+    header_img: BASE_URL + "nextjs-scalable/header.webp",
+    blog_image: BASE_URL + "nextjs-scalable/main-image.webp",
     publisher_name: "Chintan Rabadiya",
     description:
       "In today's fast-paced digital landscape, scalability isn't just an option—it's a necessity. Next.js has emerged as the go-to framework for building applications that can handle millions of users while maintaining exceptional performance and developer experience. From startups building their first MVP to Fortune 500 companies managing complex enterprise systems, Next.js provides the foundation for modern web applications that need to scale rapidly and efficiently.",

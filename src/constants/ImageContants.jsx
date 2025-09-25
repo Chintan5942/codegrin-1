@@ -4,26 +4,26 @@ const SERVICE_BASE = BASE_URL + "services/";
 const TEAM_BASE = BASE_URL + "team/";
 
 export const IMAGE_ASSETS = {
-  LOGO: LOGO_BASE + "logo-light.png",
-  LOGO_SYMBOL: LOGO_BASE + "logo-light-symbol.png",
+  LOGO: LOGO_BASE + "logo-light.webp",
+  LOGO_SYMBOL: LOGO_BASE + "logo-light-symbol.webp",
   SCROLL_TOP: LOGO_BASE + "scroll_top.svg",
   NOT_FOUND: BASE_URL + "404.gif",
-  HERO_SECTION_1: BASE_URL + "earth.png",
-  HERO_SECTION_2: BASE_URL + "code.png",
+  HERO_SECTION_1: BASE_URL + "earth.webp",
+  HERO_SECTION_2: BASE_URL + "code.webp",
 
   SERVICE_IMG: {
-    BLOCKCHAIN: SERVICE_BASE + "blockchain-dev.png",
-    CMS_DEV: SERVICE_BASE + "cms-dev.png",
-    CUSTOM_DEV: SERVICE_BASE + "custom-dev.png",
-    ECOMMERCE_DEV: SERVICE_BASE + "ecommerce-dev.png",
-    GRAPHIC_DESIGN: SERVICE_BASE + "graphic-des.png",
-    INVENTORY_DEV: SERVICE_BASE + "inventory-dev.png",
-    JS_DEV: SERVICE_BASE + "js-dev.png",
-    GOOGLE_ADS: SERVICE_BASE + "google-ads.png",
-    META_ADS: SERVICE_BASE + "meta-ads.png",
-    MOBILE_APP_DEV: SERVICE_BASE + "mobile-app-dev.png",
-    UIUX_DESIGN: SERVICE_BASE + "ui-ux.png",
-    WORDPRESS_DEV: SERVICE_BASE + "wordpress-dev.png",
+    BLOCKCHAIN: SERVICE_BASE + "blockchain-dev.webp",
+    CMS_DEV: SERVICE_BASE + "cms-dev.webp",
+    CUSTOM_DEV: SERVICE_BASE + "custom-dev.webp",
+    ECOMMERCE_DEV: SERVICE_BASE + "ecommerce-dev.webp",
+    GRAPHIC_DESIGN: SERVICE_BASE + "graphic-des.webp",
+    INVENTORY_DEV: SERVICE_BASE + "inventory-dev.webp",
+    JS_DEV: SERVICE_BASE + "js-dev.webp",
+    GOOGLE_ADS: SERVICE_BASE + "google-ads.webp",
+    META_ADS: SERVICE_BASE + "meta-ads.webp",
+    MOBILE_APP_DEV: SERVICE_BASE + "mobile-app-dev.webp",
+    UIUX_DESIGN: SERVICE_BASE + "ui-ux.webp",
+    WORDPRESS_DEV: SERVICE_BASE + "wordpress-dev.webp",
   },
 
   TOOLS: [
@@ -70,30 +70,30 @@ export const IMAGE_ASSETS = {
   ],
   
    TEAM : [
-    TEAM_BASE + "abhay.png", //1
-    TEAM_BASE + "chintanbhai.png",
-    TEAM_BASE + "devan.png",
-    TEAM_BASE + "dixit.png",
-    TEAM_BASE + "ghanshyam.png",
-    TEAM_BASE + "jiya.png",
-    TEAM_BASE + "kashyap.png",
-    TEAM_BASE + "krina.png",
-    TEAM_BASE + "krupali.png",
-    TEAM_BASE + "miten.png", //10
-    TEAM_BASE + "nemisha.png",
-    TEAM_BASE + "payal.png",
-    TEAM_BASE + "ravibhai.png",
-    TEAM_BASE + "rohan.png",
-    TEAM_BASE + "shivang.png",
-    TEAM_BASE + "taman.png",
-    TEAM_BASE + "trushit.png",
-    TEAM_BASE + "utsav.png",
-    TEAM_BASE + "vansh.png",
-    TEAM_BASE + "vishva.png", //20
-    TEAM_BASE + "princy.png",
-    TEAM_BASE + "aaryan.png",
-    TEAM_BASE + "viren.png",
-    TEAM_BASE + "chintanbhai.png",
+    TEAM_BASE + "abhay.webp", //1
+    TEAM_BASE + "chintanbhai.webp",
+    TEAM_BASE + "devan.webp",
+    TEAM_BASE + "dixit.webp",
+    TEAM_BASE + "ghanshyam.webp",
+    TEAM_BASE + "jiya.webp",
+    TEAM_BASE + "kashyap.webp",
+    TEAM_BASE + "krina.webp",
+    TEAM_BASE + "krupali.webp",
+    TEAM_BASE + "miten.webp", //10
+    TEAM_BASE + "nemisha.webp",
+    TEAM_BASE + "payal.webp",
+    TEAM_BASE + "ravibhai.webp",
+    TEAM_BASE + "rohan.webp",
+    TEAM_BASE + "shivang.webp",
+    TEAM_BASE + "taman.webp",
+    TEAM_BASE + "trushit.webp",
+    TEAM_BASE + "utsav.webp",
+    TEAM_BASE + "vansh.webp",
+    TEAM_BASE + "vishva.webp", //20
+    TEAM_BASE + "princy.webp",
+    TEAM_BASE + "aaryan.webp",
+    TEAM_BASE + "viren.webp",
+    TEAM_BASE + "chintanbhai.webp",
   ]
   
 };

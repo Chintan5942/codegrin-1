@@ -20,7 +20,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "offline",
     certificate: "Yes",
-    image: BASE_URL + "uiux.png",
+    image: BASE_URL + "uiux.webp",
   },
   {
     title: "Application Development With Flutter",
@@ -42,7 +42,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "flutter.png",
+    image: BASE_URL + "flutter.webp",
   },
   {
     title: "Blockchain Development Fundamentals",
@@ -64,7 +64,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "blockchain.png",
+    image: BASE_URL + "blockchain.webp",
   },
   {
     title: "Modern Frontend Development with React",
@@ -86,7 +86,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "react.png",
+    image: BASE_URL + "react.webp",
   },
   {
     title: "Full Stack Development with MERN",
@@ -108,7 +108,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "mern.png",
+    image: BASE_URL + "mern.webp",
   },
   {
     title: "Backend With Laravel Development",
@@ -131,7 +131,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "laravel.png",
+    image: BASE_URL + "laravel.webp",
   },
   {
     title: "Building Scalable Applications with Next.js",
@@ -153,7 +153,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "nextjs.png",
+    image: BASE_URL + "nextjs.webp",
   },
   {
     title: "Node.js Backend Development",
@@ -175,7 +175,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "nodejs.png",
+    image: BASE_URL + "nodejs.webp",
   },
   {
     title: "Backend With PHP Development",
@@ -198,7 +198,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "php.png",
+    image: BASE_URL + "php.webp",
   },
   {
     title: "Backend With Python Development",
@@ -221,7 +221,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "python.png",
+    image: BASE_URL + "python.webp",
   },
   {
     title: "Responsive Web Design Essentials",
@@ -243,7 +243,7 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "responsive.png",
+    image: BASE_URL + "responsive.webp",
   },
   {
     title: "Master the Art of Web Design",
@@ -265,6 +265,6 @@ export const COURSES = [
     qualifications: "Graduate",
     mode: "Offline",
     certificate: "Yes",
-    image: BASE_URL + "html-css-js.png",
+    image: BASE_URL + "html-css-js.webp",
   },
 ];
