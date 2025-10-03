@@ -32,9 +32,15 @@ export default function Home() {
           />
         </div>
 
-        <HeadingTitle
+        {/* <HeadingTitle
           word1={"Turning Ideas Into Impact"}
           word2={"Through the Power of Code"}
+          className="lg:pt-50 md:pt-50 pt-50 pb-20"
+          direction="col"
+        /> */}
+        <HeadingTitle
+          word1={"Smarter, Faster, Future-Ready"}
+          word2={"AI-Powered Digital Solutions"}
           className="lg:pt-50 md:pt-50 pt-50 pb-20"
           direction="col"
         />
@@ -119,8 +125,8 @@ export default function Home() {
         {/* Tools */}
         <section>
           <HeadingTitle
-            word1={"Integrating with"}
-            word2={"Top Tools"}
+            word1={"Building Smarter"}
+            word2={"with AI & Top Tools"}
             direction="col"
             className="mt-20 mb-5 lg:mb-10"
           />
@@ -130,8 +136,8 @@ export default function Home() {
         {/* Work */}
         <section className="w-full flex flex-col items-center justify-center">
           <HeadingTitle
-            word1={"Our"}
-            word2={"Work"}
+            word1={"Built by"}
+            word2={"CodeGrin"}
             direction="row"
             className="mt-20 mb-5 lg:mb-10"
           />
@@ -146,8 +152,8 @@ export default function Home() {
         {/* Blogs */}
         <section className="w-full flex flex-col items-center justify-center">
           <HeadingTitle
-            word1={"Latest"}
-            word2={"Blog"}
+            word1={"From"}
+            word2={"Our Desk"}
             direction="row"
             className="mt-20 mb-5 lg:mb-10"
           />
@@ -162,8 +168,8 @@ export default function Home() {
         {/* Client Feedback */}
         <section>
           <HeadingTitle
-            word1={"What Client Say's About"}
-            word2={"Our Services"}
+            word1={"Trusted by"}
+            word2={"Our Clients"}
             direction="col"
             className="mt-30 mb-5 lg:mb-10"
           />
@@ -173,8 +179,8 @@ export default function Home() {
         {/* Team */}
         <section>
           <HeadingTitle
-            word1={"Meet"}
-            word2={"Our Team"}
+            word1={"Brains"}
+            word2={"Behind the Work"}
             direction="row"
             className="mt-30 mb-5 lg:mb-10"
           />
@@ -184,50 +190,51 @@ export default function Home() {
         {/* Why to choose us */}
         <section>
           <HeadingTitle
-            word1={"Why Choose"}
-            word2={"Codegrin"}
+            word1={"Why Businesses"}
+            word2={"Trust Codegrin"}
             direction="col"
             className="mt-30 mb-5 lg:mb-20"
           />
           <div className="text-justify text-base xl:text-lg text-secondary">
             <p className="mb-5">
-              At <strong>Codegrin Technologies</strong>, we believe in
-              delivering more than just software—we create digital experiences
-              that make an impact. Since our founding in 2020, we’ve been
-              committed to helping businesses transform ideas into powerful,
-              scalable, and future-ready solutions. Our expertise spans the
-              entire React ecosystem, including
-              <strong>ReactJS, Next.js, Node.js</strong>, and beyond. Whether
-              it’s building custom applications, optimizing existing systems, or
-              integrating cutting-edge features, we provide complete solutions
-              under one roof.
-            </p>
+  At <strong>Codegrin Technologies</strong>, we don’t just build software —
+  we craft <strong>reliable digital solutions</strong> that create real business value.  
+  Since 2020, we’ve been helping companies turn ideas into
+  <strong> scalable, future-ready products</strong> that drive growth.  
+  Our expertise covers the complete modern tech stack, including
+  <strong> ReactJS, Next.js, Node.js</strong>, and more.  
+  From developing custom applications to upgrading existing systems and
+  integrating the latest features, we provide <strong> end-to-end solutions you can trust</strong> —
+  all under one roof.
+</p>
+
 
             <p className="mb-5">
-              What sets us apart is our user-first approach. Every design and
-              development decision is made with usability in mind—ensuring
-              seamless navigation, engaging interfaces, and an overall
-              experience that delights end users. We combine creative UI/UX
-              design with robust technology to deliver products that are both
-              visually appealing and functionally strong. From eCommerce
-              platforms to inventory management systems and even blockchain
-              solutions, our portfolio reflects our ability to adapt and deliver
-              across industries.
-            </p>
+  we believe technology should
+  feel effortless. That’s why we design and build solutions that are
+  <strong>intuitive, engaging, and built to last</strong>.  
+  Our strength lies in blending <strong> human-centered design</strong> with
+  <strong> scalable engineering</strong>, so every product not only looks
+  great but performs flawlessly in the real world.  
+  Whether it’s <strong> eCommerce, enterprise tools, or blockchain
+  applications</strong>, we deliver solutions that adapt to business needs
+  and create lasting impact across industries.
+</p>
 
-            <p className="mb-5">
-              Beyond technology, we also help businesses grow faster with
-              advanced
-              <strong>Google</strong> and <strong>Meta</strong> advertising
-              services—driving traffic, generating leads, and maximizing ROI.
-            </p>
+           <p className="mb-5">
+  we go beyond development by helping
+  businesses scale through <strong> Google</strong> and <strong> Meta </strong>
+  advertising. From driving targeted traffic to converting leads and boosting ROI,
+  our marketing strategies are designed to deliver measurable growth.
+</p>
+<p className="mb-5">
+  We see ourselves not just as a service provider, but as a
+  <strong> strategic partner</strong> invested in your success.  
+  Guided by innovation and quality, our team ensures every project is delivered
+  with precision—on time, on budget, and with results that consistently exceed
+  expectations.
+</p>
 
-            <p className="mb-5">
-              Above all, we are more than just a vendor—we are a strategic
-              partner. Our team is dedicated to innovation, quality, and
-              long-term success, ensuring every project is delivered on time,
-              within budget, and beyond expectations.
-            </p>
           </div>
         </section>
       </div>

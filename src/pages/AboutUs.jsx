@@ -15,20 +15,27 @@ export default function Contact() {
           <div>
             <h1 className="text-4xl font-bold">We Are CODEGRIN</h1>
             <p className="mt-5 text-secondary text-justify">
-              Founded in 2020, Codegrin Technologies is a leading provider of
-              advanced frontend development services and solutions. We
-              specialize in harnessing the power of the React ecosystem to craft
-              exceptional digital experiences for our clients. Our expertise
-              spans ReactJS and related technologies, including Node.js,
-              Next.js, and more. With a strong focus on user experience (UX) and
-              user interface (UI) design, we build intuitive and visually
-              appealing interfaces that prioritize usability and engagement.
+              Founded in 2020, <strong>CodeGrin Technologies</strong> is a
+              trusted partner for businesses looking to transform ideas into
+              powerful digital solutions. We specialize in{" "}
+              <strong> AI-driven and advanced frontend development</strong>,
+              with deep expertise in the <strong> React ecosystem</strong>
+              —including
+              <strong> ReactJS, Next.js, Node.js</strong>, and more. By blending
+              modern technology with a strong focus on
+              <strong> User Experience (UX)</strong> and
+              <strong> User Interface (UI)</strong> design, we create
+              applications that are not only functional but also engaging and
+              intuitive.
             </p>
             <p className="mt-5 text-secondary text-justify">
-              Whether you're looking to develop custom web and mobile
-              applications from scratch or enhance your existing system with
-              unique features and functionalities, Codegrin Technologies offers
-              all the solutions you need under one roof.
+              From building <strong>custom web and mobile applications</strong>{" "}
+              to enhancing existing platforms with cutting-edge features, our
+              team delivers
+              <strong> end-to-end solutions under one roof</strong>. At
+              CodeGrin, we go beyond coding—we focus on crafting
+              <strong> future-ready digital experiences</strong> that drive
+              growth, scalability, and long-term success for our clients.
             </p>
           </div>
         </div>
@@ -36,19 +43,16 @@ export default function Contact() {
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl font-bold">Our Mission</h1>
             <p className="mt-5 text-secondary text-justify">
-              Our mission is to empower businesses with innovative frontend
-              solutions, transforming digital experiences. We aim to help our
-              clients thrive in a dynamic digital landscape. Through
-              cutting-edge technology, we drive success and growth. Together, we
-              create lasting impact and build the future of digital interaction.
+              Our mission is to enable businesses to unlock growth through
+              modern digital solutions. By blending creativity with advanced
+              technology, we design experiences that engage, inspire, and
+              deliver results. We are committed to helping our clients stay
+              ahead in a fast-changing digital world while shaping the future of
+              interaction.
             </p>
             <h1 className="mt-10 text-4xl font-bold">Our Vission</h1>
             <p className="mt-5 text-secondary text-justify">
-              Our vision is to lead transformative change in the frontend
-              industry by merging creativity and technology. We aim to set new
-              benchmarks and create remarkable digital experiences that leave a
-              lasting impact on users and transform how businesses connect with
-              their audiences.{" "}
+           We envision a world where businesses connect with their audiences through meaningful, intuitive, and powerful digital experiences. By blending design and technology, we aim to lead the transformation of the frontend industry and create solutions that leave a lasting impact.
             </p>
           </div>
           <div class="order-1 lg:order-2 animate-float-up relative w-60 h-52 md:w-[300px] md:h-[260px] flex items-center justify-center mx-auto">
@@ -87,7 +91,7 @@ export default function Contact() {
           ))}
         </div>
 
-        <div className="my-10 w-full h-0.5 bg-primary blend-x"/>
+        <div className="my-10 w-full h-0.5 bg-primary blend-x" />
 
         {/* Employee section - responsive grid with gap-x for md and below */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-6 gap-10 my-10 sm:my-20 w-full justify-items-center">

@@ -91,7 +91,7 @@ export default function Portfolio() {
   return (
     <section className="w-full min-h-screen" ref={containerRef}>
       <div className="container">
-        <PageTitle title="Our Portfolio" />
+        <PageTitle title="Built by CodeGrin" />
 
         {/* Category Filter Radio Buttons */}
         <div className="w-full flex flex-row lg:items-center mt-20 mb-8 gap-4">

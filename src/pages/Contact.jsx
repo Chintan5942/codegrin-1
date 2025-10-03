@@ -50,11 +50,10 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center my-20">
           <div>
             <h1 className="lg:text-5xl text-3xl font-semibold">
-              We're Always Eager to Hear From You!
+              Opportunities Start With a Conversation 
             </h1>
             <p className="mt-5 text-secondary">
-              Have service-related questions or interested in other
-              collaborations? We're here to support your every steps{" "}
+              Whether it’s services or collaborations, we’re here to support you every step of the way.{" "}
             </p>
             <div className="w-full h-0.5 bg-primary-card-light my-10" />
             <div className="flex flex-col gap-10">

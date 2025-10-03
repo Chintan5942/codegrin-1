@@ -57,9 +57,7 @@ export default function Footer() {
               </a>
 
               <p className="mb-5 text-sm text-white/75 lg:pr-6">
-                CodeGrin Technologies empowering the next generation of
-                developers with hands-on courses in Web Development, UI/UX
-                Design, Blockchain, Full Stack Development, and more.
+               CodeGrin Technologies building the future with next-gen AI strategies in Web Development, UI/UX, Blockchain, and Full Stack solutions.
               </p>
 
               <ul className="flex gap-3 justify-center md:justify-start lg:justify-start">
