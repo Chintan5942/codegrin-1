@@ -165,7 +165,7 @@ export const PORTFOLIO = [
       "ToyiQ is a one-stop destination for fun, learning, and creativity, offering a wide range of toys that inspire imagination and bring joy to every child. From educational games and puzzles to action figures, dolls, and outdoor play essentials, our collection is carefully curated to combine entertainment with development.",
       "We believe toys are more than playthings—they’re tools that help children explore, learn, and grow. At ToyiQ, our mission is to provide safe, high-quality, and innovative toys that spark curiosity, nurture creativity, and create unforgettable childhood memories. Whether for playtime, learning, or gifting, ToyiQ brings happiness to every home.",
     ],
-    image_path: BASE_URL + "toy-iq/",
+    image_path: BASE_URL + "toyiq/",
     project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://toyiq.in/",
   },
