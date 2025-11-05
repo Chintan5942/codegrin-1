@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
-export default function AchivementCard({
+export default function AchievementCard({
   count,
   title,
   className = "",

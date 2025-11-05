@@ -4,7 +4,7 @@ import Particles from "../components/Particles";
 import { IMAGE_ASSETS } from "../constants/ImageContants";
 import HeadingTitle from "../components/HeadingTItle";
 import Orbit from "../components/Orbit";
-import AchivementCard from "../components/Cards/AchivementCard";
+import AchievementCard from "../components/Cards/AchievementCard";
 import ServiceCard from "../components/Cards/ServiceCard";
 import { SERVICES } from "../constants/ServicesConstants";
 import BorderButton from "../components/Buttons/BorderButton";
@@ -68,31 +68,31 @@ export default function Home() {
 
       {/* Contents */}
       <div className="container">
-        {/* Achivements */}
+        {/* Achivement */}
         <section className="w-fullflex items-center justify-center">
           <HeadingTitle
             word1={"Our"}
-            word2={"Achivements"}
+            word2={"Achievements"}
             direction="row"
             className="mt-10 mb-5 lg:mb-10"
           />
           <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6 xl:gap-8 items-center justify-items-center">
-            <AchivementCard
+            <AchievementCard
               className="animate-float-left lg:animate-float-left xl:animate-float-up"
               count={5}
               title={"Year of trust"}
             />
-            <AchivementCard
+            <AchievementCard
               className="animate-float-right lg:animate-float-right xl:animate-float-down"
               count={29}
               title={"Clients"}
             />
-            <AchivementCard
+            <AchievementCard
               className="animate-float-left lg:animate-float-right xl:animate-float-up"
               count={30}
               title={"Projects Completed"}
             />
-            <AchivementCard
+            <AchievementCard
               className="animate-float-right lg:animate-float-left xl:animate-float-down"
               count={10}
               title={"Countries Served"}
