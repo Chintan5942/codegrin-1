@@ -310,6 +310,20 @@ export const PORTFOLIO = [
     project_link: "https://varshafoundation.org/",
   },
   {
+    title: "Judge a Craft",
+    slug: "judge-a-craft",
+    tech_category: ["shopify"],
+    project_type: "Shopify Store",
+    publisher_name: "Judge a Craft",
+    description: [
+      "Judge A Craft is a Shopify store born from Brittnee’s love for handmade creations. What began as a family hobby has grown into a space where customers can easily shop for personalized, meaningful items made with care and creativity.",
+      "From custom gifts to school spirit wear, each piece reflects family-inspired passion and attention to detail. Built on Shopify, the store offers a smooth, heartfelt shopping experience that helps people celebrate life’s special moments."
+    ],
+    image_path: BASE_URL + "judge-a-craft/",
+    project_images: ["ss1.webp", "ss2.webp", "ss3.webp","ss4.webp"],
+    project_link: "https://www.judgeacraft.shop/",
+  },
+  {
     title: "Adore Beds Mobile App",
     slug: "adore-beds-mobile-app",
     tech_category: ["mobile", "erp"],
@@ -406,4 +420,5 @@ export const PORTFOLIO = [
     project_images: ["ss1.webp", "ss2.webp", "ss3.webp"],
     project_link: "https://varshafoundation.org/",
   },
+  
 ];
