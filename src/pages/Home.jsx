@@ -111,7 +111,7 @@ export default function Home() {
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
             {SERVICES.slice(0, 8).map((service, index) => (
               <div key={index} className="w-full">
-                <ServiceCard service={service}/>
+                <ServiceCard service={service} />
               </div>
             ))}
           </div>
@@ -197,44 +197,51 @@ export default function Home() {
           />
           <div className="text-justify text-base xl:text-lg text-secondary">
             <p className="mb-5">
-  At <strong>Codegrin Technologies</strong>, we don’t just build software —
-  we craft <strong>reliable digital solutions</strong> that create real business value.  
-  Since 2020, we’ve been helping companies turn ideas into
-  <strong> scalable, future-ready products</strong> that drive growth.  
-  Our expertise covers the complete modern tech stack, including
-  <strong> ReactJS, Next.js, Node.js</strong>, and more.  
-  From developing custom applications to upgrading existing systems and
-  integrating the latest features, we provide <strong> end-to-end solutions you can trust</strong> —
-  all under one roof.
-</p>
-
+              At <strong>Codegrin Technologies</strong>, we don’t just build
+              software — we craft <strong>reliable digital solutions</strong>{" "}
+              that create real business value. Since 2020, we’ve been helping
+              companies turn ideas into
+              <strong> scalable, future-ready products</strong> that drive
+              growth. Our expertise covers the complete modern tech stack,
+              including
+              <strong> ReactJS, Next.js, Node.js</strong>, and more. From
+              developing custom applications to upgrading existing systems and
+              integrating the latest features, we provide{" "}
+              <strong> end-to-end solutions you can trust</strong> — all under
+              one roof.
+            </p>
 
             <p className="mb-5">
-  we believe technology should
-  feel effortless. That’s why we design and build solutions that are
-  <strong>intuitive, engaging, and built to last</strong>.  
-  Our strength lies in blending <strong> human-centered design</strong> with
-  <strong> scalable engineering</strong>, so every product not only looks
-  great but performs flawlessly in the real world.  
-  Whether it’s <strong> eCommerce, enterprise tools, or blockchain
-  applications</strong>, we deliver solutions that adapt to business needs
-  and create lasting impact across industries.
-</p>
+              we believe technology should feel effortless. That’s why we design
+              and build solutions that are
+              <strong>intuitive, engaging, and built to last</strong>. Our
+              strength lies in blending <strong> human-centered design</strong>{" "}
+              with
+              <strong> scalable engineering</strong>, so every product not only
+              looks great but performs flawlessly in the real world. Whether
+              it’s{" "}
+              <strong>
+                {" "}
+                eCommerce, enterprise tools, or blockchain applications
+              </strong>
+              , we deliver solutions that adapt to business needs and create
+              lasting impact across industries.
+            </p>
 
-           <p className="mb-5">
-  we go beyond development by helping
-  businesses scale through <strong> Google</strong> and <strong> Meta </strong>
-  advertising. From driving targeted traffic to converting leads and boosting ROI,
-  our marketing strategies are designed to deliver measurable growth.
-</p>
-<p className="mb-5">
-  We see ourselves not just as a service provider, but as a
-  <strong> strategic partner</strong> invested in your success.  
-  Guided by innovation and quality, our team ensures every project is delivered
-  with precision—on time, on budget, and with results that consistently exceed
-  expectations.
-</p>
-
+            <p className="mb-5">
+              we go beyond development by helping businesses scale through{" "}
+              <strong> Google</strong> and <strong> Meta </strong>
+              advertising. From driving targeted traffic to converting leads and
+              boosting ROI, our marketing strategies are designed to deliver
+              measurable growth.
+            </p>
+            <p className="mb-5">
+              We see ourselves not just as a service provider, but as a
+              <strong> strategic partner</strong> invested in your success.
+              Guided by innovation and quality, our team ensures every project
+              is delivered with precision—on time, on budget, and with results
+              that consistently exceed expectations.
+            </p>
           </div>
         </section>
       </div>

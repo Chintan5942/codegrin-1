@@ -4,9 +4,9 @@ import { ROUTES } from "../../constants/RoutesContants";
 
 export default function BlogSection({ bloglimit = 4 }) {
       const navigate = useNavigate();
-      const handleRedirect = (blog) => {
-        navigate(ROUTES.BLOG_DETAILS, { state: { blog } });
-      };
+       const handleRedirect = (blog) => {
+        navigate(`${ROUTES.BLOG_DETAILS}/${blog.slug}`);
+    };
       
   return (
     <div className="w-full h-full">
