@@ -651,4 +651,19 @@ export const PORTFOLIO = [
     project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
     project_link: "https://www.merakibeauty.in/",
   },
+  {
+  title: "BZBox School Kits",
+  slug: "bzbox",
+  tech_category: ["shopify"],
+  project_type: "E-Commerce Platform for Household & School Essentials",
+  publisher_name: "BZBox",
+  description: [
+    "BZBox is a modern subscription-driven e-commerce platform designed to simplify the recurring purchase of school supplies, home office essentials, and activity kits for families and small businesses. The website focuses on clarity, convenience, and trust—allowing users to choose subscription plans tailored to household size and evolving needs.",
+    "The platform architecture emphasizes seamless plan selection, flexible subscription management, and an intuitive shopping experience. Each section reinforces reliability and value, combining structured product discovery with user-centric features like plan customization, queue management, and free shipping—positioning BZBox as a dependable monthly essentials solution."
+  ],
+  image_path: BASE_URL + "bzbox/",
+  project_images: ["ss1.webp", "ss2.webp", "ss3.webp", "ss4.webp"],
+  project_link: "https://www.bzbox.com/",
+}
+
 ];
