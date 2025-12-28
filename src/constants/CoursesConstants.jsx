@@ -224,28 +224,6 @@ export const COURSES = [
     image: BASE_URL + "python.webp",
   },
   {
-    title: "Responsive Web Design Essentials",
-    category: "Responsive Web Design",
-    slug: "responsive-web-design",
-    description:
-      "This course teaches the fundamentals of responsive web design, focusing on flexible layouts, responsive images, and CSS media queries. Students will learn how to build websites that look great and function properly on any device, from desktops to smartphones, ensuring a seamless user experience.",
-    what_you_will_learn: [
-      "Understand the core principles of responsive design.",
-      "Create flexible layouts using CSS Grid and Flexbox.",
-      "Implement media queries to adapt website design to different devices.",
-      "Optimize images and multimedia for faster loading and better performance.",
-      "Ensure accessibility and usability in responsive designs.",
-    ],
-    duration: "16 weeks",
-    lesson: "6",
-    timing: "10:00 - 07:00",
-    language: "English",
-    qualifications: "Graduate",
-    mode: "Offline",
-    certificate: "Yes",
-    image: BASE_URL + "responsive.webp",
-  },
-  {
     title: "Master the Art of Web Design",
     category: "Web Design",
     slug: "web-design",
@@ -267,4 +245,114 @@ export const COURSES = [
     certificate: "Yes",
     image: BASE_URL + "html-css-js.webp",
   },
+  {
+    title: "Python Programming",
+    category: "Programming",
+    slug: "python-programming",
+    description:
+      "This structured course is designed to transform beginners into proficient Python developers by reinforcing core programming foundations and practical problem-solving skills. Learners will start with the building blocks of the language, diving into syntax, variables, and control structures before progressing to advanced topics including data structures, file operations, error handling, and functional programming. The course places a strong emphasis on object-oriented programming (OOP) and teaches how to architect scalable codebases using classes and modules. By the end, students will confidently develop automation tools, console-based applications, and real-world scripts for business and personal use, setting a solid foundation for careers in development, automation, data analysis, and backend engineering.",
+    what_you_will_learn: [
+      "Understand Python fundamentals, syntax rules, and logic-based programming.",
+      "Work with advanced data structures like dictionaries, sets, and nested collections.",
+      "Write modular and reusable code using functions, modules, and packages.",
+      "Implement OOP concepts including inheritance, polymorphism, and encapsulation.",
+      "Develop automation scripts and small-scale applications for real-world needs."
+    ],
+    duration: "20 Weeks",
+    lesson: "18",
+    timing: "10:00 AM - 07:00 PM",
+    language: "English",
+    qualifications: "Graduate",
+    mode: "Offline",
+    certificate: "Yes",
+    image: BASE_URL + "python.webp"
+  },
+  {
+    title: "Database Management Systems (DBMS)",
+    category: "Database",
+    slug: "dbms-course",
+    description:
+      "This course delivers a complete exploration of database systems used across modern software environments. Students will learn how business data is stored, organized, secured, and accessed using relational database management systems. The curriculum focuses heavily on SQL — starting from basic queries and gradually incorporating joins, subqueries, transactions, views, stored procedures, and optimization practices. Alongside theory, learners will design real database schemas using ER models, understand normalization to reduce redundancy, apply indexing to boost performance, and implement relational integrity through keys and constraints. By the end of the course, students will be equipped to design, deploy, and manage relational databases used in enterprise-grade applications.",
+    what_you_will_learn: [
+      "Understand database architecture, schemas, and relational data modeling concepts.",
+      "Design normalized databases using ER diagrams with real business requirements.",
+      "Write SQL queries for CRUD operations, joins, subqueries, and aggregations.",
+      "Optimize performance using indexing strategies and query tuning.",
+      "Implement security, constraints, triggers, and storage principles for real systems."
+    ],
+    duration: "16 Weeks",
+    lesson: "14",
+    timing: "10:00 AM - 07:00 PM",
+    language: "English",
+    qualifications: "Graduate",
+    mode: "Offline",
+    certificate: "Yes",
+    image: BASE_URL + "dbms.webp"
+  },
+  {
+    title: "Data Analysis",
+    category: "Data Analytics",
+    slug: "data-analysis",
+    description:
+      "This application-driven program guides students through every stage of the data analysis pipeline, enabling them to turn raw, unstructured information into meaningful insights. The course begins with foundational concepts, exploring analytical thinking, data literacy, and business interpretation. Students learn to clean and preprocess data using professional techniques, handle missing values, and apply transformation logic to prepare datasets for analysis. The curriculum then covers Exploratory Data Analysis (EDA), statistical summaries, pattern discovery, and the creation of compelling visual dashboards that communicate insights clearly. Real datasets from marketing, finance, operations, and technology domains are used to demonstrate how analytical reasoning supports data-driven decision making in organizations.",
+    what_you_will_learn: [
+      "Navigate the full data analysis lifecycle from data collection to insight delivery.",
+      "Perform dataset preparation, validation, and preprocessing for accuracy.",
+      "Analyze statistical patterns and trends for business-focused reporting.",
+      "Develop charts, dashboards, and visual reports that showcase findings effectively.",
+      "Work with real-world case studies to solve industry problems using analytics."
+    ],
+    duration: "20 Weeks",
+    lesson: "20",
+    timing: "10:00 AM - 07:00 PM",
+    language: "English",
+    qualifications: "Graduate",
+    mode: "Offline",
+    certificate: "Yes",
+    image: BASE_URL + "data-analysis.webp"
+  },
+  {
+    title: "Data Science",
+    category: "Data Science",
+    slug: "data-science",
+    description:
+      "This extensive program builds the multidisciplinary skillset necessary to excel in the data science domain. It merges statistics, mathematics, programming, and business awareness to empower learners to create data-driven solutions. Students will explore statistical modeling, probability, data preprocessing, feature engineering, and visualization with industry-standard Python libraries. Through guided case studies and capstone projects, learners will tackle real scenarios involving trend prediction, classification, clustering, forecasting, and advanced analytical storytelling. This course not only teaches the technical stack but also emphasizes the thought process, experimentation mindset, and communication skills required to succeed as a professional data scientist.",
+    what_you_will_learn: [
+      "Navigate the data science process from data collection to predictive modeling.",
+      "Apply statistics, probability, and hypothesis testing for analytical accuracy.",
+      "Use Python libraries like NumPy, Pandas, Matplotlib, and Seaborn for insights.",
+      "Develop storytelling dashboards and data narratives for business leaders.",
+      "Build and present end-to-end data science projects for professional portfolios."
+    ],
+    duration: "36 Weeks",
+    lesson: "40",
+    timing: "10:00 AM - 07:00 PM",
+    language: "English",
+    qualifications: "Graduate",
+    mode: "Offline",
+    certificate: "Yes",
+    image: BASE_URL + "data-science.webp"
+  },
+  {
+    title: "Machine Learning",
+    category: "Machine Learning",
+    slug: "machine-learning",
+    description:
+      "This practical course is designed for learners seeking to enter the rapidly growing field of artificial intelligence and machine learning. The curriculum begins with the foundations of ML theory, covering algorithm categories, dataset handling, model training, evaluation metrics, and performance tuning. Students will learn to implement algorithms such as linear regression, decision trees, logistic regression, clustering, and support vector machines using Python-based ML frameworks. The program also explores how machine learning is applied in industries such as healthcare, finance, marketing, business automation, and product development. Upon completion, learners will be capable of building predictive models, improving accuracy through optimization, and deploying ML-driven solutions.",
+    what_you_will_learn: [
+      "Study ML model pipelines including preprocessing, model training, and validation.",
+      "Implement core supervised and unsupervised learning techniques.",
+      "Use real datasets to build classification, clustering, and regression algorithms.",
+      "Compare and optimize models using evaluation metrics and hyperparameter tuning.",
+      "Build project-ready ML applications suitable for portfolio and interviews."
+    ],
+    duration: "20 Weeks",
+    lesson: "18",
+    timing: "10:00 AM - 07:00 PM",
+    language: "English",
+    qualifications: "Graduate",
+    mode: "Offline",
+    certificate: "Yes",
+    image: BASE_URL + "machine-learning.webp"
+  }
 ];

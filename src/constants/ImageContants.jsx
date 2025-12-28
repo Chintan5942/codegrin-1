@@ -24,6 +24,13 @@ export const IMAGE_ASSETS = {
     MOBILE_APP_DEV: SERVICE_BASE + "mobile-app-dev.webp",
     UIUX_DESIGN: SERVICE_BASE + "ui-ux.webp",
     WORDPRESS_DEV: SERVICE_BASE + "wordpress-dev.webp",
+    AI_SOLUTIONS: SERVICE_BASE + "ai-solutions.webp",
+    PYTHON_DEV: SERVICE_BASE + "python-dev.webp",
+    DATA_ANALYTICS: SERVICE_BASE + "data-analytics.webp",
+    DATA_SCIENCE: SERVICE_BASE + "data-science.webp",
+    CHATBOT_DEV: SERVICE_BASE + "ai-chatbot.webp",
+    ML_DEV: SERVICE_BASE + "ml-dev.webp",
+    
   },
 
   TOOLS: [

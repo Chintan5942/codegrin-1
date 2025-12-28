@@ -193,4 +193,93 @@ export const SERVICES = [
       "We offer Google Ads management services that combine strategy, creativity, and data-driven insights to fuel business growth. Whether your goal is to boost website traffic, generate qualified leads, or increase online sales, our Google Ads campaigns are tailored to deliver results. With real-time analytics, conversion tracking, and ongoing optimization, we help you get the most out of every advertising dollar.",
     ],
   },
+  {
+  title: "AI-Based Solutions",
+  slug: "ai-based-solutions",
+  short_description:
+    "AI-powered systems that automate processes, improve decision-making, and deliver scalable digital transformation.",
+  img: IMAGE_ASSETS.SERVICE_IMG.AI_SOLUTIONS,
+  description: [
+    "We provide AI-based solutions that help businesses streamline workflows, automate decision-making, and enhance customer experiences. From predictive analytics and NLP systems to intelligent automation and recommendation engines, we build scalable AI models that align with your business objectives. Our solutions accelerate digital transformation, improve operational efficiency, and reduce manual intervention. By integrating AI into existing systems, we help organizations unlock new revenue opportunities and stay competitive in the modern digital economy.",
+    "AI Automation – Automating repetitive tasks and business operations. NLP & Chat-based AI – Human-like language understanding and interaction. Predictive Intelligence – Forecasting trends and analyzing outcomes. Computer Vision – Image detection and visual data interpretation. AI Model Integration – Plug-and-play deployment for existing systems. Custom AI Development – Tailored solutions built for your use case.",
+    "Our AI-Based Solutions are built using industry-leading frameworks and cloud infrastructures for optimal performance and scalability. We leverage TensorFlow, PyTorch, Azure AI, AWS Machine Learning, and Google Vertex AI to implement robust end-to-end systems. With continuous monitoring, retraining, and optimization pipelines, our models evolve with new data, maintaining reliability and accuracy. The result is adaptable, future-proof AI that grows with your business ecosystem.",
+    "We specialize in designing AI solutions for industries such as healthcare, finance, logistics, retail, education, and cybersecurity. Whether it’s a custom diagnostic model, fraud detection system, demand forecasting engine, or autonomous business process, we combine technology with domain expertise to deliver measurable value. With AI governance and ethical model development, we ensure transparency, trust, and compliance.",
+    "Our goal is to make AI adoption simple, scalable, and ROI-driven for every organization. We provide consulting, prototyping, development, deployment, and lifecycle management for every solution we deliver. With strategic planning and hands-on support, we guide businesses in integrating AI responsibly while maximizing output, efficiency, and customer satisfaction."
+  ],
+},
+
+{
+  title: "Python Development",
+  slug: "python-development",
+  short_description:
+    "Custom Python development for backend systems, APIs, automation, and enterprise software solutions.",
+  img: IMAGE_ASSETS.SERVICE_IMG.PYTHON_DEV,
+  description: [
+    "We offer Python development services focused on building secure, scalable, and high-performance applications tailored to your business. Our expertise spans backend systems, RESTful APIs, enterprise dashboards, automation tools, and data-driven platforms. Using frameworks like Django, Flask, and FastAPI, we ensure applications are modular, clean, and future-ready. Our Python architecture supports rapid development, seamless integrations, and reliable performance under enterprise workloads.",
+    "Python Backend Development – High-performance and modular architecture. API & Microservices – Scalable and cloud-ready. Automation Scripts – Reduce manual processes and improve efficiency. Enterprise Solutions – Industry-grade software for business operations. Data Engineering – ETL pipelines and optimized data flow for analytics. SaaS Product Development – Build subscription-based applications for scale.",
+    "Our development approach includes clean code practices, version control (Git), CI/CD integration, containerization (Docker), and automated testing to deliver production-grade software. We deploy solutions across AWS, Azure, and Google Cloud with proper load balancing and monitoring. Our applications are engineered for extensibility, ensuring you can add features and scale without rewriting core systems.",
+    "We integrate third-party services, payment gateways, CRM/ERP systems, messaging queues, and AI/ML pipelines to extend application functionality. Our custom middleware and event-driven architecture ensure seamless communication between services. We also modernize legacy systems to improve performance, reliability, and security while preserving business-critical workflows.",
+    "With end-to-end development and post-deployment support, we help businesses reduce technical risks and accelerate innovation. Python’s stability and ecosystem make it an ideal choice for multi-domain applications, and we leverage its strengths to support long-term digital maturity. From MVP to enterprise-grade platforms, we deliver solutions that grow with you."
+  ],
+},
+
+{
+  title: "Data Analytics",
+  slug: "data-analytics",
+  short_description:
+    "Turning raw data into actionable insights for better decisions, strategy, and growth.",
+  img: IMAGE_ASSETS.SERVICE_IMG.DATA_ANALYTICS,
+  description: [
+    "We provide Data Analytics solutions to help businesses make smarter decisions using accurate, insight-driven information. Our services cover data collection, cleaning, modeling, and visualization to uncover patterns, trends, and performance gaps. We build dashboards and reporting systems that enable department heads and leadership teams to monitor operations and make informed decisions. With streamlined data flows and automated reporting pipelines, we help companies adopt a culture of continuous improvement.",
+    "Business Intelligence – KPI dashboards and reporting automation. Performance Analytics – Sales, marketing, and operations intelligence. Forecasting Models – Demand prediction and planning. Customer Analytics – Behavior segmentation and retention strategies. Financial Analytics – Profitability and cost optimization insights. Real-time Analytics – Live metrics for monitoring business health.",
+    "Our stack includes Power BI, Tableau, Looker, Superset, and Python-based custom visualization engines. We integrate data analytics systems with ERP, CRM, HRMS, eCommerce, and supply chain tools for unified reporting. With ETL automation, validation layers, and quality checkpoints, businesses reduce manual work and increase accuracy. The result: simplified decision structures powered by reliable data.",
+    "We help organizations build scalable analytics foundations that support growth. With structured governance, access control, and compliance-driven data handling, we ensure security and privacy remain intact. Our solutions improve cross-team alignment and strategic forecasting, allowing companies to respond faster to market changes and internal insights.",
+    "Whether you're building your first reporting system or scaling to enterprise analytics, we deliver tailored solutions designed to maximize visibility and operational clarity. Our analytics systems drive clarity, accountability, and measurable results across every unit of your business."
+  ],
+},
+
+{
+  title: "Data Science",
+  slug: "data-science",
+  short_description:
+    "Predictive analytics and modeling solutions that uncover patterns and forecast outcomes for strategic growth.",
+  img: IMAGE_ASSETS.SERVICE_IMG.DATA_SCIENCE,
+  description: [
+    "Our Data Science services transform complex datasets into predictive intelligence that drives business decisions. We design machine learning models, statistical frameworks, and forecasting engines to solve real-world problems and optimize business strategy. With data engineering support and automation pipelines, we ensure models run reliably at scale. Our solutions eliminate guesswork and replace it with accurate prediction and insight.",
+    "Predictive Modeling – Identify trends and forecast outcomes. Statistical Analysis – Hypothesis testing and confidence scoring. Machine Learning Integration – ML models for production environments. Recommendation Systems – Personalized product and content suggestions. Optimization Models – Efficiency and cost reduction algorithms. Real-time Analytics – Continuous insight generation.",
+    "We work across healthcare, finance, eCommerce, logistics, manufacturing, and SaaS to implement data science systems tailored for each industry. From fraud detection to patient risk analysis, dynamic pricing to supply chain automation, our solutions impact core business functions. With integration, monitoring, and retraining frameworks, we ensure ready-to-use models that maintain accuracy over time.",
+    "Our methodology includes experiment tracking, versioning, drift detection, feature validation, and lifecycle management. We prioritize transparency through model explainability and data ethics to minimize risk and enhance trust. With automated infrastructure and governance controls, we support enterprise-grade deployments confidently.",
+    "Our end-to-end service model supports discovery, prototyping, development, deployment, and operational scaling. This makes Data Science accessible for growing companies and powerful for enterprise organizations seeking transformation."
+  ],
+},
+
+{
+  title: "Machine Learning",
+  slug: "machine-learning",
+  short_description:
+    "ML models that automate predictions, classification, personalization, and business decision-making.",
+  img: IMAGE_ASSETS.SERVICE_IMG.ML_DEV,
+  description: [
+    "We develop Machine Learning solutions that automate predictions and decision-making across industries. Our models support classification, regression, clustering, anomaly detection, and recommendation use cases. By combining structured data pipelines, automated training, model evaluation, and continuous monitoring, we deliver ML systems built for production. Each model is optimized for performance and business value from day one.",
+    "ML Model Development – Predictive, prescriptive, and adaptive systems. Recommendation Engines – Personalize customer journeys. Risk & Fraud Detection – Identify anomalies and suspicious events. Demand Forecasting – Predict market, supply, and consumption trends. NLP & Voice AI – Text and speech analytics with language models. Advanced Automation – Machine-guided decision engines.",
+    "We deploy ML solutions using TensorFlow, Scikit-learn, PyTorch, and custom algorithms, integrating them into products via APIs or cloud-based ML Ops pipelines. With drift detection, alerting, and retraining, systems stay accurate over time. Our scalable infrastructure supports real-time inference, batch processing, and hybrid models for flexible performance.",
+    "ML enhances ROI by reducing manual workloads, increasing accuracy, and enabling scalable automation. We design each solution to integrate smoothly with existing digital systems, eliminating adoption friction and technical overhead. Our backend architecture and monitoring controls ensure reliability, transparency, and long-term sustainability.",
+    "Machine Learning is not just a tool — it becomes a strategic asset in your organization. With our guidance, companies build automation-first systems that outperform traditional operations and evolve as market conditions change."
+  ],
+},
+
+{
+  title: "AI Chatbot Development",
+  slug: "ai-chatbot-development",
+  short_description:
+    "Conversational AI chatbots for automated support, lead handling, and customer engagement across platforms.",
+  img: IMAGE_ASSETS.SERVICE_IMG.CHATBOT_DEV,
+  description: [
+    "We build AI-powered chatbots that automate communication, improve response times, and enhance customer interactions. Using NLP, conversational AI, and contextual memory, our chatbots handle support, lead qualification, onboarding, booking, queries, and product guidance. This reduces workload on human teams and ensures quick, accurate responses every time.",
+    "Conversational AI – Natural and human-like dialogue. WhatsApp, IG, FB Messenger – Multi-platform chatbot deployment. Lead Qualification – Capture, score, and route prospects. Customer Support – Automated resolutions and escalation workflows. Internal Bots – AI assistants for team productivity. Multilingual AI – Provide support across languages.",
+    "We integrate chatbots with CRM, ERP, eCommerce systems, booking platforms, and ticketing tools for centralized management. Our analytics dashboards monitor conversation quality, user behavior, and conversion rates. Each chatbot is trained to maintain brand voice and deliver responses aligned with business policies.",
+    "Our deployment includes fallback logic, escalation routes, sentiment detection, and training loops to continuously improve accuracy. With real-time learning and adaptive intelligence, chatbots evolve as user interactions grow. This ensures long-term efficiency and predictable ROI.",
+    "Our AI chatbots create personalized, scalable, and accessible digital experiences. They boost customer satisfaction, support business scalability, and serve as a digital workforce available 24/7. From small businesses to enterprise ecosystems, we deliver AI chatbots that redefine customer engagement."
+  ],
+},
 ];
