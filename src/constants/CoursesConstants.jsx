@@ -290,9 +290,9 @@ export const COURSES = [
     image: BASE_URL + "dbms.webp"
   },
   {
-    title: "Data Analysis",
+    title: "Data Analytics",
     category: "Data Analytics",
-    slug: "data-analysis",
+    slug: "data-analytics",
     description:
       "This application-driven program guides students through every stage of the data analysis pipeline, enabling them to turn raw, unstructured information into meaningful insights. The course begins with foundational concepts, exploring analytical thinking, data literacy, and business interpretation. Students learn to clean and preprocess data using professional techniques, handle missing values, and apply transformation logic to prepare datasets for analysis. The curriculum then covers Exploratory Data Analysis (EDA), statistical summaries, pattern discovery, and the creation of compelling visual dashboards that communicate insights clearly. Real datasets from marketing, finance, operations, and technology domains are used to demonstrate how analytical reasoning supports data-driven decision making in organizations.",
     what_you_will_learn: [
