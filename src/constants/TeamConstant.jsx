@@ -10,7 +10,7 @@ export const TEAM_DATA = {
         {
             name:"Chintan Rabadiya",
             image:BASE_URL + "chintanbhai.webp",
-            position:"CEO",
+            position:"Co-founder & CEO",
         }
     ],
     EMPLOYEES:[
