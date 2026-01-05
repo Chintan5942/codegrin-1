@@ -102,7 +102,7 @@ export default function Footer() {
                     href={ROUTES.COURSES}
                     className="text-sm text-white/70 hover:text-white"
                   >
-                    Courses
+                    Corporate Training
                   </a>
                 </li>
                 <li>
