@@ -5,7 +5,7 @@ export default function Courses() {
   return (
     <section className="w-full min-h-screen">
       <div className="container">
-        <PageTitle title="Our Courses" />
+        <PageTitle title="Our Trainings" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 my-20 ">
         {COURSES.map((course) => (
           <CourseCard course={course} />

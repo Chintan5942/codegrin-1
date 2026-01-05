@@ -16,7 +16,7 @@ const Breadcrumb = ({
     [ROUTES.HOME]: "Home",
     [ROUTES.SERVICES]: "Services",
     [ROUTES.PORTFOLIO]: "Portfolio", 
-    [ROUTES.COURSES]: "Courses",
+    [ROUTES.COURSES]: "Trainings",
     [ROUTES.BLOG]: "Blogs",
     [ROUTES.BLOG_DETAILS]: "Blog Details",
     [ROUTES.ABOUT]: "About",
@@ -72,10 +72,10 @@ const Breadcrumb = ({
     }
 
     // Handle Course Details page specifically
-    if (currentPath.startsWith('/course-details/') && params.slug) {
+    if (currentPath.startsWith('/corporate-training-details/') && params.slug) {
       // Add Courses page
       breadcrumbs.push({
-        label: "Courses",
+        label: "Trainings",
         path: ROUTES.COURSES,
         current: false
       });
