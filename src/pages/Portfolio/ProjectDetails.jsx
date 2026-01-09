@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Navigate, useParams, useNavigate } from "react-router-dom";
 import { ROUTES } from "../../constants/RoutesContants";
-import { PORTFOLIO } from "../../constants/PortfolioConstants";
+import {
+  PORTFOLIO,
+  PORTFOLIO_CATEGORY,
+} from "../../constants/PortfolioConstants";
 import BorderButton from "../../components/Buttons/BorderButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -23,14 +26,14 @@ const ProjectDetails = () => {
   // Fetch portfolio data based on slug
   useEffect(() => {
     if (slug) {
-      const foundPortfolio = PORTFOLIO.find(p => p.slug === slug);
-      const foundIndex = PORTFOLIO.findIndex(p => p.slug === slug);
-      
+      const foundPortfolio = PORTFOLIO.find((p) => p.slug === slug);
+      const foundIndex = PORTFOLIO.findIndex((p) => p.slug === slug);
+
       if (foundPortfolio) {
         setPortfolio(foundPortfolio);
         setCurrentIndex(foundIndex);
       }
-      
+
       setLoading(false);
     }
   }, [slug]);
@@ -46,7 +49,7 @@ const ProjectDetails = () => {
       const nextIndex = (currentIndex + 1) % PORTFOLIO.length;
       return {
         project: PORTFOLIO[nextIndex],
-        index: nextIndex
+        index: nextIndex,
       };
     }
     return null;
@@ -104,12 +107,15 @@ const ProjectDetails = () => {
                 if (nextProjectData) {
                   // Kill all ScrollTrigger instances before navigation
                   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-                  
+
                   // Navigate using slug instead of state
-                  navigate(`${ROUTES.PROJECT_DETAILS}/${nextProjectData.project.slug}`, {
-                    replace: false
-                  });
-                  
+                  navigate(
+                    `${ROUTES.PROJECT_DETAILS}/${nextProjectData.project.slug}`,
+                    {
+                      replace: false,
+                    }
+                  );
+
                   // Scroll to top
                   if (window.lenis) {
                     window.lenis.scrollTo(0, { immediate: true });
@@ -117,8 +123,8 @@ const ProjectDetails = () => {
                     window.scrollTo(0, 0);
                   }
                 }
-              }
-            }
+              },
+            },
           });
         }
 
@@ -131,8 +137,8 @@ const ProjectDetails = () => {
               trigger: nextProjectRef.current,
               start: "top bottom",
               end: "bottom top",
-              scrub: true
-            }
+              scrub: true,
+            },
           });
         }
         ScrollTrigger.refresh();
@@ -165,12 +171,12 @@ const ProjectDetails = () => {
       <div className="relative min-h-screen w-full overflow-hidden">
         <div className="absolute bg-black/50 w-full h-screen z-10 flex items-center justify-center text-shadow-lg/25 text-white font-bold text-2xl md:text-4xl lg:text-6xl xl:text-7xl">
           {portfolio.title}
-        </div>  
+        </div>
         <img
           src={portfolio.image_path + "header.webp"}
           className="absolute top-1/2 left-0 -translate-y-1/2 min-h-full min-w-none object-cover z-0"
           alt={portfolio.title}
-        />  
+        />
       </div>
 
       {/* Details */}
@@ -180,11 +186,22 @@ const ProjectDetails = () => {
           <ul className="pl-2 md:pl-5">
             <li className="mb-1 text-lg">
               <strong className="mr-2 text-white">Tech Category:</strong>
-              <span className="text-secondary capitalize">{portfolio.tech_category.join(", ")}</span>
+              <span className="text-secondary capitalize">
+                {portfolio.tech_category
+                  .map(
+                    (tech) =>
+                      PORTFOLIO_CATEGORY.find(
+                        (category) => category.value === tech
+                      )?.label || tech
+                  )
+                  .join(", ")}
+              </span>
             </li>
             <li className="mb-1 text-lg">
               <strong className="mr-2 text-white">Project Type:</strong>
-              <span className="text-secondary capitalize">{portfolio.project_type}</span>
+              <span className="text-secondary capitalize">
+                {portfolio.project_type}
+              </span>
             </li>
             <li className="mb-1 text-lg">
               <strong className="mr-2 text-white">Publisher Name:</strong>
@@ -234,22 +251,25 @@ const ProjectDetails = () => {
 
       {/* Next Project Section */}
       {nextProjectData && (
-        <section 
+        <section
           ref={nextProjectRef}
           className="next-project relative min-h-screen overflow-hidden"
         >
           <div className="bg absolute inset-0">
-            <img 
+            <img
               ref={nextBgRef}
-              src={nextProjectData.project.image_path + "header.webp"} 
+              src={nextProjectData.project.image_path + "header.webp"}
               alt="Next Project Background"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="next-project-inner relative z-10 flex items-center justify-center min-h-screen bg-black/50">
             <div className="text-center">
-              <h2 ref={titleFillRef} className="text-2xl md:text-3xl lg:text-5xl font-bold">
-                  Next: {nextProjectData.project.title}
+              <h2
+                ref={titleFillRef}
+                className="text-2xl md:text-3xl lg:text-5xl font-bold"
+              >
+                Next: {nextProjectData.project.title}
               </h2>
             </div>
           </div>

@@ -1,5 +1,17 @@
 const BASE_URL = "/assets/images/portfolio/";
-export const PORTFOLIO_CATEGORY = ["nextjs", "reactjs","nodejs","wordpress", "shopify","laravel","blockchain","mobile","uiux", "erp"];
+export const PORTFOLIO_CATEGORY = [
+  { label: "NextJS", value: "nextjs" },
+  { label: "ReactJS", value: "reactjs" },
+  { label: "NodeJS", value: "nodejs" },
+  { label: "WordPress", value: "wordpress" },
+  { label: "Shopify", value: "shopify" },
+  { label: "Laravel", value: "laravel" },
+  { label: "Blockchain", value: "blockchain" },
+  { label: "Mobile Apps", value: "mobile" },
+  { label: "UI/UX", value: "uiux" },
+  { label: "ERP", value: "erp" }
+];
+
 export const PORTFOLIO = [
   {
     title: "Lumetiq",

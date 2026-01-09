@@ -20,7 +20,6 @@ export default function Portfolio() {
   const filtersRef = useRef([]);
 
   const handleCardClick = (portfolio) => {
-    // Only pass the slug in the URL, no state
     navigate(`${ROUTES.PROJECT_DETAILS}/${portfolio.slug}`);
   };
 
@@ -28,7 +27,6 @@ export default function Portfolio() {
     setSelectedCategory(category);
   };
 
-  // Filter portfolio based on selected category
   const filteredPortfolio =
     selectedCategory === "All"
       ? PORTFOLIO
@@ -38,7 +36,6 @@ export default function Portfolio() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate portfolio cards with ScrollTrigger
       gsap.fromTo(
         cardsRef.current,
         {
@@ -66,7 +63,6 @@ export default function Portfolio() {
     return () => ctx.revert();
   }, [filteredPortfolio]);
 
-  // Re-animate cards when category changes
   useLayoutEffect(() => {
     if (cardsRef.current.length > 0) {
       gsap.fromTo(
@@ -94,8 +90,8 @@ export default function Portfolio() {
         <PageTitle title="Built by CodeGrin" />
 
         {/* Category Filter Radio Buttons */}
-        <div className="w-full flex flex-row lg:items-center mt-20 mb-8 gap-4">
-          <h3 className="hidden lg:block lg:text-lg lg:font-semibold">
+        <div className="w-full flex flex-row lg:items-start mt-20 mb-8 gap-4">
+          <h3 className="hidden lg:mt-2 lg:block lg:text-lg lg:font-semibold">
             Filter:
           </h3>
           <div className="flex flex-wrap gap-4">
@@ -128,10 +124,10 @@ export default function Portfolio() {
             {/* Category options */}
             {PORTFOLIO_CATEGORY.map((category, index) => (
               <label
-                key={category}
+                key={category.value}
                 ref={(el) => (filtersRef.current[index + 1] = el)}
                 className={`flex items-center cursor-pointer ${
-                  selectedCategory === category
+                  selectedCategory === category.value
                     ? "border border-primary-border"
                     : ""
                 } bg-primary-card py-3 px-5 hover:scale-105 transition-transform duration-200`}
@@ -139,19 +135,19 @@ export default function Portfolio() {
                 <input
                   type="radio"
                   name="category"
-                  value={category}
-                  checked={selectedCategory === category}
-                  onChange={() => handleCategoryChange(category)}
+                  value={category.value}
+                  checked={selectedCategory === category.value}
+                  onChange={() => handleCategoryChange(category.value)}
                   className="mr-2 w-3.5 h-3.5 accent-primary"
                 />
                 <span
-                  className={`text-sm capitalize ${
-                    selectedCategory === category
+                  className={`text-sm ${
+                    selectedCategory === category.value
                       ? "text-primary font-semibold"
                       : "text-white"
                   }`}
                 >
-                  {category}
+                  {category.label}
                 </span>
               </label>
             ))}
@@ -165,7 +161,7 @@ export default function Portfolio() {
               key={`${selectedCategory}-${index}`}
               ref={(el) => (cardsRef.current[index] = el)}
               className="w-full relative border border-primary-border rounded-xl cursor-pointer group hover:shadow-2xl transition-shadow duration-300"
-              onClick={() => handleCardClick(portfolio)} // Removed index parameter
+              onClick={() => handleCardClick(portfolio)}
             >
               <div className="overflow-hidden rounded-xl">
                 <img
@@ -181,7 +177,9 @@ export default function Portfolio() {
                       key={index}
                       className="lg:text-sm text-xs w-fit bg-black/50 rounded-full text-white px-4 py-1 capitalize"
                     >
-                      {tech}
+                      {PORTFOLIO_CATEGORY.find(
+                        (category) => category.value === tech
+                      )?.label}
                     </h2>
                   ))}
                 </div>
